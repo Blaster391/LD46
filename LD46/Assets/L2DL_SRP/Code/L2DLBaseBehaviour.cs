@@ -83,7 +83,7 @@ namespace L2DL
             // It might break batching and cause a bunch of problems but there doesn't seem to be a better alternative, at least that I know of right now
             // Once instancing is 'fixed' this should allow it to render all objects with the same sprite together in one call so bit of a future investment
 
-            L2DLRenderer.GetPropertyBlock(WorkingMaterialPropertyBlock, 0);
+            L2DLRenderer.GetPropertyBlock(WorkingMaterialPropertyBlock);
             WorkingMaterialPropertyBlock.SetFloat("_Emission", Emission);
             WorkingMaterialPropertyBlock.SetFloat("_Occlusion", Occlusion);
             WorkingMaterialPropertyBlock.SetFloat("_Reflectance", Reflectance);
@@ -109,7 +109,7 @@ namespace L2DL
 
             UpdateMaterialPropertyBlockParameters(WorkingMaterialPropertyBlock);
             
-            l2DLRenderer.SetPropertyBlock(WorkingMaterialPropertyBlock, 0);
+            l2DLRenderer.SetPropertyBlock(WorkingMaterialPropertyBlock);
         }
 
         protected virtual void UpdateMaterialPropertyBlockParameters(MaterialPropertyBlock materialPropertyBlock)
