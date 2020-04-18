@@ -145,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultTarget: {fileID: 0}
   m_moveForce: 1
+  m_movementUpdateRate: 0.5

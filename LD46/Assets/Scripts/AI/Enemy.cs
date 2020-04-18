@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D m_rigidbody2D = null;
     private NavMesh m_mesh;
     private float m_timeSinceLastPathUpdate = 0.0f;
+    private Vector2 m_targetPosition = new Vector2();
 
     // Start is called before the first frame update
     void Start()
@@ -36,18 +37,10 @@ public class Enemy : MonoBehaviour
             UpdatePath();
         }
 
-        Vector2 targetPosition = m_defaultTarget.transform.position;
         Vector2 myPosition = transform.position;
         Vector2 directionToTarget = new Vector2();
-        if (m_path != null && m_path.Count > 2)
-        {
-            directionToTarget = (m_path[2] - myPosition).normalized;
-        }
-        else
-        {
-            directionToTarget = (targetPosition - myPosition).normalized;
-        }
 
+        directionToTarget = (m_targetPosition - myPosition).normalized;
         m_rigidbody2D.AddForce(directionToTarget * m_moveForce);
     }
 
@@ -57,9 +50,31 @@ public class Enemy : MonoBehaviour
 
         Vector2 targetPosition = m_defaultTarget.transform.position;
         Vector2 myPosition = transform.position;
-        m_path = m_mesh.RequestPath(myPosition, targetPosition);
+        var newPath = m_mesh.RequestPath(myPosition, targetPosition);
+        if(newPath != null)
+        {
+            m_path = newPath;
+        }
+        
+
+        m_targetPosition = targetPosition;
+        if (m_path != null && m_path.Count > 2)
+        {
+            if(IsWithinThreshold(myPosition, m_path[1], 0.1f) || GameHelper.HasLineOfSight(gameObject, m_path[2]))
+            {
+                m_targetPosition = m_path[2];
+            }
+            else
+            {
+                m_targetPosition = m_path[1];
+            }
+        }
     }
 
+    private bool IsWithinThreshold(Vector2 pos1, Vector2 pos2, float threshold)
+    {
+        return (pos1 - pos2).magnitude < threshold;
+    }
 
     private void OnDrawGizmosSelected()
     {
