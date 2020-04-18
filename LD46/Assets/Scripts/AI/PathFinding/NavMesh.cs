@@ -62,11 +62,15 @@ public class NavMesh : MonoBehaviour
        // GameHelper.GetManager<PathManager>().Register(this);
     }
 
+
+    const int maxIterations = 1000;
+    List<CalculatingNode> m_openList = new List<CalculatingNode>(maxIterations);
+    List<CalculatingNode> m_closedList = new List<CalculatingNode>(maxIterations);
     // Querying
     public List<Vector2> RequestPath(Vector2 from, Vector2 to)
     {
-        List<CalculatingNode> openList = new List<CalculatingNode>();
-        List<CalculatingNode> closedList = new List<CalculatingNode>();
+        m_openList.Clear();
+        m_closedList.Clear();
 
         Vector2Int startingIndex = GetNearestIndex(from);
         Vector2Int endingIndex = GetNearestIndex(to);
@@ -96,7 +100,6 @@ public class NavMesh : MonoBehaviour
 
 
         int iteration = 0;
-        const int maxIterations = 100;
         do
         {
             ++iteration;
@@ -104,12 +107,12 @@ public class NavMesh : MonoBehaviour
             //Debug.Log(iteration.ToString() + " " + currentNode.Node.Position.ToString());
 
             // Add to closed list
-            closedList.Add(currentNode);
+            m_closedList.Add(currentNode);
 
             // Add/update connected nodes to open list
             foreach (var connectedNode in currentNode.Node.ConnectedNodes)
             {
-                if (closedList.Any(x => x.Node == connectedNode))
+                if (m_closedList.Any(x => x.Node == connectedNode))
                 {
                     continue;
                 }
@@ -119,9 +122,9 @@ public class NavMesh : MonoBehaviour
                 calculatedConnectedNode.Node = connectedNode;
 
 
-                if (openList.Any(x => x.Node == connectedNode))
+                if (m_openList.Any(x => x.Node == connectedNode))
                 {
-                    CalculatingNode existingNode = openList.First(x => x.Node == calculatedConnectedNode.Node);
+                    CalculatingNode existingNode = m_openList.First(x => x.Node == calculatedConnectedNode.Node);
                     if (existingNode.DistanceFromStart > calculatedConnectedNode.DistanceFromStart)
                     {
                         existingNode.DistanceFromStart = calculatedConnectedNode.DistanceFromStart;
@@ -133,19 +136,19 @@ public class NavMesh : MonoBehaviour
                 {
                     calculatedConnectedNode.DistanceToEnd = CalculateDistance(calculatedConnectedNode.Node, endingNode);
                     calculatedConnectedNode.Parent = currentNode;
-                    openList.Add(calculatedConnectedNode);
+                    m_openList.Add(calculatedConnectedNode);
                 }
             }
 
             // Sort open list
-            openList = openList.OrderBy(x => x.TotalCost).ToList();
+            m_openList = m_openList.OrderBy(x => x.TotalCost).ToList();
 
             // Select new current node
-            currentNode = openList.First();
-            openList.Remove(currentNode);
+            currentNode = m_openList.First();
+            m_openList.Remove(currentNode);
 
            // Debug.Log(openList.Count);
-        } while ((currentNode.Node != endingNode) && (openList.Count > 0) && (iteration < maxIterations));
+        } while ((currentNode.Node != endingNode) && (m_openList.Count > 0) && (iteration < maxIterations));
 
         // Check was successful
         if (currentNode.Node != endingNode)
@@ -154,7 +157,7 @@ public class NavMesh : MonoBehaviour
         }
 
         // Build path
-        List<Vector2> results = new List<Vector2>();
+        List<Vector2> results = new List<Vector2>(m_openList.Count);
         results.Add(to);
         while(currentNode.Parent != null)
         {
