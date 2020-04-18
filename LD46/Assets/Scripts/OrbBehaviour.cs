@@ -50,7 +50,7 @@ public class OrbBehaviour : MonoBehaviour
 
     public void TakeEnergy(float _energyAmount)
     {
-        UpdateEnergy(_energyAmount);
+        UpdateEnergy(-_energyAmount);
     }
 
     void Start()

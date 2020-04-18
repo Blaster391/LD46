@@ -11,6 +11,10 @@ public class Enemy : MonoBehaviour
     private float m_moveForce = 1.0f;
 
     [SerializeField]
+    private float m_energyDrainAmount = 10.0f;
+
+
+    [SerializeField]
     private float m_movementUpdateRate = 1.0f;
 
     private List<Vector2> m_path = null;
@@ -96,7 +100,7 @@ public class Enemy : MonoBehaviour
         OrbBehaviour orb = collision.gameObject.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
-            orb.TakeEnergy(-10.0f);
+            orb.TakeEnergy(m_energyDrainAmount);
             Destroy(gameObject);
         }
     }
