@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1928319516" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MONOLITHICBIGBOYSOUNDBANK</ObjectPath>
+			<ShortName>MONOLITHICBIGBOYSOUNDBANK</ShortName>
+			<Path>MONOLITHICBIGBOYSOUNDBANK.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2769336799" Name="BallOfLight" ObjectPath="\Events\Default Work Unit\BallOfLight" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="679225109" Language="SFX">
+							<ShortName>LD_ball_light_sound01.wav</ShortName>
+							<Path>SFX\LD_ball_light_sound01_55EDB696.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="679225109" Language="SFX">
+					<ShortName>LD_ball_light_sound01.wav</ShortName>
+					<Path>SFX\LD_ball_light_sound01_55EDB696.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
