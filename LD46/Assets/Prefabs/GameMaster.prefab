@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 27447131541504393}
   - component: {fileID: 899647910}
   - component: {fileID: 4805470249427859455}
+  - component: {fileID: 822240017}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -76,3 +77,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca98d813197e9f4a9e577a3ac8086d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &822240017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27447131541504395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fefd5e020bff244bc086bbbff498b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioEventPrefab: {fileID: 3849175588230153092, guid: 06a455559d8ca6446836df577d647d80,
+    type: 3}

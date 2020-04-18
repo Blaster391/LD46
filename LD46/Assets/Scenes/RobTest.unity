@@ -670,6 +670,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5970692507235732746, guid: 7373382353344a342a7727952bb3c084,
+        type: 3}
+      propertyPath: m_Distance
+      value: 9.045496
+      objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2278,6 +2283,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1251154379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7459418591684140267, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7459418591509916711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1251154380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251154379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8621c66e99d9f418442ae5a63eb874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_desiredHeight: 10
+  m_heightThreshold: 1
+  m_upwardsForce: 1
 --- !u!1 &1259245592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2438,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5970692507235732746, guid: 7373382353344a342a7727952bb3c084,
+        type: 3}
+      propertyPath: m_Distance
+      value: 8.385732
+      objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2914,6 +2945,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5970692507235732746, guid: 7373382353344a342a7727952bb3c084,
+        type: 3}
+      propertyPath: m_Distance
+      value: 3.3717759
+      objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2922,7 +2958,7 @@ PrefabInstance:
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.347
+      value: 4.19
       objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
@@ -2983,6 +3019,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3127841447378706624, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
+        type: 3}
+      propertyPath: m_Distance
+      value: 7.5484104
+      objectReference: {fileID: 0}
+    - target: {fileID: -1956138050813927739, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1956138050813927739, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1659119190, guid: 41a882a7cd13cc844aa8fceb1ccac0c1, type: 3}
       propertyPath: LargeModePositions.Array.size
       value: 1
