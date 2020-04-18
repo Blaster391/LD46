@@ -49,7 +49,11 @@ public class NavMesh : MonoBehaviour
 
     // private List<PathNode> _nodes = new List<PathNode>();
     private Dictionary<Vector2Int, PathNode> _nodeMap = new Dictionary<Vector2Int, PathNode>();
-    
+
+    [SerializeField]
+    private List<Vector2Int> m_nodeIndexes = null;
+    [SerializeField]
+    private List<PathNode> m_pathNodes = null;
 
     // Start is called before the first frame update
     void Start()
@@ -92,7 +96,7 @@ public class NavMesh : MonoBehaviour
 
 
         int iteration = 0;
-        const int maxIterations = 1000;
+        const int maxIterations = 100;
         do
         {
             ++iteration;
