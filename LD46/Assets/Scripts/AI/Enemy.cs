@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
-    private GameObject m_defaultTarget;
+    private GameObject m_defaultTarget = null;
 
     [SerializeField]
     private float m_moveForce = 1.0f;
