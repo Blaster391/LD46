@@ -28,7 +28,7 @@ public class InteractionObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UnityEngine.Debug.Log(m_collider2D.friction.ToString());   
+        //UnityEngine.Debug.Log(m_collider2D.friction.ToString());   
     }
 
     // Called when player drops this.

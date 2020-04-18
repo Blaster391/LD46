@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private GameObject m_target = null;
+
     [SerializeField]
-    private GameObject m_defaultTarget = null;
+    private float m_energy = 10.0f;
+    [SerializeField]
+    private float m_energyAttackModifier = 1.0f;
 
     [SerializeField]
     private float m_moveForce = 1.0f;
-
-    [SerializeField]
-    private float m_energyDrainAmount = 10.0f;
-
 
     [SerializeField]
     private float m_movementUpdateRate = 1.0f;
@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_target = GameObject.FindObjectOfType<OrbBehaviour>().gameObject;
         m_mesh = GameHelper.GetManager<NavMesh>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_timeSinceLastPathUpdate = Random.Range(0, m_movementUpdateRate);
@@ -51,7 +52,7 @@ public class Enemy : MonoBehaviour
     {
         m_timeSinceLastPathUpdate = 0.0f;
 
-        Vector2 targetPosition = m_defaultTarget.transform.position;
+        Vector2 targetPosition = m_target.transform.position;
         Vector2 myPosition = transform.position;
         var newPath = m_mesh.RequestPath(myPosition, targetPosition);
         if(newPath != null)
@@ -94,13 +95,22 @@ public class Enemy : MonoBehaviour
         mesh.DebugDrawPath(m_path);
     }
 
+    public void DealDamage(float damage)
+    {
+        m_energy -= damage;
+        if(m_energy <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         OrbBehaviour orb = collision.gameObject.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
-            orb.TakeEnergy(m_energyDrainAmount);
+            orb.TakeEnergy(m_energy * m_energyAttackModifier);
             Destroy(gameObject);
         }
     }

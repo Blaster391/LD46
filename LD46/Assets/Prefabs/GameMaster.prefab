@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 27447131541504392}
   - component: {fileID: 27447131541504393}
+  - component: {fileID: 899647910}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -43,7 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56c4060589e358409303764730c3dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requiredRadius: 0.25
-  _spacing: 1
+  _requiredRadius: 0.2
+  _spacing: 0.75
   _maxVerticalNodes: 50
   _maxHorizontalNodes: 50
+--- !u!114 &899647910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27447131541504395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c85ee52a45b504794672e351b2932d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemy: {fileID: 8873470741719198398, guid: 80f4e1e1f3299b247b6145852e1341e8, type: 3}
+  m_spawnRate: 0
+  m_maxEnemies: 10

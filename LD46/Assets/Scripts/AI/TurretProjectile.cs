@@ -8,6 +8,9 @@ public class TurretProjectile : MonoBehaviour
     [SerializeField]
     private float m_lifeSpan = 10.0f;
 
+    [SerializeField]
+    private float m_damage = 10.0f;
+
     private float m_timeAlive = 0.0f;
 
     void Update()
@@ -24,6 +27,12 @@ public class TurretProjectile : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = _velocity;
     }
 
+    public void SetDamage(float damage)
+    {
+         m_damage = damage;
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == Tags.StaticWorld)
@@ -31,10 +40,10 @@ public class TurretProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(collision.tag == Tags.Enemy)
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null)
         {
-            // TODO damage
-            Destroy(collision.gameObject);
+            enemy.DealDamage(m_damage);
             Destroy(gameObject);
         }
     }
