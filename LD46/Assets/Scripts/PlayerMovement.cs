@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     private float m_baseJumpForce = 1.0f;
 
     [SerializeField]
+    private float m_sideDoubleJumpForce = 5.0f;
+
+    [SerializeField]
     private float m_groundedEpsilon = 0.05f;
 
 
@@ -64,28 +67,47 @@ public class PlayerMovement : MonoBehaviour
             m_canDoubleJump = true;
         }
 
-        if (Input.GetKey(KeyCode.A))
+        bool leftMoveDown = Input.GetKey(KeyCode.A);
+        bool rightMoveDown = Input.GetKey(KeyCode.D);
+
+        if (m_isGrounded)
         {
-            m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce);
+            if (leftMoveDown)
+            {
+                m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce);
+            }
+
+            if (rightMoveDown)
+            {
+                m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce);
+            }
         }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce);
-        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             bool doJump = m_isGrounded;
+            Vector2 jumpForce = Vector2.up * m_baseJumpForce;
+
             if(!m_isGrounded && m_canDoubleJump)
             {
                 m_canDoubleJump = false;
                 doJump = true;
+
+                // Add direction for double jump
+                Vector2 sideJumpForce = m_sideDoubleJumpForce * new Vector2((leftMoveDown ? -1.0f : 0.0f) + (rightMoveDown ? 1.0f : 0.0f), 0.0f);
+
+                // If jumping opposite direction reduce lateral velocity to make a snappier double jump.
+                if (Vector2.Dot(sideJumpForce, m_rigidbody2D.velocity) < 0.0f)
+                {
+                    m_rigidbody2D.velocity = new Vector2(m_rigidbody2D.velocity.x * 0.2f, m_rigidbody2D.velocity.y);
+                }
+                jumpForce += sideJumpForce;
             }
 
             if(doJump)
             {
-                m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
+                m_rigidbody2D.AddForce(jumpForce, ForceMode2D.Impulse);
             }
         }
         
