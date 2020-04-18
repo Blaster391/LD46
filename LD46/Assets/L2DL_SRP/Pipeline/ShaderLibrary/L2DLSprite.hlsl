@@ -90,7 +90,7 @@ FragOutput L2DLSpritePassFragment (VertexOutput input)
 
     // Target 2 : Occlusion/Reflectivity
 	float3 absorbedColours = float3(1, 1, 1) - (output.color.rgb * _LightBleed);
-	output.occlusionReflection = float4(absorbedColours * lightingMasks.g * _Occlusion * alpha, alpha);
+	output.occlusionReflection = float4(absorbedColours * lightingMasks.r * _Occlusion * alpha, alpha);
     
     // Target 3 : Emission
 	output.emission = float4(output.color.rgb * lightingMasks.r * _Emission * alpha, alpha);

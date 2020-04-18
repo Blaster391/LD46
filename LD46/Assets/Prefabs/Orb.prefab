@@ -59,7 +59,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.8
+  orthographic size: 4.6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_intensity: 1
   m_color: {r: 1, g: 1, b: 1, a: 1}
-  m_range: 4.8
-  m_shadowmapSize: 512
+  m_range: 4.6
+  m_shadowmapSize: 2048
 --- !u!1 &7459418591684140267
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +106,9 @@ GameObject:
   - component: {fileID: 1659119191}
   - component: {fileID: 1393356278}
   - component: {fileID: 1393356274}
-  m_Layer: 0
+  - component: {fileID: -1956138050813927739}
+  - component: {fileID: -3127841447378706624}
+  m_Layer: 10
   m_Name: Orb
   m_TagString: L2DLDirectLight
   m_Icon: {fileID: 0}
@@ -160,14 +162,17 @@ MonoBehaviour:
   m_maxEnergy: 100
   m_energyLostPerSecond: 2
   m_energyDrainedPerSecond: 5
+  m_maxEnergyGainPerSecondAtFullEnergy: 0
   m_healthScalingEffects:
-    m_usePointLightSettingsAtFullHealth: 0
+    m_usePointLightSettingsAtFullHealth: 1
     m_propsAtFullHealth:
       m_range: 5
       m_intensity: 1
     m_propsAtAtNoHealth:
       m_range: 1
       m_intensity: 0.1
+  m_shopUIPrefab: {fileID: 8726261674924298018, guid: 1dad66e763f5e8e4aa2e2653cb58626d,
+    type: 3}
 --- !u!114 &1659119190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,3 +291,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1af73e1ff0deb74fa3b7d568edfcc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pickupRadius: 0.5
+  m_sleepVelocityThreshold: 0.5
+  m_maxYeetVelocity: 20
+--- !u!50 &-1956138050813927739
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459418591684140267}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!232 &-3127841447378706624
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459418591684140267}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 3.1214616
+  m_MaxDistanceOnly: 0

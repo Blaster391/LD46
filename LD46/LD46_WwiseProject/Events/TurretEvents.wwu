@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" SchemaVersion="97" RootDocumentID="{452AD202-D74C-4888-A71B-87243D501C2E}">
+	<Events>
+		<WorkUnit Name="TurretEvents" ID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" OwnerID="{452AD202-D74C-4888-A71B-87243D501C2E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Turret" ID="{2BC1094D-409A-4009-A4FC-D7B9DFCA5535}">
+					<ChildrenList>
+						<Action Name="" ID="{41F49FE9-2CB8-4EA6-BCC3-0DE74A4C300C}" ShortID="571541206">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TurretsSwitch" ID="{57E3F92C-55FD-4922-B4B0-D29AB2AEDD93}" WorkUnitID="{20A5500D-5B72-4242-BA15-938C851DF25C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret2" ID="{4F105C7D-1A72-4458-9F2A-C2BBC791E6D5}">
+					<ChildrenList>
+						<Action Name="" ID="{1572ECE9-79C7-4201-A812-E3BBD7548981}" ShortID="261930535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="turret_high-001" ID="{A77F2496-E449-4E67-840F-8FEB43CAD2F7}" WorkUnitID="{20A5500D-5B72-4242-BA15-938C851DF25C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

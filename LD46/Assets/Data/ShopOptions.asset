@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d09908c600ede04aa6b8419fea0ffa9, type: 3}
+  m_Name: ShopOptions
+  m_EditorClassIdentifier: 
+  m_options:
+  - m_turretPrefab: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+    m_energyCost: 20
+    m_title: Turret 1
+    m_subtitle: The first turret
+    m_sprite: {fileID: 21300000, guid: 546dded7b6f44714c82425654e2aead9, type: 3}
+  - m_turretPrefab: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+    m_energyCost: 30
+    m_title: Turret 2
+    m_subtitle: The second turret
+    m_sprite: {fileID: 21300000, guid: 35a7d91ca4004854b95258c7a7110792, type: 3}

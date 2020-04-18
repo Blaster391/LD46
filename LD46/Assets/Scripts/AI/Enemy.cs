@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float m_movementUpdateRate = 1.0f;
 
+    [SerializeField]
+    private AudioEventPosition m_deathObject = null;
+
     private List<Vector2> m_path = null;
     private Rigidbody2D m_rigidbody2D = null;
     private NavMesh m_mesh;
@@ -100,6 +103,10 @@ public class Enemy : MonoBehaviour
         m_energy -= damage;
         if(m_energy <= 0)
         {
+
+            // PLAY AUDIO
+            //GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, EVENT);
+
             Destroy(gameObject);
         }
     }
@@ -107,7 +114,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OrbBehaviour orb = collision.gameObject.GetComponent<OrbBehaviour>();
+        HandleCollision(collision.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        HandleCollision(collision.gameObject);
+    }
+
+    void HandleCollision(GameObject collision)
+    {
+        OrbBehaviour orb = collision.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
             orb.TakeEnergy(m_energy * m_energyAttackModifier);

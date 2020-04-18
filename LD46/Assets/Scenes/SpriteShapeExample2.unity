@@ -322,17 +322,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f12945398499a48af704676d2d97b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emission: 2.29
-  Occlusion: 0
+  Emission: 0
+  Occlusion: 2.41
   Reflectance: 0.498
-  LightBleed: 0.792
-  LightingTexture: {fileID: 2800000, guid: c84aef9498c35384188402cce5c53148, type: 3}
+  LightBleed: 0.496
+  LightingTexture: {fileID: 0}
   lightingFrame: {fileID: 0}
   EdgeEmissivePower: 0
-  EdgeOcclusion: 3.06
+  EdgeOcclusion: 1.48
   EdgeReflectance: 0.476
   EdgeLightBleed: 0.617
-  EdgeLightingTexture: {fileID: 0}
+  EdgeLightingTexture: {fileID: 2800000, guid: 4b473e04bf06c404f9da45180f8f8562, type: 3}
 --- !u!114 &1085115147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,12 +449,12 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: 78f216c569196b34eb5f51bc6ee3af18, type: 3}
+  m_ShapeTexture: {fileID: 2800000, guid: 20559321d956c4716bc2ab5e777e2394, type: 3}
   m_Sprites:
-  - {fileID: 21300000, guid: 0eef1cad9e5df564386065d7b035ea74, type: 3}
+  - {fileID: 21300000, guid: 51c39d882c9554ab3966f1a9b84e93d8, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.299726, y: -0.23763275, z: -0.00005}
-    m_Extent: {x: 6.832139, y: 3.4431105, z: 0.00005}
+    m_Center: {x: -0.29357672, y: -0.23628545, z: -0.00005}
+    m_Extent: {x: 6.8999596, y: 3.5291944, z: 0.00005}
 --- !u!4 &1085115149
 Transform:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_intensity: 6.13
   m_color: {r: 1, g: 1, b: 1, a: 1}
   m_range: 8.86
-  m_shadowmapSize: 1024
+  m_shadowmapSize: 2048
 --- !u!20 &1582658897
 Camera:
   m_ObjectHideFlags: 0
@@ -560,3 +560,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1647648307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647648310}
+  - component: {fileID: 1647648309}
+  - component: {fileID: 1647648308}
+  m_Layer: 0
+  m_Name: L2DLDirectionalLight
+  m_TagString: L2DLDirectLight
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1647648308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4c7895ff5090248bbe6910466e1ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_intensity: 1
+  m_color: {r: 1, g: 1, b: 1, a: 1}
+  m_width: 20
+  m_height: 20
+  m_shadowmapSize: 2048
+--- !u!20 &1647648309
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647648307}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 10
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1647648310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647648307}
+  m_LocalRotation: {x: 0, y: 0, z: 0.059306376, w: 0.9982399}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.8}

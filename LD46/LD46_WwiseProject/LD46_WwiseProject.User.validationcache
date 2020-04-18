@@ -28,10 +28,10 @@
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46_WwiseIntegrationTemp\LD46_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1587222873" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\States\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1587208903" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1587224946" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Queries\Factory Queries.wwu" DateLow="1586969771" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1586969771" DateHigh="0"/>
@@ -40,10 +40,11 @@
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\LD46_WwiseProject.wproj" DateLow="1587201064" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\LD46_WwiseProject.User.wsettings" DateLow="1587208908" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\LD46_WwiseProject.User.wsettings" DateLow="1587222878" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Events\Default Work Unit.wwu" DateLow="1587208903" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Events\TurretEvents.wwu" DateLow="1587224540" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Events\Default Work Unit.wwu" DateLow="1587222873" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Effects\Factory Effects.wwu" DateLow="1586969771" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
@@ -52,5 +53,6 @@
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1587208903" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1587201006" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1587208903" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Actor-Mixer Hierarchy\Turrets.wwu" DateLow="1587222873" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1587222873" DateHigh="0"/>
 </ValidationCache>
