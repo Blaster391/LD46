@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BALLOFLIGHT = 2769336799U;
+        static const AkUniqueID ENEMYDEATH = 3249137159U;
+        static const AkUniqueID PLAYMUSIC = 417627684U;
         static const AkUniqueID TURRET = 2674766611U;
         static const AkUniqueID TURRET2 = 212920027U;
     } // namespace EVENTS
