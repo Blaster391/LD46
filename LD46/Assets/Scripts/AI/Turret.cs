@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TurretSound;
 
 public class Turret : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Turret : MonoBehaviour
     private float m_reactionTime = 1.0f;
     [SerializeField]
     private GameObject m_projectilePrefab = null;
+
+    public AK.Wwise.Event MyEvent;
 
     private bool m_isFiring = false;
     private float m_timeSinceUpdate = 0.0f;
@@ -99,6 +102,7 @@ public class Turret : MonoBehaviour
 
             Vector2 directionToTarget = (m_currentTarget.transform.position - spawnedProjectile.transform.position).normalized;
             projectile.SetVelocity(directionToTarget * m_projectileSpeed);
+            MyEvent.Post(gameObject);
         }
         m_timeSinceLastShot = 0.0f;
     }

@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D[] hits = Physics2D.CircleCastAll(m_rigidbody2D.position, capsuleBounds.extents.x, Vector2.down);
         foreach (var hit in hits)
         {
-            if (hit.rigidbody == m_rigidbody2D) continue;
+            if (hit.rigidbody == m_rigidbody2D || hit.rigidbody?.gameObject?.GetComponent<InteractionObject>() != null) continue;
 
             m_lastGroundHit = hit;
             m_isGrounded = (m_rigidbody2D.position.y - hit.point.y) <= (capsuleBounds.extents.y + m_groundedEpsilon);

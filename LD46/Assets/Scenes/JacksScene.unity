@@ -1378,6 +1378,7 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8726261673389802621
+--- !u!1001 &8967545703424586469
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
