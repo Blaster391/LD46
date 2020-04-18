@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7698208293231898640}
   - component: {fileID: -2618400999284390469}
+  - component: {fileID: 4036357846764682505}
+  - component: {fileID: 6595722114930555117}
   - component: {fileID: 1284019506947057598}
-  m_Layer: 0
+  - component: {fileID: 3502419496577708586}
+  m_Layer: 10
   m_Name: TestPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,12 +45,53 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46
+--- !u!50 &4036357846764682505
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135496036017318727}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 2
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!231 &6595722114930555117
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135496036017318727}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 4.3932333
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!114 &1284019506947057598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,3 +104,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1af73e1ff0deb74fa3b7d568edfcc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pickupRadius: 0.5
+  m_sleepVelocityThreshold: 0.5
+--- !u!232 &3502419496577708586
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135496036017318727}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 4.3932333
+  m_MaxDistanceOnly: 0
