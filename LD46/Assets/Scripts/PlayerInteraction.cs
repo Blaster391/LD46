@@ -5,10 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class PlayerInteraction : MonoBehaviour
 {
+    [SerializeField]
+    private float m_dragSpeed = 0.1f;
+
     private Collider2D m_collider = null;
 
     private List<InteractionObject> m_overlappingInteractionObjects = new List<InteractionObject>();
     private InteractionObject m_objectInHands = null;
+
+    private Vector2 m_dragVelocity = Vector2.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -45,10 +50,12 @@ public class PlayerInteraction : MonoBehaviour
             {
                 m_objectInHands.OnDropped();
                 m_objectInHands = null;
+                m_dragVelocity = Vector2.zero;
             }
             else
             {
-                m_objectInHands.GetComponent<Transform>().position = transform.position;
+                Transform t = m_objectInHands.GetComponent<Transform>();
+                t.position = Vector2.SmoothDamp(t.position, transform.position, ref m_dragVelocity, m_dragSpeed);
             }
 
         }
