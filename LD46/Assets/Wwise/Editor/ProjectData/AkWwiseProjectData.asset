@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e3c5e58064bcd24d87221585ecaead5d
     GuidInternal: 
-    m_lastTime: -8586143798494529255
+    m_lastTime: -8586143708132474658
     List:
     - name: MONOLITHICBIGBOYSOUNDBANK
       guid: b4e5e7bb98361d4b8ede1cf1f90376b0
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 02d22a454cd78848a71b87243d501c2e
     GuidInternal: 
-    m_lastTime: -8586143798494648933
+    m_lastTime: -8586143708133566806
     List:
     - name: BallOfLight
       guid: c6bb90583a55a7429a57b8ab56b4cc14
@@ -70,11 +70,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: PlayMusic
+      guid: 57eaee143bc01348a5612909443bffe6
+      id: 417627684
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayMusic
+        ObjectType: 3
+      Path: Default Work Unit\PlayMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Enemies.wwu
     ParentPath: Default Work Unit\Enemies
     guid: 3cfb5e25782a5440821ac628dd77e3d6
     GuidInternal: 
-    m_lastTime: -8586143798494798257
+    m_lastTime: -8586143708133566806
     List:
     - name: EnemyDeath
       guid: 290a96f31bd13f43a152c1dc0af790e7
@@ -182,5 +194,7 @@ MonoBehaviour:
   - /LD46_WwiseProject/Events
   - /LD46_WwiseProject/Events/Default Work Unit
   - /LD46_WwiseProject/Events/Default Work Unit/Enemies
+  - /LD46_WwiseProject/SoundBanks
+  - /LD46_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
