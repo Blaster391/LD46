@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce);
+            m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
         }
 
 
