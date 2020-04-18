@@ -17,7 +17,7 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private float m_reactionTime = 1.0f;
     [SerializeField]
-    private GameObject m_projectilePrefab;
+    private GameObject m_projectilePrefab = null;
 
     private bool m_isFiring = false;
     private float m_timeSinceUpdate = 0.0f;
@@ -55,13 +55,30 @@ public class Turret : MonoBehaviour
         {
             m_isFiring = true;
         }
+        else
+        {
+            m_currentTarget = null;
+            m_isFiring = false;
+
+            var allEnemies = FindObjectsOfType<Enemy>();
+            foreach(Enemy e in allEnemies)
+            {
+                if(CanSeeTarget(e.gameObject))
+                {
+                    m_currentTarget = e.gameObject;
+                    m_isFiring = true;
+                    break;
+                }
+            }
+        }
+
 
         m_timeSinceUpdate = 0.0f;
     }
 
     bool CanSeeTarget(GameObject _target)
     {
-        return true;
+        return GameHelper.HasLineOfSight(gameObject, _target);
     }
 
     void Fire()

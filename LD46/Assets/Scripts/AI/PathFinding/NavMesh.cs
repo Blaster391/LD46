@@ -352,17 +352,17 @@ public class NavMesh : MonoBehaviour
     }
 
     //List<Vector2> _debugPath = null;
-    //private void OnDrawGizmosSelected()
-    //{
-    //   //DebugDraw();
-    //   if(Input.GetKey(KeyCode.Y))
-    //    {
-    //        _debugPath = RequestPath(new Vector2(0, 0), GameHelper.MouseToWorldPosition());
-           
-    //    }
+    private void OnDrawGizmosSelected()
+    {
+        DebugDraw();
+        //if (Input.GetKey(KeyCode.Y))
+        //{
+        //    _debugPath = RequestPath(new Vector2(0, 0), GameHelper.MouseToWorldPosition());
 
-    // //   DebugDrawPath(_debugPath);
-    //}
+        //}
+
+        //   DebugDrawPath(_debugPath);
+    }
 
     private void DebugDraw()
     {

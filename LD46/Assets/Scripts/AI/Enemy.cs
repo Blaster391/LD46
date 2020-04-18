@@ -55,25 +55,34 @@ public class Enemy : MonoBehaviour
         {
             m_path = newPath;
         }
-        
 
         m_targetPosition = targetPosition;
         if (m_path != null && m_path.Count > 2)
         {
-            if(IsWithinThreshold(myPosition, m_path[1], 0.1f) || GameHelper.HasLineOfSight(gameObject, m_path[2]))
+            //if (GameHelper.IsWithinThreshold(myPosition, m_path[2], 0.1f))
+            //{
+            //    m_path.RemoveAt(2);
+            //}
+
+            //if (GameHelper.IsWithinThreshold(myPosition, m_path[1], 0.1f))
+            //{
+            //    m_path.RemoveAt(1);
+            //}
+
+            if(GameHelper.IsWithinThreshold(myPosition, m_path[1], 0.1f) || GameHelper.HasLineOfSight(gameObject, m_path[2]))
             {
                 m_targetPosition = m_path[2];
+
+                if (GameHelper.IsWithinThreshold(myPosition, m_path[2], 0.1f))
+                {
+                    m_path.RemoveAt(2);
+                }
             }
             else
             {
                 m_targetPosition = m_path[1];
             }
         }
-    }
-
-    private bool IsWithinThreshold(Vector2 pos1, Vector2 pos2, float threshold)
-    {
-        return (pos1 - pos2).magnitude < threshold;
     }
 
     private void OnDrawGizmosSelected()

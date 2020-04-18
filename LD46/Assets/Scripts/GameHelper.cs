@@ -14,9 +14,26 @@ public static class GameHelper
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
+    public static bool IsWithinThreshold(Vector2 pos1, Vector2 pos2, float threshold)
+    {
+        return (pos1 - pos2).magnitude < threshold;
+    }
+
     public static bool HasLineOfSight(GameObject from, GameObject to)
     {
-        return false;
+        int layerMask = 1 << 8;
+        Vector2 fromPosition2D = from.transform.position;
+        Vector2 toPosition2D = to.transform.position;
+        float distance = (fromPosition2D - toPosition2D).magnitude;
+        RaycastHit2D result = Physics2D.Raycast(fromPosition2D, toPosition2D, distance, layerMask);
+        if (result)
+        {
+            return (result.collider.gameObject == to);
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public static bool HasLineOfSight(GameObject from, Vector2 to)
