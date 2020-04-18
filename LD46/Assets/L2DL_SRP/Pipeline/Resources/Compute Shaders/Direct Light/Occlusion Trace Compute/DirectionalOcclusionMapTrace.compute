@@ -1,0 +1,24 @@
+﻿#pragma kernel DirectionalLightOcclusionTrace
+
+RWTexture2D<float4> Occlusion;
+RWTexture2D<float4> Shadow;
+
+int _TextureSize;
+float _WorldDistPerStep;
+float _DirectLightOcclusionMultiplier;
+
+[numthreads(64,1,1)]
+void DirectionalLightOcclusionTrace (uint3 id : SV_DispatchThreadID)
+{
+	float3 totalOcclusion = float3(0, 0, 0);
+
+	// Top down
+	for (int i = _TextureSize - 1; i >= 0; --i)
+	{
+		uint3 texLoc = uint3(id.x, i, id.z);
+
+		float3 occlusion = Occlusion.Load(texLoc.xy).rgb;
+		totalOcclusion += (float3(1, 1, 1) - totalOcclusion) * occlusion * _WorldDistPerStep * _DirectLightOcclusionMultiplier;
+		Shadow[texLoc.xy] = float4(totalOcclusion, 1);
+	}
+}

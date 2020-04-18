@@ -1,0 +1,148 @@
+﻿#pragma kernel GenerateOcclusionMipmaps MIPMETHOD_FILTER22
+#pragma kernel GenerateOcclusionMipmaps MIPMETHOD_FILTER23
+#pragma kernel GenerateOcclusionMipmaps MIPMETHOD_FILTER32
+#pragma kernel GenerateOcclusionMipmaps MIPMETHOD_FILTER33
+
+#include "GeneratePolyphaseMipmapsCompute.hlsl"
+
+float4 Sample(uint2 texel)
+{
+	float4 sampleValue = LowerMipTex.Load(texel);
+
+	if (isFirstMip)
+	{
+		//Convert colour occlusion into 2 anisotropic occlusion values ready for next mip
+		float occlusionMag = length(sampleValue.rgb);
+		sampleValue = float4(occlusionMag, occlusionMag, 0, 1);
+	}
+
+	return sampleValue;
+}
+
+[numthreads(8, 8, 1)]
+void GenerateOcclusionMipmaps(uint3 id : SV_DispatchThreadID)
+{
+	//Get the input texel location by doubling the output texels position
+	uint2 texel = id.xy * 2;
+
+	//Calculate offsets once
+	float4 col = float4(0, 0, 0, 1);
+
+	uint left1 = texel.x - 1;
+	uint right1 = texel.x + 1;
+	uint right2 = texel.x + 2;
+
+	uint down1 = texel.y - 1;
+	uint up1 = texel.y + 1;
+	uint up2 = texel.y + 2;
+
+#if MIPMETHOD_FILTER22
+
+	//4x4 Box Filter
+	// ##
+	// ##
+
+	float4 val00 = Sample(uint2(texel.x, texel.y));
+	float4 val10 = Sample(uint2(right1, texel.y));
+	float4 val01 = Sample(uint2(texel.x, up1));
+	float4 val11 = Sample(uint2(right1, up1));
+
+	col.x = standardFilterAv(
+		standardFilterMax(val00.x, val10.x),
+		standardFilterMax(val01.x, val11.x)
+	);
+
+	col.y = standardFilterAv(
+		standardFilterMax(val00.y, val01.y),
+		standardFilterMax(val10.y, val11.y)
+	);
+
+#elif MIPMETHOD_FILTER23
+
+	//2x3 filtering
+	//=+x, =+2y
+	// ##
+	// ##
+	// ##
+
+	float4 val00 = Sample(float2(texel.x, texel.y));
+	float4 val01 = Sample(float2(texel.x, up1));
+	float4 val02 = Sample(float2(texel.x, up2));
+	float4 val10 = Sample(float2(right1, texel.y));
+	float4 val11 = Sample(float2(right1, up1));
+	float4 val12 = Sample(float2(right1, up2));
+
+	col.x = polyFilterAv(texel,
+		standardFilterMax(val00.x, val10.x),
+		standardFilterMax(val01.x, val11.x),
+		standardFilterMax(val02.x, val12.x),
+		1	//index 1 as we're polyfiltering along the y
+	);
+
+	col.y = standardFilterAv(
+		polyFilterMax(texel, val00.y, val01.y, val02.y, 1),
+		polyFilterMax(uint2(right1, texel.y), val10.y, val11.y, val12.y, 1)
+	);
+
+#elif MIPMETHOD_FILTER32
+
+	//3x2 filter
+	//=+2x, =+y
+	// ###
+	// ###
+
+	float4 val00 = Sample(float2(texel.x, texel.y));
+	float4 val10 = Sample(float2(right1, texel.y));
+	float4 val20 = Sample(float2(right2, texel.y));
+	float4 val01 = Sample(float2(texel.x, up1));
+	float4 val11 = Sample(float2(right1, up1));
+	float4 val21 = Sample(float2(right2, up1));
+
+	col.x = standardFilterAv(
+		polyFilterMax(texel, val00.x, val10.x, val20.x, 0),
+		polyFilterMax(uint2(texel.x, up1), val01.x, val11.x, val21.x, 0)
+	);
+
+	col.y = polyFilterAv(texel,
+		standardFilterMax(val00.y, val01.y),
+		standardFilterMax(val10.y, val11.y),
+		standardFilterMax(val20.y, val21.y),
+		0
+	);
+
+#else //if MIPMETHOD_FILTER33
+
+	//3x3 filter
+	//=+2x, =+2y
+	// ###
+	// ###
+	// ###
+
+	float4 val00 = Sample(float2(texel.x, texel.y));
+	float4 val10 = Sample(float2(right1, texel.y));
+	float4 val20 = Sample(float2(right2, texel.y));
+	float4 val01 = Sample(float2(texel.x, up1));
+	float4 val11 = Sample(float2(right1, up1));
+	float4 val21 = Sample(float2(right2, up1));
+	float4 val02 = Sample(float2(texel.x, up2));
+	float4 val12 = Sample(float2(right1, up2));
+	float4 val22 = Sample(float2(right2, up2));
+
+	col.x = polyFilterAv(float2(texel.x, texel.y),
+		polyFilterMax(float2(texel.x, texel.y), val00.x, val10.x, val20.x, 0),
+		polyFilterMax(float2(texel.x, up1), val01.x, val11.x, val21.x, 0),
+		polyFilterMax(float2(texel.x, up2), val02.x, val12.x, val22.x, 0),
+		1
+	);
+
+	col.y = polyFilterAv(texel,
+		polyFilterMax(texel, val00.y, val01.y, val02.y, 1),
+		polyFilterMax(float2(right1, texel.y), val10.y, val11.y, val12.y, 1),
+		polyFilterMax(float2(right2, texel.y), val20.y, val21.y, val22.y, 1),
+		0
+	);
+
+#endif
+
+	HigherMipTex[id.xy] = col;
+}

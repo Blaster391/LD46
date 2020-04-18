@@ -1,0 +1,41 @@
+﻿#pragma kernel PointLightOcclusionTrace
+
+RWTexture2D<float4> Occlusion;
+RWTexture2D<float4> Shadow;
+
+int _TextureSize;
+float _DirectLightOcclusionMultiplier;
+float _OcclusionDropoffPerUnit;
+
+float _TextureSizeHalf;
+float _TexturePercentagePerPixel;
+float _WorldDistPerStep;
+
+[numthreads(16,4,1)]
+void PointLightOcclusionTrace (uint3 id : SV_DispatchThreadID)
+{
+	float2 lightSourceID = float2(_TextureSizeHalf, _TextureSizeHalf);
+
+	// Figure out the ID of the outline pixel we want to start from
+	float2 workingID;
+	if (id.y < 2)
+	{
+		workingID = float2(id.x, (_TextureSize - 1) * id.y);
+	}
+	else
+	{
+		workingID = float2((_TextureSize - 1) * max(0, id.y - 2), id.x);
+	}
+
+	float2 toMove = (workingID - lightSourceID) / _TextureSizeHalf;
+
+	float3 totalOcclusion = float3(0, 0, 0);
+	for (int i = 0; i < _TextureSizeHalf; i++)
+	{
+		float2 position = lightSourceID + toMove * i;
+
+		float3 occlusion = Occlusion.Load(uint2(position)).rgb;
+		totalOcclusion += (float3(1, 1, 1) - totalOcclusion) * occlusion * _WorldDistPerStep * _DirectLightOcclusionMultiplier;
+		Shadow[position] = float4(totalOcclusion, 1);
+	}
+}

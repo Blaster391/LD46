@@ -1,0 +1,12 @@
+﻿#pragma kernel AmbientLightInjection
+
+RWTexture2D<float4> Texture;
+
+float4 AmbientLight;
+
+[numthreads(8,8,1)]
+void AmbientLightInjection(uint3 id : SV_DispatchThreadID)
+{
+	float4 current = Texture.Load(id.xy);
+	Texture[id.xy] = current + AmbientLight;
+}

@@ -1,0 +1,72 @@
+﻿#pragma kernel LPVIterationFlip
+#pragma kernel LPVIterationFlop
+
+Texture2D<float4> OcclusionInput;
+RWTexture2D<float4> LightFlip;
+RWTexture2D<float4> LightFlop;
+RWTexture2D<float4> LightTotal;
+
+SamplerState samplerLightFlip;
+
+int Iteration;
+int StartTotalSavingIteration;
+
+float TexelWorldWidth;
+
+int WorkingMipLevel;
+
+float OcclusionMultiplier;
+
+[numthreads(8, 8, 1)]
+void LPVIterationFlip (uint3 id : SV_DispatchThreadID)
+{
+	uint2 sampleLocation = id.xy;
+
+	float2 occlusion = OcclusionInput.Load(uint3(id.xy, WorkingMipLevel)).rg;
+
+	//Calculate distance stuff
+	float2 incommingLightMult = clamp(float2(1, 1) - (occlusion * OcclusionMultiplier * TexelWorldWidth), float2(0, 0), float2(1, 1));
+
+	float4 lightLeft = LightFlip.Load(sampleLocation - uint2(-1, 0));
+	float4 lightRight = LightFlip.Load(sampleLocation - uint2(1, 0));
+	float4 lightUp = LightFlip.Load(sampleLocation - uint2(0, 1));
+	float4 lightDown = LightFlip.Load(sampleLocation - uint2(0, -1));
+
+	float4 LightOutput = ((lightLeft + lightRight) * incommingLightMult.x + (lightUp + lightDown) * incommingLightMult.y) / 4;
+
+	LightFlop[id.xy] = LightOutput;
+
+	//Doing this stops large colour spikes on a few pixels which makes the sampling bad. Raise the start iteration and have a smoother image to a point.
+	if (Iteration > StartTotalSavingIteration)
+	{
+		float4 currentLightTotal = LightTotal.Load(sampleLocation);
+		LightTotal[id.xy] = max(currentLightTotal, LightOutput);
+	}
+}
+
+[numthreads(8, 8, 1)]
+void LPVIterationFlop(uint3 id : SV_DispatchThreadID)
+{
+	uint2 sampleLocation = id.xy;
+
+	float2 occlusion = OcclusionInput.Load(uint3(id.xy, WorkingMipLevel)).rg;
+
+	//Calculate distance stuff
+	float2 incommingLightMult = clamp(float2(1, 1) - (occlusion * TexelWorldWidth), float2(0, 0), float2(1, 1));
+
+	float4 lightLeft = LightFlop.Load(sampleLocation - uint2(-1, 0));
+	float4 lightRight = LightFlop.Load(sampleLocation - uint2(1, 0));
+	float4 lightUp = LightFlop.Load(sampleLocation - uint2(0, 1));
+	float4 lightDown = LightFlop.Load(sampleLocation - uint2(0, -1));
+
+	float4 LightOutput = ((lightLeft + lightRight) * incommingLightMult.x + (lightUp + lightDown) * incommingLightMult.y) / 4;
+
+	LightFlip[id.xy] = LightOutput;
+
+	//Doing this stops large colour spikes on a few pixels which makes the sampling bad. Raise the start iteration and have a smoother image to a point.
+	if (Iteration > StartTotalSavingIteration)
+	{
+		float4 currentLightTotal = LightTotal.Load(sampleLocation);
+		LightTotal[id.xy] = max(currentLightTotal, LightOutput);
+	}
+}

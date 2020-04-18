@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965670c7789d724d95bdd251a95681a, type: 3}
+  m_Name: L2DLIndirectLightCalculationLPV
+  m_EditorClassIdentifier: 
+  m_lpvIterationsData:
+  - MipLevel: 4
+    Iterations: 150
+    TotalStartIteration: 130
+    InjectAmbientLight: 1
+  - MipLevel: 3
+    Iterations: 70
+    TotalStartIteration: 35
+    InjectAmbientLight: 0
+  - MipLevel: 2
+    Iterations: 35
+    TotalStartIteration: 15
+    InjectAmbientLight: 0

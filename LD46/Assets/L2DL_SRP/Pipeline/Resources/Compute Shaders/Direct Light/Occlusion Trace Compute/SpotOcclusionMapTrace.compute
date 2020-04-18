@@ -1,0 +1,28 @@
+﻿#pragma kernel SpotLightOcclusionTrace
+
+RWTexture2D<float4> Occlusion;
+RWTexture2D<float4> Shadow;
+
+int _TextureSize;
+float _DirectLightOcclusionMultiplier;
+float _OcclusionDropoffPerUnit;
+
+float _WorldDistPerStep;
+
+[numthreads(64,1,1)]
+void SpotLightOcclusionTrace (uint3 id : SV_DispatchThreadID)
+{
+	float3 totalOcclusion = float3(0, 0, 0);
+
+	for (int i = _TextureSize - 1; i >= 0; --i)
+	{
+		//Pulling in the base IDS to form the cone shape
+		float2 workingID = float2(id.x, i);
+
+		workingID = float2(0.5f * workingID.y + workingID.x * (1.f - (workingID.y / (uint)_TextureSize)), workingID.y);
+
+		float3 occlusion = Occlusion.Load(workingID).rgb;
+		totalOcclusion += (float3(1, 1, 1) - totalOcclusion) * occlusion * _WorldDistPerStep * _DirectLightOcclusionMultiplier;
+		Shadow[workingID] = float4(totalOcclusion, 1);
+	}
+}
