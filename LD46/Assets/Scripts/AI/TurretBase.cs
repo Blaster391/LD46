@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class TurretBase : MonoBehaviour
 {
-    void Start()
+    public Turret Turret { get; private set; }
+
+    void Awake()
     {
-        
-    }
-    
-    void Update()
-    {
-        
+        Turret = GetComponentInChildren<Turret>();
     }
 }

@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1737359314299122718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.538, y: -2.874, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5935076955652029379}
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Emission: 0
-  Occlusion: 1.32
+  Occlusion: 0.53
   Reflectance: 0.5
   LightBleed: 0.5
   LightingTexture: {fileID: 0}
@@ -154,7 +154,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 0.32
 --- !u!232 &1241722996
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 1063516472177607929, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: Occlusion
-      value: 0.24
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2504239467468068053, guid: 7373382353344a342a7727952bb3c084,
         type: 3}

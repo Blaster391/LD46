@@ -9,7 +9,7 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
     [SerializeField] private Text m_subtitleText = null;
     [SerializeField] private Text m_energyCostText = null;
     [SerializeField] private Image m_iconImage = null;
-    private Turret m_turretPrefab = null;
+    private TurretBase m_turretPrefab = null;
 
     [SerializeField] private Button m_button = null;
 
