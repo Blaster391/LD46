@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 1393356274}
   - component: {fileID: -1956138050813927739}
   - component: {fileID: -3127841447378706624}
+  - component: {fileID: 1251154380}
   m_Layer: 10
   m_Name: Orb
   m_TagString: L2DLDirectLight
@@ -205,7 +206,8 @@ MonoBehaviour:
   m_callbackDataInternal: {fileID: 0}
   MultiPositionType: 1
   multiPositionTypeLabel: 0
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &1659119191
 MonoBehaviour:
@@ -291,9 +293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1af73e1ff0deb74fa3b7d568edfcc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pickupRadius: 0.5
+  m_pickupRadius: 2
   m_sleepVelocityThreshold: 0.5
-  m_maxYeetVelocity: 20
+  m_maxYeetVelocity: 50
 --- !u!50 &-1956138050813927739
 Rigidbody2D:
   serializedVersion: 4
@@ -307,7 +309,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -331,6 +333,21 @@ DistanceJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 3.1214616
+  m_AutoConfigureDistance: 0
+  m_Distance: 1
   m_MaxDistanceOnly: 0
+--- !u!114 &1251154380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459418591684140267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8621c66e99d9f418442ae5a63eb874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_desiredHeight: 1
+  m_heightThreshold: 1
+  m_upwardsForce: 1
