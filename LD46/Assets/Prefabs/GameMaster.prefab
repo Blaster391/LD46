@@ -47,9 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _requiredRadius: 0.2
-  _spacing: 0.75
-  _maxVerticalNodes: 50
-  _maxHorizontalNodes: 50
+  _spacing: 1.5
+  _maxVerticalNodes: 30
+  _maxHorizontalNodes: 30
+  m_nodeIndexes: []
 --- !u!114 &899647910
 MonoBehaviour:
   m_ObjectHideFlags: 0

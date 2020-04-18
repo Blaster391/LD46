@@ -111,7 +111,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OrbBehaviour orb = collision.gameObject.GetComponent<OrbBehaviour>();
+        HandleCollision(collision.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        HandleCollision(collision.gameObject);
+    }
+
+    private void HandleCollision(GameObject otherObject)
+    {
+        OrbBehaviour orb = otherObject.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
             orb.TakeEnergy(m_energy * m_energyAttackModifier);
