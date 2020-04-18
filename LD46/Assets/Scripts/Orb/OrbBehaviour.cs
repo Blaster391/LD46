@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(InteractionObject))]
 public class OrbBehaviour : MonoBehaviour
 {
     // Editor fields
@@ -44,6 +45,7 @@ public class OrbBehaviour : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
+    private ShopUIBehaviour m_shopUI = null;
 
     // Working fields
 
@@ -52,10 +54,9 @@ public class OrbBehaviour : MonoBehaviour
     public float CurrentEnergyProp { get { return CurrentEnergy / m_maxEnergy; } }
     public float CurrentRange { get; private set; }
 
-    public System.Action OnInteract = delegate { };
-
     // Components
     private GameWorldObjectManager m_gameWorldObjectManager = null;
+    private InteractionObject m_interactionComponent = null;
 
     public void TakeEnergy(float _energyAmount)
     {
@@ -74,6 +75,9 @@ public class OrbBehaviour : MonoBehaviour
     private void Awake()
     {
         m_gameWorldObjectManager = GetComponentInParent<GameWorldObjectManager>();
+        m_interactionComponent = GetComponent<InteractionObject>();
+        m_interactionComponent.OnUse += Use;
+        m_interactionComponent.Dropped += Dropped;
     }
 
     void Start()
@@ -90,10 +94,6 @@ public class OrbBehaviour : MonoBehaviour
                 m_intensity = m_pointLight.Intensity
             };
         }
-
-        // Testing
-        ShopUIBehaviour shopUI = Instantiate(m_shopUIPrefab, m_gameWorldObjectManager.UIParent);
-        shopUI.Initialise(this);
     }
     
     void Update()
@@ -153,6 +153,39 @@ public class OrbBehaviour : MonoBehaviour
     private void SpawnTurret(Turret _turretPrefab)
     {
         Turret turret = Instantiate(_turretPrefab, transform.position, Quaternion.identity, m_gameWorldObjectManager.TurretsParent);
+    }
+
+    private void Use(PlayerInteraction _playerInteraction)
+    {
+        if(m_shopUI == null)
+        {
+            SpawnShopUI();
+        }
+        else
+        {
+            DestroyShopUI();
+        }
+    }
+
+    private void Dropped(PlayerInteraction _playerInteraction)
+    {
+        if (m_shopUI != null)
+        {
+            DestroyShopUI();
+        }
+    }
+
+    // UI
+    private void SpawnShopUI()
+    {
+        m_shopUI = Instantiate(m_shopUIPrefab, m_gameWorldObjectManager.UIParent);
+        m_shopUI.Initialise(this);
+    }
+
+    private void DestroyShopUI()
+    {
+        Destroy(m_shopUI.gameObject);
+        m_shopUI = null;
     }
 
     // Debug
