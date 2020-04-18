@@ -28,10 +28,11 @@ public class InteractionObject : MonoBehaviour
 
     private void OnSettle()
     {
-        m_rigidBody2D.Sleep();
-        m_rigidBody2D.simulated = false;
-        m_collider2D.isTrigger = true;
-        m_isSettling = false;
+        //m_rigidBody2D.Sleep();
+        //m_rigidBody2D.simulated = false;
+        //m_collider2D.isTrigger = true;
+        //m_isSettling = false;
+        m_joint2D.enabled = false;
     }
 
     // Start is called before the first frame update
@@ -47,6 +48,11 @@ public class InteractionObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(m_isPickedUp)
+        {
+            AimTowardsMouse();
+        }
+
         //if(m_isSettling)
         //{
         //    if(m_rigidBody2D.velocity.magnitude <= m_sleepVelocityThreshold)
@@ -54,6 +60,16 @@ public class InteractionObject : MonoBehaviour
         //        OnSettle();
         //    }
         //}
+    }
+
+    void AimTowardsMouse()
+    {
+        Vector2 myPosition = transform.position;
+        Vector2 mousePosition = GameHelper.MouseToWorldPosition();
+        Vector2 directionToMousePos = (mousePosition - myPosition).normalized;
+
+        m_rigidBody2D.AddForce(directionToMousePos * 10.0f);
+        m_joint2D.connectedBody.AddForce(-directionToMousePos * 10.0f);
     }
 
     // Called when player drops this.
@@ -65,6 +81,8 @@ public class InteractionObject : MonoBehaviour
         m_joint2D.enabled = false;
 
         Dropped(player.GetComponent<PlayerInteraction>());
+
+        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), m_collider2D, false);
     }
 
     virtual public void OnYeeted(GameObject player, Vector3 force)
