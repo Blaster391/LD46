@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
 public class PlayerInteraction : MonoBehaviour
@@ -78,7 +79,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         bool interactionPressed = Input.GetKeyDown(KeyCode.F);
         bool usePressed = Input.GetKeyDown(KeyCode.E);
-        bool mouseDown = Input.GetMouseButton(0);
+        bool mouseDown = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(0) : false;
 
         if(m_objectInHands)
         {
