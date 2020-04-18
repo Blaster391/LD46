@@ -49,7 +49,6 @@ public class EnemySpawner : MonoBehaviour
         {
             IsAvailable = true;
         }
-
     }
 
     public bool IsAvailable { get; private set; } = true;
