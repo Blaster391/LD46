@@ -15,6 +15,18 @@
 					</ChildrenList>
 				</Event>
 				<WorkUnit Name="TurretEvents" ID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" PersistMode="Reference"/>
+				<WorkUnit Name="Enemies" ID="{255EFB3C-2A78-4054-821A-C628DD77E3D6}" PersistMode="Reference"/>
+				<Event Name="PlayMusic" ID="{14EEEA57-C03B-4813-A561-2909443BFFE6}">
+					<ChildrenList>
+						<Action Name="" ID="{E50D28FD-6A8D-4AE5-90B8-429489D319E8}" ShortID="895929022">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="New Music Playlist Container" ID="{EB2B7BB4-D084-4359-912C-478EDD9AB9D1}" WorkUnitID="{DF25BD0F-4297-48F2-B0A0-A3404A34C4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

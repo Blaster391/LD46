@@ -678,12 +678,12 @@ PrefabInstance:
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.53
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.01
+      value: 3.51
       objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
@@ -876,6 +876,12 @@ PrefabInstance:
       propertyPath: m_energy
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8873470741719198371, guid: 80f4e1e1f3299b247b6145852e1341e8,
+        type: 3}
+      propertyPath: MyEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c8deb63f6bace6d44b18e2f4da6d6dff,
+        type: 2}
     - target: {fileID: 8873470741719198397, guid: 80f4e1e1f3299b247b6145852e1341e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2400,12 +2406,12 @@ PrefabInstance:
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.54
+      value: -7.9
       objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.67
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
@@ -2459,6 +2465,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7373382353344a342a7727952bb3c084, type: 3}
+--- !u!1 &1481154123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8873470741719198398, guid: 80f4e1e1f3299b247b6145852e1341e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 376090019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1481154129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481154123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613137842bf291349bd45b7e951e173d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c8deb63f6bace6d44b18e2f4da6d6dff,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &1481154130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481154123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62970740be71ad74dbea0bf4450df14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1578019582
 GameObject:
   m_ObjectHideFlags: 0
