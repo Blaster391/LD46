@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0eef1cad9e5df564386065d7b035ea74
+guid: 78f216c569196b34eb5f51bc6ee3af18
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,15 +34,15 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -95,7 +95,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 2078fa1bc12a86542b804e7753f8b3a8, type: 3}
+      name: _Lighting
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
