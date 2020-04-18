@@ -38,9 +38,8 @@ public class Enemy : MonoBehaviour
         }
 
         Vector2 myPosition = transform.position;
-        Vector2 directionToTarget = new Vector2();
+        Vector2 directionToTarget = (m_targetPosition - myPosition).normalized;
 
-        directionToTarget = (m_targetPosition - myPosition).normalized;
         m_rigidbody2D.AddForce(directionToTarget * m_moveForce);
     }
 
@@ -91,4 +90,14 @@ public class Enemy : MonoBehaviour
         mesh.DebugDrawPath(m_path);
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        OrbBehaviour orb = collision.gameObject.GetComponent<OrbBehaviour>();
+        if (orb != null)
+        {
+            orb.TakeEnergy(-10.0f);
+            Destroy(gameObject);
+        }
+    }
 }
