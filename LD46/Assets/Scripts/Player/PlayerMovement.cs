@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float m_groundedEpsilon = 0.05f;
 
 
+    private SpriteRenderer m_sprite = null;
     private Rigidbody2D m_rigidbody2D = null;
     private CapsuleCollider2D m_capsuleCollider2D = null;
 
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_sprite = GetComponent<SpriteRenderer>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_capsuleCollider2D = GetComponent<CapsuleCollider2D>();
     }
@@ -76,11 +78,15 @@ public class PlayerMovement : MonoBehaviour
         if (leftMoveDown)
         {
             m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce * damp);
+
+            m_sprite.flipX = true;
         }
 
         if (rightMoveDown)
         {
             m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * damp);
+
+            m_sprite.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
