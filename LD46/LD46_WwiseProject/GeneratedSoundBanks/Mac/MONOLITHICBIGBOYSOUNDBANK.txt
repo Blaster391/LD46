@@ -1,6 +1,26 @@
 Event	ID	Name			Wwise Object Path	Notes
+	212920027	Turret2			\Default Work Unit\TurretEvents\Turret2	
+	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1521021787	TurretType			\Default Work Unit\TurretType	
+
+Switch	ID	Name	Switch Group			Notes
+	545371365	Low	TurretType			
+	3550808449	High	TurretType			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	76914504	turret_high-006	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-006		202196
+	259285699	turret_low-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-003		203024
+	559944824	turret_high-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-001		201872
+	574119826	turret_high-005	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-005		198636
+	626905238	turret_low-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-004		207888
 	679225109	LD_ball_light_sound01	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\LD_ball_light_sound01_55EDB696.wem		\Actor-Mixer Hierarchy\Default Work Unit\LD_ball_light_sound01		2293104
+	687047562	turret_low-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-001		197688
+	722309184	turret_high-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-003		194092
+	800509450	turret_high-007	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-007		209864
+	935780839	turret_high-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-004		199360
+	963565389	turret_low-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-002		208244
+	1023117400	turret_high-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-002		195956
 

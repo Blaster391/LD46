@@ -33,6 +33,7 @@
 						<ActiveSource Name="LD_ball_light_sound01" ID="{FB9CBD59-A54B-492F-A70A-D2811E6DCF1E}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<WorkUnit Name="Turrets" ID="{20A5500D-5B72-4242-BA15-938C851DF25C}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5069D990-5BF4-4E50-938D-1EBDAC07D784}" SchemaVersion="97">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{5069D990-5BF4-4E50-938D-1EBDAC07D784}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5069D990-5BF4-4E50-938D-1EBDAC07D784}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="TurretType" ID="{F66FF432-15DD-4F38-B40D-83FBFEDD6DE2}">
+					<ChildrenList>
+						<Switch Name="High" ID="{23F028BA-D8E2-4ED8-A530-6DEE01C65058}"/>
+						<Switch Name="Low" ID="{EAB5D1A1-A342-4A45-82B2-2D4E7DFF421F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
