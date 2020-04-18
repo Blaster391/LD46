@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit2D m_lastGroundHit;
     private bool m_isGrounded = true;
 
+    private bool m_canDoubleJump = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             if (hit.rigidbody == m_rigidbody2D) continue;
 
             m_lastGroundHit = hit;
-            m_isGrounded = (m_rigidbody2D.position.y - hit.point.y) >= (capsuleBounds.extents.y + m_groundedEpsilon);
+            m_isGrounded = (m_rigidbody2D.position.y - hit.point.y) <= (capsuleBounds.extents.y + m_groundedEpsilon);
             break;
         }
     }
@@ -54,12 +56,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool wasGrounded = m_isGrounded;
         DoGroundCast();
+
+        if(!wasGrounded && m_isGrounded)
+        {
+            m_canDoubleJump = true;
+        }
 
         if (Input.GetKey(KeyCode.A))
         {
             m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
             m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce);
@@ -67,7 +76,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
+            bool doJump = m_isGrounded;
+            if(!m_isGrounded && m_canDoubleJump)
+            {
+                m_canDoubleJump = false;
+                doJump = true;
+            }
+
+            if(doJump)
+            {
+                m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
+            }
         }
         
         float speed = m_rigidbody2D.velocity.magnitude;
