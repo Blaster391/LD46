@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc982d54ddf27954f968ebedceb22d31, type: 3}
   m_Name: 5890BBC6-553A-42A7-9A57-B8AB56B4CC14
   m_EditorClassIdentifier: 
-  objectName: BallOfLight_b
-  id: 2133782388
+  objectName: BallOfLight
+  id: 2769336799
   guid: 5890BBC6-553A-42A7-9A57-B8AB56B4CC14

@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e3c5e58064bcd24d87221585ecaead5d
     GuidInternal: 
-    m_lastTime: -8586144016684280789
+    m_lastTime: -8586143979820266264
     List:
     - name: MONOLITHICBIGBOYSOUNDBANK
       guid: b4e5e7bb98361d4b8ede1cf1f90376b0
@@ -56,17 +56,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 02d22a454cd78848a71b87243d501c2e
     GuidInternal: 
-    m_lastTime: -8586144016684350607
+    m_lastTime: -8586143979820475705
     List:
-    - name: BallOfLight_b
+    - name: BallOfLight
       guid: c6bb90583a55a7429a57b8ab56b4cc14
-      id: 2133782388
+      id: 2769336799
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BallOfLight_b
+      - ElementName: BallOfLight
         ObjectType: 3
-      Path: Default Work Unit\BallOfLight_b
+      Path: Default Work Unit\BallOfLight
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -102,5 +102,7 @@ MonoBehaviour:
   - /LD46_WwiseProject
   - /LD46_WwiseProject/Events
   - /LD46_WwiseProject/Events/Default Work Unit
+  - /LD46_WwiseProject/SoundBanks
+  - /LD46_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
