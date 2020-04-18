@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{875A71EA-CE74-4446-B881-2E780BE812D2}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{875A71EA-CE74-4446-B881-2E780BE812D2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{875A71EA-CE74-4446-B881-2E780BE812D2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="LD_ball_light_sound01" ID="{D2622844-FB17-420B-98AF-A949CBC34201}" ShortID="772063079">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="LD_ball_light_sound01" ID="{FB9CBD59-A54B-492F-A70A-D2811E6DCF1E}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0.182097744360902"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.166922932330827"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>LD_ball_light_sound01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="679225109"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="LD_ball_light_sound01" ID="{FB9CBD59-A54B-492F-A70A-D2811E6DCF1E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	679225109	LD_ball_light_sound01	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\LD_ball_light_sound01_55EDB696.wem		\Actor-Mixer Hierarchy\Default Work Unit\LD_ball_light_sound01		2293104
+

@@ -5,14 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float m_maxVelocity = 10.0f;
+    private Vector2 m_maxVelocity = new Vector2(10.0f, 17.5f);
     [SerializeField]
     private float m_baseMovementForce = 1.0f;
     [SerializeField]
     private float m_baseJumpForce = 1.0f;
 
+    [Range(0.0f, 1.0f)]
     [SerializeField]
-    private float m_sideDoubleJumpForce = 5.0f;
+    private float m_airDampening = 0.45f;
 
     [SerializeField]
     private float m_groundedEpsilon = 0.05f;
@@ -70,52 +71,33 @@ public class PlayerMovement : MonoBehaviour
         bool leftMoveDown = Input.GetKey(KeyCode.A);
         bool rightMoveDown = Input.GetKey(KeyCode.D);
 
-        if (m_isGrounded)
-        {
-            if (leftMoveDown)
-            {
-                m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce);
-            }
+        float damp = m_isGrounded ? 1.0f : m_airDampening;
 
-            if (rightMoveDown)
-            {
-                m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce);
-            }
+        if (leftMoveDown)
+        {
+            m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce * damp);
         }
 
+        if (rightMoveDown)
+        {
+            m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * damp);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             bool doJump = m_isGrounded;
-            Vector2 jumpForce = Vector2.up * m_baseJumpForce;
-
             if(!m_isGrounded && m_canDoubleJump)
             {
                 m_canDoubleJump = false;
                 doJump = true;
-
-                // Add direction for double jump
-                Vector2 sideJumpForce = m_sideDoubleJumpForce * new Vector2((leftMoveDown ? -1.0f : 0.0f) + (rightMoveDown ? 1.0f : 0.0f), 0.0f);
-
-                // If jumping opposite direction reduce lateral velocity to make a snappier double jump.
-                if (Vector2.Dot(sideJumpForce, m_rigidbody2D.velocity) < 0.0f)
-                {
-                    m_rigidbody2D.velocity = new Vector2(m_rigidbody2D.velocity.x * 0.2f, m_rigidbody2D.velocity.y);
-                }
-                jumpForce += sideJumpForce;
             }
 
             if(doJump)
             {
-                m_rigidbody2D.AddForce(jumpForce, ForceMode2D.Impulse);
+                m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
             }
         }
-        
-        float speed = m_rigidbody2D.velocity.magnitude;
-        if (speed > m_maxVelocity)
-        {
-            Vector3 movementDirection = m_rigidbody2D.velocity.normalized;
-            m_rigidbody2D.velocity = movementDirection * m_maxVelocity;
-        }
+
+        m_rigidbody2D.velocity = Vector2.Min(m_rigidbody2D.velocity, m_maxVelocity);
     }
 }

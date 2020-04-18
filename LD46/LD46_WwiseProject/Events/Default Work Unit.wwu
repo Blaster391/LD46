@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{452AD202-D74C-4888-A71B-87243D501C2E}" SchemaVersion="97">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{452AD202-D74C-4888-A71B-87243D501C2E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{452AD202-D74C-4888-A71B-87243D501C2E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="BallOfLight" ID="{5890BBC6-553A-42A7-9A57-B8AB56B4CC14}">
+					<ChildrenList>
+						<Action Name="" ID="{B6057007-C7F0-47E4-81F6-58AFC27FD1E8}" ShortID="207455369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LD_ball_light_sound01" ID="{D2622844-FB17-420B-98AF-A949CBC34201}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
