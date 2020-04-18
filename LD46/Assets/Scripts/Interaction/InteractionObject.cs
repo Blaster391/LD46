@@ -23,6 +23,9 @@ public class InteractionObject : MonoBehaviour
 
     public float PickupRadius { get { return m_pickupRadius; } }
 
+    public System.Action<PlayerInteraction> OnUse = delegate { };
+    public System.Action<PlayerInteraction> Dropped = delegate { };
+
     private void OnSettle()
     {
         m_rigidBody2D.Sleep();
@@ -60,14 +63,13 @@ public class InteractionObject : MonoBehaviour
         m_isPickedUp = false;
         m_isSettling = true;
         m_joint2D.enabled = false;
+
+        Dropped(player.GetComponent<PlayerInteraction>());
     }
 
     virtual public void OnYeeted(GameObject player, Vector3 force)
     {
-        m_joint2D.connectedBody = null;
-        m_isPickedUp = false;
-        m_isSettling = true;
-        m_joint2D.enabled = false;
+        OnDropped(player);
 
         if(force.magnitude > m_maxYeetVelocity)
         {
@@ -89,5 +91,10 @@ public class InteractionObject : MonoBehaviour
         m_isPickedUp = true;
 
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), m_collider2D, true);
+    }
+
+    virtual public void Use(GameObject player)
+    {
+        OnUse(player.GetComponent<PlayerInteraction>());
     }
 }

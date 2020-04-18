@@ -77,6 +77,7 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         bool interactionPressed = Input.GetKeyDown(KeyCode.F);
+        bool usePressed = Input.GetKeyDown(KeyCode.E);
         bool mouseDown = Input.GetMouseButton(0);
 
         if(m_objectInHands)
@@ -103,6 +104,9 @@ public class PlayerInteraction : MonoBehaviour
             HandleInteraction();
         }
         
-
+        if(usePressed && m_objectInHands != null)
+        {
+            m_objectInHands.Use(gameObject);
+        }
     }
 }
