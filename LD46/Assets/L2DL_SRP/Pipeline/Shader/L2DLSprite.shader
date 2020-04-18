@@ -25,6 +25,7 @@
 
 			ZWrite On
 			Blend One OneMinusSrcAlpha
+			Cull Off 
 
 			HLSLPROGRAM
 
