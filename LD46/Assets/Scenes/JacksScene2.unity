@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 699168952}
   - component: {fileID: 699168951}
   - component: {fileID: 699168954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,30 +1080,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492607428}
     m_Modifications:
-    - target: {fileID: 1229337032596592002, guid: 72290825666b00a41a7fdb3f345f714a,
+    - target: {fileID: 510500951907337174, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
-      propertyPath: m_BodyType
-      value: 0
+      propertyPath: Occlusion
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 1229337032596592003, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1229337032596592004, guid: 72290825666b00a41a7fdb3f345f714a,
+    - target: {fileID: 1229337032596592006, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
+      propertyPath: Occlusion
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 1229337032596592007, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.36
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 1229337032596592007, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.94
+      value: -2.868
       objectReference: {fileID: 0}
     - target: {fileID: 1229337032596592007, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
