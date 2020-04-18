@@ -4,17 +4,53 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    
-    void Start()
+    [SerializeField]
+    private float m_availabilityUpdate = 1.0f;
+    [SerializeField]
+    private float m_minDistanceFromOrb = 10.0f;
+    [SerializeField]
+    private float m_maxDistanceFromOrb = 100.0f;
+
+
+    private float m_timeSinceAvailabilityUpdate = 0.0f;
+
+    private void Start()
     {
-        
+        UpdateAvailability();
+        m_timeSinceAvailabilityUpdate = Random.Range(0, m_availabilityUpdate);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        m_timeSinceAvailabilityUpdate += Time.deltaTime;
+        if(m_timeSinceAvailabilityUpdate > m_availabilityUpdate)
+        {
+            UpdateAvailability();
+        }
     }
 
-    public bool IsAvailable { get; } = true;
+    private void UpdateAvailability()
+    {
+        m_timeSinceAvailabilityUpdate = 0.0f;
+
+        OrbBehaviour orb = GameObject.FindObjectOfType<OrbBehaviour>();
+
+        Vector2 myPosition = transform.position;
+        Vector2 orbPosition = orb.transform.position;
+
+        float distanceFromOrb = (myPosition - orbPosition).magnitude;
+
+        if(distanceFromOrb > m_maxDistanceFromOrb || distanceFromOrb < m_minDistanceFromOrb)
+        {
+            IsAvailable = false;
+        }
+        else
+        {
+            IsAvailable = true;
+        }
+
+    }
+
+    public bool IsAvailable { get; private set; } = true;
 }

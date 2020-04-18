@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59ee1bddb033c14ab7d51ee982d64b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_availabilityUpdate: 1
+  m_minDistanceFromOrb: 10
+  m_maxDistanceFromOrb: 50

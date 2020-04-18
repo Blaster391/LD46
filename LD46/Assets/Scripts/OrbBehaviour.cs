@@ -55,6 +55,8 @@ public class OrbBehaviour : MonoBehaviour
 
     void Start()
     {
+        GameHelper.GetManager<StatsManager>().StartAliveTimer();
+
         CurrentEnergy = m_maxEnergy;
 
         if (m_healthScalingEffects.m_usePointLightSettingsAtFullHealth)
@@ -86,6 +88,7 @@ public class OrbBehaviour : MonoBehaviour
             if (Vector3.Distance(transform.position, drainable.transform.position) < CurrentRange)
             {
                 float energyTaken = drainable.TakeEnergy(m_energyDrainedPerSecond * Time.deltaTime);
+                GameHelper.GetManager<StatsManager>().AddLeachedEnergy(energyTaken);
                 UpdateEnergy(energyTaken);
             }
         }
@@ -107,6 +110,7 @@ public class OrbBehaviour : MonoBehaviour
         if(CurrentEnergy == 0f)
         {
             //Dead
+            GameHelper.GetManager<StatsManager>().EndAliveTimer();
         }
     }
 
