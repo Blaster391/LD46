@@ -61,8 +61,15 @@ public class Turret : MonoBehaviour
             m_isFiring = false;
 
             var allEnemies = FindObjectsOfType<Enemy>();
+            Vector2 myPosition = gameObject.transform.position;
             foreach(Enemy e in allEnemies)
             {
+                Vector2 enemyPosition = e.transform.position;
+                if ((enemyPosition - myPosition).magnitude > m_range)
+                {
+                    continue;
+                }
+
                 if(CanSeeTarget(e.gameObject))
                 {
                     m_currentTarget = e.gameObject;

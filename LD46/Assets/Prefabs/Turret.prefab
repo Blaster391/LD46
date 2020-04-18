@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5350828436446108364}
   - component: {fileID: 5350828436446108367}
+  - component: {fileID: 944994526}
+  - component: {fileID: 944994525}
+  - component: {fileID: 944994527}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -81,3 +84,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &944994526
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350828436446108366}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
+--- !u!114 &944994525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350828436446108366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1af73e1ff0deb74fa3b7d568edfcc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &944994527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350828436446108366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a1ce5d705c2aa458c174527ee71add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_currentTarget: {fileID: 0}
+  m_rateOfFire: 1
+  m_range: 5
+  m_damage: 1
+  m_projectileSpeed: 10
+  m_reactionTime: 1
+  m_projectilePrefab: {fileID: 3773419286250415915, guid: 175f2d3d9df3657439cb93ab72bf9381,
+    type: 3}
