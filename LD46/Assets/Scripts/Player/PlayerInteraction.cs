@@ -27,10 +27,16 @@ public class PlayerInteraction : MonoBehaviour
     private bool m_mouse1WasDown = false;
 
     private float m_timeMouseWasDownFor = 0.0f;
+    [SerializeField] private float m_timeDownForMaxHelmetLight = 3f;
 
     public AK.Wwise.Event MyEvent;
     public AK.Wwise.Event MyEvent2;
     public AK.Wwise.Event MyEvent3;
+
+    public System.Action<float> OnForceEnergyPropChange = delegate { };
+    public System.Action<float> OnPush = delegate { };
+    public System.Action<float> OnPull = delegate { };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,6 +119,15 @@ public class PlayerInteraction : MonoBehaviour
                 MyEvent.Post(gameObject);
             }
         }
+
+        if (!inverse)
+        {
+            OnPush(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
+        }
+        else
+        {
+            OnPull(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
+        }
     }
 
     void HandleInteraction()
@@ -141,12 +156,13 @@ public class PlayerInteraction : MonoBehaviour
         bool mouse0Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(0) : false;
         bool mouse1Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(1) : false;
          
-        bool mouse0Release = m_mouse0WasDown && !mouse0Down;
-        bool mouse1Release = m_mouse1WasDown && !mouse1Down;
+        bool mouse0Release = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButtonUp(0) : false; //m_mouse0WasDown && !mouse0Down;
+        bool mouse1Release = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButtonUp(1) : false; //m_mouse1WasDown && !mouse1Down;
 
         if(mouse0Down || mouse1Down)
         {
             m_timeMouseWasDownFor += Time.deltaTime;
+            OnForceEnergyPropChange(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
         }
 
         if((mouse0Release || mouse1Release) && !(mouse0Down || mouse1Down))
@@ -161,6 +177,7 @@ public class PlayerInteraction : MonoBehaviour
                 ForcePush(isInverted);
             }
             m_timeMouseWasDownFor = 0.0f;
+            OnForceEnergyPropChange(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
         }
 
         m_mouse0WasDown = mouse0Down;

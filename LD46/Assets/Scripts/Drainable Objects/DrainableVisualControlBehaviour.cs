@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(DrainableBehaviour))]
 public class DrainableVisualControlBehaviour : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer m_spriteRenderer;
-    [SerializeField] private ParticleSystem m_drainingParticleSystem;
+    [SerializeField] private SpriteRenderer m_spriteRenderer = null;
+    [SerializeField] private ParticleSystem m_drainingParticleSystem = null;
 
     [Header("Colour")]
     [SerializeField] private bool m_useSpriteRenderableColour = false;
@@ -31,6 +31,8 @@ public class DrainableVisualControlBehaviour : MonoBehaviour
         }
 
         m_originalScale = transform.localScale;
+
+        m_drainingParticleSystem.Stop();
     }
 
     private void Update()
