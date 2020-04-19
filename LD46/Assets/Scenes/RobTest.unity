@@ -3610,6 +3610,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1229337032596592025, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: m_baseMovementForce
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 6212587735602788994, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
       propertyPath: m_RootOrder
