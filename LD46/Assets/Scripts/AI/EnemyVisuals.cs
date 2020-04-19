@@ -10,6 +10,8 @@ public class EnemyVisuals : MonoBehaviour
 
     [SerializeField] private L2DL.L2DLSpriteBehaviour m_stopsL2DLSprite;
 
+    [SerializeField] private GameObject m_deathParticleSystem;
+
     private Color m_fullHealthColor;
     private float m_fullHealthEmission;
 
@@ -24,22 +26,29 @@ public class EnemyVisuals : MonoBehaviour
 
     private Enemy m_enemy;
 
+    private GameWorldObjectManager m_worldObjectManager;
+
     private void Awake()
     {
         m_enemy = GetComponent<Enemy>();
+
     }
 
     void Start()
     {
+        m_worldObjectManager = GetComponentInParent<GameWorldObjectManager>();
+
         m_fullHealthColor = m_bodySpriteRenderer.color;
         m_fullHealthEmission = m_bodyL2DLSprite.Emission;
 
         m_enemy.OnHit += OnHit;
+        m_enemy.OnDeath += OnDeath;
     }
 
     private void OnDestroy()
     {
         m_enemy.OnHit -= OnHit;
+        m_enemy.OnDeath -= OnDeath;
     }
 
     void Update()
@@ -75,5 +84,13 @@ public class EnemyVisuals : MonoBehaviour
     private void OnHit()
     {
         m_flashingUwU = true;
+    }
+
+    private void OnDeath()
+    {
+        if (m_worldObjectManager != null && m_worldObjectManager.EffectsParent != null)
+        {
+            Instantiate(m_deathParticleSystem, transform.position, Quaternion.identity, m_worldObjectManager.EffectsParent);
+        }
     }
 }

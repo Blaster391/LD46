@@ -11,12 +11,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float m_maxDistanceFromOrb = 100.0f;
 
-
     private float m_timeSinceAvailabilityUpdate = 0.0f;
 
     private static List<EnemySpawner> s_enemySpawners = new List<EnemySpawner>();
     public static List<EnemySpawner> EnemySpawners { get { return new List<EnemySpawner>(s_enemySpawners); } }
-
+    
     private void Awake()
     {
         s_enemySpawners.Add(this);
