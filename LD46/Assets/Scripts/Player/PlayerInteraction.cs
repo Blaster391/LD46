@@ -119,7 +119,7 @@ public class PlayerInteraction : MonoBehaviour
                 float angMul = Mathf.Lerp(0.45f, 1.0f, (dot / cosConeAngle));
                 float mul = m_timeMouseWasDownFor * m_forcePushMultiplier * angMul * (inverse ? -1.0f : 1.0f);
                 collider.attachedRigidbody.AddForce(toObj * mul);
-                MyEvent.Post(gameObject);
+               
             }
         }
 
@@ -156,51 +156,51 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_orb.IsShopOpen || !m_statsManager.IsAlive)
+        if (!(m_orb.IsShopOpen || !m_statsManager.IsAlive))
         {
-            return;
+            //bool mouse0Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(0) : false;
+            //bool mouse1Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(1) : false;
+
+            //bool mouse0Release = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButtonUp(0) : false; //m_mouse0WasDown && !mouse0Down;
+            //bool mouse1Release = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButtonUp(1) : false; //m_mouse1WasDown && !mouse1Down;
+
+            bool mouse0Down = Input.GetMouseButton(0);
+            bool mouse1Down = Input.GetMouseButton(1);
+
+            bool mouse0Release = Input.GetMouseButtonUp(0); //m_mouse0WasDown && !mouse0Down;
+            bool mouse1Release = Input.GetMouseButtonUp(1); //m_mouse1WasDown && !mouse1Down;
+
+            if (mouse0Down || mouse1Down)
+            {
+                m_timeMouseWasDownFor += Time.deltaTime;
+                OnForceEnergyPropChange(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
+            }
+
+            if ((mouse0Release || mouse1Release) && !(mouse0Down || mouse1Down))
+            {
+                
+
+                if (m_objectInHands)
+                {
+                    YeetTheThing();
+                    MyEvent2.Post(gameObject);
+                }
+                else
+                {
+                    bool isInverted = mouse1Release;
+                    ForcePush(isInverted);
+                    MyEvent.Post(gameObject);
+                }
+                m_timeMouseWasDownFor = 0.0f;
+                OnForceEnergyPropChange(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
+            }
+
+            m_mouse0WasDown = mouse0Down;
+            m_mouse1WasDown = mouse1Down;
         }
 
         bool interactionPressed = Input.GetKeyDown(KeyCode.F);
         bool usePressed = Input.GetKeyDown(KeyCode.E);
-        //bool mouse0Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(0) : false;
-        //bool mouse1Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(1) : false;
-
-        //bool mouse0Release = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButtonUp(0) : false; //m_mouse0WasDown && !mouse0Down;
-        //bool mouse1Release = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButtonUp(1) : false; //m_mouse1WasDown && !mouse1Down;
-
-        bool mouse0Down =  Input.GetMouseButton(0);
-        bool mouse1Down =  Input.GetMouseButton(1);
-
-        bool mouse0Release = Input.GetMouseButtonUp(0); //m_mouse0WasDown && !mouse0Down;
-        bool mouse1Release = Input.GetMouseButtonUp(1); //m_mouse1WasDown && !mouse1Down;
-
-        if (mouse0Down || mouse1Down)
-        {
-            m_timeMouseWasDownFor += Time.deltaTime;
-            OnForceEnergyPropChange(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
-        }
-
-        if((mouse0Release || mouse1Release) && !(mouse0Down || mouse1Down))
-        {
-            MyEvent2.Post(gameObject);
-
-            if (m_objectInHands)
-            {
-                YeetTheThing();
-            }
-            else
-            {
-                bool isInverted = mouse1Release;
-                ForcePush(isInverted);
-            }
-            m_timeMouseWasDownFor = 0.0f;
-            OnForceEnergyPropChange(m_timeMouseWasDownFor / m_timeDownForMaxHelmetLight);
-        }
-
-        m_mouse0WasDown = mouse0Down;
-        m_mouse1WasDown = mouse1Down;
-
         if (interactionPressed)
         {
             HandleInteraction();
