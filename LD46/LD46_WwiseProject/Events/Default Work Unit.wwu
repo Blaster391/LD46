@@ -108,6 +108,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="DEATH" ID="{EF25F681-5AB2-49D4-A171-1BB2DB00CE71}">
+					<ChildrenList>
+						<Action Name="" ID="{C75E5236-CEEF-46B6-AA05-C173FF29B7D3}" ShortID="331098542">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DEATH" ID="{D5B2DAAF-183A-4C98-9E53-4BE6C594A2EC}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

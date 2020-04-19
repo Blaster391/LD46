@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	417627684	PlayMusic			\Default Work Unit\PlayMusic	
 	516313049	UIInteraction			\Default Work Unit\UIInteraction	
 	591859596	TreeDying			\Default Work Unit\Tree\TreeDying	
+	779278001	DEATH			\Default Work Unit\DEATH	
 	1917263390	StopMusic			\Default Work Unit\StopMusic	
 	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
@@ -45,6 +46,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	170475520	lead	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\lead_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\lead		1316636
 	227414808	Arp high	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\arp high_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Arp high		1316636
 	230180277	Bass	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\bass-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Bass		1316636
+	246482562	DEATH	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\DEATH_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\DEATH		226352
 	259285699	turret_low-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-003		203024
 	272060669	jump-02	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\jump-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jumps\jump-02		82352
 	329795044	enemy_death-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\enemy_death-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-001		202112
