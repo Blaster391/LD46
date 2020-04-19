@@ -132,10 +132,11 @@ public class PlayerInteraction : MonoBehaviour
 
     void HandleInteraction()
     {
-        MyEvent3.Post(gameObject);
+        
         if (m_objectInHands)
         {
             DropTheThing();
+            MyEvent3.Post(gameObject);
         }
         else
         {
@@ -144,6 +145,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 m_objectInHands = obj;
                 m_objectInHands.OnPickup(gameObject);
+                MyEvent3.Post(gameObject);
             }
         }
     }
