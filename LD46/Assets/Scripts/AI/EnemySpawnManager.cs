@@ -46,11 +46,14 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField]
     private List<EnemySpawnWaveSetting> m_enemySpawnWaveSettings = new List<EnemySpawnWaveSetting>();
 
+    [SerializeField] private GameWorldObjectManager m_gameWorldObjectManager;
+
     private int m_currentWaveIndex = 0;
     private float m_currentWaveDuration = 0f;
 
     private float m_lastSpawnTime = 0.0f;
-        
+    
+
     void Update()
     {
         m_currentWaveDuration += Time.deltaTime;
@@ -84,7 +87,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     void SpawnAtSpawner(EnemySpawner spawner)
     {
-        var newEnemy = Instantiate(GetEnemy());
+        var newEnemy = Instantiate(GetEnemy(), m_gameWorldObjectManager.EnemyParent != null ? m_gameWorldObjectManager.EnemyParent : transform);
         newEnemy.transform.position = spawner.transform.position;
     }
 

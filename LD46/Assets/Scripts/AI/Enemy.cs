@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
     public static List<Enemy> Enemies { get { return new List<Enemy>(s_enemies); } }
 
     public System.Action OnHit = delegate { };
+    public System.Action OnDeath = delegate { };
 
     private void Awake()
     {
@@ -160,6 +161,7 @@ public class Enemy : MonoBehaviour
         OnHit();
         if (m_energy <= 0)
         {
+            OnDeath();
             GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent);
             Destroy(gameObject);
         }
