@@ -25,6 +25,6 @@ MonoBehaviour:
     m_enabled: 1
     m_indirectLightCalculationMethod: {fileID: 11400000, guid: 5cc23e850232eaf459346df35f17d699,
       type: 2}
-  m_textureToView: 1
+  m_textureToView: 0
   m_debugSettings:
     m_emulateNoComputeShaderSupport: 0
