@@ -31,6 +31,12 @@ public class L2DLPointLight : MonoBehaviour, IL2DLDirectLight
     [SerializeField] private float m_maxIntensityOutput = 1f;
 
     // --------------------------------------------------------------------
+    private void Start()
+    {
+        UpdateShadowCamera();
+    }
+
+    // --------------------------------------------------------------------
     private void OnValidate()
     {
         UpdateShadowCamera();

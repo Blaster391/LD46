@@ -29,6 +29,8 @@ public class PlayerInteraction : MonoBehaviour
     private float m_timeMouseWasDownFor = 0.0f;
 
     public AK.Wwise.Event MyEvent;
+    public AK.Wwise.Event MyEvent2;
+    public AK.Wwise.Event MyEvent3;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,7 @@ public class PlayerInteraction : MonoBehaviour
         Vector3 v = dir.normalized * m_timeMouseWasDownFor * m_yeetSpeedMultiplier;
         m_objectInHands.OnYeeted(gameObject, v);
         m_objectInHands = null;
+        MyEvent2.Post(gameObject);
     }
 
     void ForcePush(bool inverse)
@@ -114,6 +117,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void HandleInteraction()
     {
+        MyEvent3.Post(gameObject);
         if (m_objectInHands)
         {
             DropTheThing();

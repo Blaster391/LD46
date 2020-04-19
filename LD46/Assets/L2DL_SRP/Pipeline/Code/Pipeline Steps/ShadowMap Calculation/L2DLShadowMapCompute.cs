@@ -10,9 +10,9 @@ public class L2DLShadowMapCompute : IL2DLShadowMapCalculationStep
     public bool OcclusionMapGenerateMips => false;
     public FilterMode OcclusionMapFilterMode => FilterMode.Bilinear;
 
-    ComputeShader m_directionalLightOcclusionTraceCompute = (ComputeShader)Resources.Load("Shaders/Direct Light/Occlusion Trace Compute/DirectionalOcclusionMapTrace");
-    ComputeShader m_pointLightOcclusionTraceCompute = (ComputeShader)Resources.Load("Shaders/Direct Light/Occlusion Trace Compute/PointOcclusionMapTrace");
-    ComputeShader m_spotLightOcclusionTraceCompute = (ComputeShader)Resources.Load("Shaders/Direct Light/Occlusion Trace Compute/SpotOcclusionMapTrace");
+    ComputeShader m_directionalLightOcclusionTraceCompute = (ComputeShader) Resources.Load("Compute Shaders/Direct Light/Occlusion Trace Compute/DirectionalOcclusionMapTrace");
+    ComputeShader m_pointLightOcclusionTraceCompute = (ComputeShader) Resources.Load("Compute Shaders/Direct Light/Occlusion Trace Compute/PointOcclusionMapTrace");
+    ComputeShader m_spotLightOcclusionTraceCompute = (ComputeShader) Resources.Load("Compute Shaders/Direct Light/Occlusion Trace Compute/SpotOcclusionMapTrace");
 
     int m_directLightOcclusionMapId = Shader.PropertyToID("_L2DLDirectLightOcclusionMap");
     int m_directLightShadowMapId = Shader.PropertyToID("_L2DLDirectLightShadowMap");

@@ -39,7 +39,7 @@ public static class L2DLRenderHelpers
     }
 
     // --------------------------------------------------------------------
-    [Conditional("UNITY_EDITOR"), Conditional("DEVELOPMENT_BUILD")]
+    [Conditional("UNITY_EDITOR")]
     public static void DrawUnsupportedShaders(ScriptableRenderContext _context, CullingResults _cullingResults)
     {
         if (s_errorMaterial == null)
@@ -62,12 +62,12 @@ public static class L2DLRenderHelpers
     }
 
     // --------------------------------------------------------------------
-    [Conditional("UNITY_EDITOR"), Conditional("DEVELOPMENT_BUILD")]
+    [Conditional("UNITY_EDITOR")]
     public static void PrepareCameraForSceneWindow(Camera _camera)
     {
         if (_camera.cameraType == CameraType.SceneView)
         {
-            ScriptableRenderContext.EmitWorldGeometryForSceneView(_camera);
+            //ScriptableRenderContext.EmitWorldGeometryForSceneView(_camera);
         }
     }
 

@@ -411,6 +411,11 @@ MonoBehaviour:
   m_energyCostText: {fileID: 6357545384704106017}
   m_iconImage: {fileID: 6357545383013446754}
   m_button: {fileID: 6357545383264288155}
+  MyEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 156538efb0214624f883f2fb0f382a83,
+      type: 2}
 --- !u!1 &6357545384704106023
 GameObject:
   m_ObjectHideFlags: 0

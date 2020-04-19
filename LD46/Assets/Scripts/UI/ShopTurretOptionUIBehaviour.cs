@@ -15,7 +15,9 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
 
     private OrbBehaviour m_orbBehavior;
     private ShopOption m_shopOption;
-    
+
+    public AK.Wwise.Event MyEvent;
+
     public void Initialise(ShopOption shopOption, OrbBehaviour orb)
     {
         m_titleText.text = shopOption.m_title;
@@ -45,6 +47,7 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
 
     private void ButtonClicked()
     {
+        MyEvent.Post(gameObject);
         m_orbBehavior.PurchaseTurret(m_turretPrefab, m_shopOption.m_energyCost);
     }
 }

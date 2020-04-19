@@ -27,5 +27,5 @@ MonoBehaviour:
     InjectAmbientLight: 0
   - MipLevel: 1
     Iterations: 15
-    TotalStartIteration: 10
+    TotalStartIteration: 9
     InjectAmbientLight: 0
