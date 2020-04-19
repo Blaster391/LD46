@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEditor;
 using UnityEngine;
 
@@ -51,7 +52,11 @@ public class NavMesh : MonoBehaviour
     private string m_navmeshFile = "";
 
     [SerializeField]
+    private bool m_generateDiagonals = false;
+
+    [SerializeField]
     private bool m_debugDraw = true;
+
 
 
     private Vector2 _origin = new Vector2(0, 0);
@@ -83,8 +88,8 @@ public class NavMesh : MonoBehaviour
         m_openList.Clear();
         m_closedList.Clear();
 
-        Vector2Int startingIndex = GetNearestIndex(from);
-        Vector2Int endingIndex = GetNearestIndex(to);
+        Vector2Int startingIndex = GetNearestIndexValid(from);
+        Vector2Int endingIndex = GetNearestIndexValid(to);
 
         if (startingIndex == endingIndex)
         {
@@ -102,6 +107,9 @@ public class NavMesh : MonoBehaviour
 
         PathNode startingNode = _nodeMap[startingIndex];
         PathNode endingNode = _nodeMap[endingIndex];
+
+        _debugLastPathStartPoint = startingNode.Position;
+        _debugLastPathEndPoint = endingNode.Position;
 
 
         CalculatingNode currentNode = new CalculatingNode();
@@ -225,6 +233,39 @@ public class NavMesh : MonoBehaviour
         return index;
     }
 
+    private Vector2Int GetNearestIndexValid(Vector2 position)
+    {
+        Vector2Int index = GetNearestIndex(position);
+
+        if(_nodeMap.ContainsKey(index))
+        {
+            return index;
+        }
+
+        if(_nodeMap.ContainsKey(index + new Vector2Int(0,1)))
+        {
+            return index + new Vector2Int(0, 1);
+        }
+
+        if (_nodeMap.ContainsKey(index + new Vector2Int(0, -1)))
+        {
+            return index + new Vector2Int(0, -1);
+        }
+
+        if (_nodeMap.ContainsKey(index + new Vector2Int(1, 0)))
+        {
+            return index + new Vector2Int(1, 0);
+        }
+
+        if (_nodeMap.ContainsKey(index + new Vector2Int(-1, 0)))
+        {
+            return index + new Vector2Int(-1, 0);
+        }
+
+        // We couldn't find anything :c
+        return index;
+    }
+
     // Generation
     private void GeneratePathNodes(Vector2 origin)
     {
@@ -298,11 +339,12 @@ public class NavMesh : MonoBehaviour
             PathNode realNode = _nodeMap[serializedNode.Index.Get()];
             foreach(var connectedNode in serializedNode.ConnectedNodes)
             {
-                realNode.AddConnectedNodes(_nodeMap[connectedNode.Get()]);
+                if(_nodeMap.ContainsKey(connectedNode.Get()))
+                {
+                    realNode.AddConnectedNodes(_nodeMap[connectedNode.Get()]);
+                }
             }
-            
         }
-
     }
 
     public void OutputNavmesh()
@@ -328,8 +370,13 @@ public class NavMesh : MonoBehaviour
             serializableNodes.Add(node.Value.GetSerializable());
         }
 
+        //BinaryFormatter bf = new BinaryFormatter();
+        //FileStream fs = File.Open(file, FileMode.Create);
+        //bf.Serialize(fs, serializableNodes);
+        //fs.Close();
+
         string output = JsonConvert.SerializeObject(serializableNodes);
-        Debug.Log(output);
+        //Debug.Log(output);
         File.WriteAllText(file, output);
     }
 
@@ -350,8 +397,13 @@ public class NavMesh : MonoBehaviour
 
         CheckNodeConnection(node, index + new Vector2Int(-1, 0));
         CheckNodeConnection(node, index + new Vector2Int(0, -1));
-        CheckNodeConnection(node, index + new Vector2Int(-1, -1));
-        CheckNodeConnection(node, index + new Vector2Int(1, -1));
+
+        if(m_generateDiagonals)
+        {
+            CheckNodeConnection(node, index + new Vector2Int(-1, -1));
+            CheckNodeConnection(node, index + new Vector2Int(1, -1));
+        }
+
     }
 
     private void ClearUnwalkableArea(UnwalkableAreaMarker marker)
@@ -424,13 +476,21 @@ public class NavMesh : MonoBehaviour
     }
 
     //List<Vector2> _debugPath = null;
+
+    Vector2 _debugLastPathStartPoint;
+    Vector2 _debugLastPathEndPoint;
     private void OnDrawGizmosSelected()
     {
         if(m_debugDraw)
         {
             DebugDraw();
+
+
         }
-   
+
+        Gizmos.DrawSphere(_debugLastPathStartPoint, 1.0f);
+        Gizmos.DrawSphere(_debugLastPathEndPoint, 1.0f);
+
         //if (Input.GetKey(KeyCode.Y))
         //{
         //    _debugPath = RequestPath(new Vector2(0, 0), GameHelper.MouseToWorldPosition());
@@ -461,7 +521,8 @@ public class NavMesh : MonoBehaviour
         {
             for(int i = 1; i < path.Count; ++i)
             {
-               // Gizmos.DrawWireSphere(list[i], 0.1f);
+                // Gizmos.DrawWireSphere(list[i], 0.1f);
+                Gizmos.color = Color.red;
                 Gizmos.DrawLine(path[i - 1], path[i]);
             }
         }

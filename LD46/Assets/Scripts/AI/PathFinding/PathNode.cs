@@ -33,6 +33,7 @@ public class PathNode
     }
 }
 
+[System.Serializable]
 public class Vector2IntSerializable
 {
     public Vector2IntSerializable()
@@ -55,6 +56,7 @@ public class Vector2IntSerializable
     }
 }
 
+[System.Serializable]
 public class Vector2Serializable
 {
     public Vector2Serializable()
@@ -79,6 +81,7 @@ public class Vector2Serializable
 }
 
 
+[System.Serializable]
 public class PathNodeSerializable
 {
     public Vector2IntSerializable Index { get; set; }

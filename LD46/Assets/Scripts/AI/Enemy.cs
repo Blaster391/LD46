@@ -22,12 +22,15 @@ public class Enemy : MonoBehaviour
     private NavMesh m_mesh;
     private float m_timeSinceLastPathUpdate = 0.0f;
     private Vector2 m_targetPosition = new Vector2();
+    private float m_size = 0.1f;
 
     public AK.Wwise.Event MyEvent;
 
     // Static tracking
     private static List<Enemy> s_enemies = new List<Enemy>();
     public static List<Enemy> Enemies { get { return new List<Enemy>(s_enemies); } }
+
+
 
     private void Awake()
     {
@@ -40,6 +43,8 @@ public class Enemy : MonoBehaviour
         m_mesh = GameHelper.GetManager<NavMesh>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_timeSinceLastPathUpdate = Random.Range(0, m_movementUpdateRate);
+
+        m_size = GetComponent<CircleCollider2D>().radius;
     }
 
     void OnDestroy()
@@ -56,10 +61,36 @@ public class Enemy : MonoBehaviour
             UpdatePath();
         }
 
+        if(m_path != null)
+        {
+            UpdatePathProgress();
+        }
+
         Vector2 myPosition = transform.position;
         Vector2 directionToTarget = (m_targetPosition - myPosition).normalized;
 
         m_rigidbody2D.AddForce(directionToTarget * m_moveForce);
+    }
+
+    void UpdatePathProgress()
+    {
+        if (m_path.Count == 0)
+        {
+            m_targetPosition = m_target.transform.position;
+            return;
+        }
+
+
+        if (m_path.Count > 1 && (GameHelper.HasLineOfSight(gameObject, m_path[1])))
+        {
+            m_targetPosition = m_path[1];
+            m_path.RemoveAt(0);
+
+        }
+        else
+        {
+            m_targetPosition = m_path[0];
+        }
     }
 
     private void UpdatePath()
@@ -69,44 +100,52 @@ public class Enemy : MonoBehaviour
         Vector2 targetPosition = m_target.transform.position;
         Vector2 myPosition = transform.position;
         var newPath = m_mesh.RequestPath(myPosition, targetPosition);
-        if(newPath != null)
+        m_targetPosition = targetPosition;
+        if (newPath != null)
         {
             m_path = newPath;
+            if(m_path.Count > 0)
+            {
+                m_path.RemoveAt(0);
+            }
+
+            UpdatePathProgress();
         }
 
-        m_targetPosition = targetPosition;
-        if (m_path != null && m_path.Count > 2)
-        {
-            //if (GameHelper.IsWithinThreshold(myPosition, m_path[2], 0.1f))
-            //{
-            //    m_path.RemoveAt(2);
-            //}
 
-            //if (GameHelper.IsWithinThreshold(myPosition, m_path[1], 0.1f))
-            //{
-            //    m_path.RemoveAt(1);
-            //}
 
-            if(GameHelper.IsWithinThreshold(myPosition, m_path[1], 0.1f) || GameHelper.HasLineOfSight(gameObject, m_path[2]))
-            {
-                m_targetPosition = m_path[2];
+        
+        //if (m_path != null && m_path.Count > 2)
+        //{
+        //    //if (GameHelper.IsWithinThreshold(myPosition, m_path[2], 0.1f))
+        //    //{
+        //    //    m_path.RemoveAt(2);
+        //    //}
 
-                if (GameHelper.IsWithinThreshold(myPosition, m_path[2], 0.1f))
-                {
-                    m_path.RemoveAt(2);
-                }
-            }
-            else
-            {
-                m_targetPosition = m_path[1];
-            }
-        }
+        //    //if (GameHelper.IsWithinThreshold(myPosition, m_path[1], 0.1f))
+        //    //{
+        //    //    m_path.RemoveAt(1);
+        //    //}
+
+        //    if(GameHelper.IsWithinThreshold(myPosition, m_path[1], m_size) || GameHelper.HasLineOfSight(gameObject, m_path[2]))
+        //    {
+        //        m_targetPosition = m_path[2];
+
+
+        //    }
+        //    else
+        //    {
+        //        m_targetPosition = m_path[1];
+        //    }
+        //}
     }
 
     private void OnDrawGizmosSelected()
     {
         NavMesh mesh = GameHelper.GetManager<NavMesh>();
         mesh.DebugDrawPath(m_path);
+
+        Gizmos.DrawSphere(m_targetPosition, m_size);
     }
 
     public void DealDamage(float damage)
