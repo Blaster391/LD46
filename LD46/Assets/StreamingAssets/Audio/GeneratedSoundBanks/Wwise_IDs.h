@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID FORCEYEET = 2996467687U;
         static const AkUniqueID PICKUP = 3978245845U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
+        static const AkUniqueID STOPMUSIC = 1917263390U;
         static const AkUniqueID TAKEDAMAGE = 2784187423U;
         static const AkUniqueID TREEDYING = 591859596U;
         static const AkUniqueID TURRET = 2674766611U;
