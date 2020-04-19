@@ -114,8 +114,7 @@ public class Enemy : MonoBehaviour
         m_energy -= damage;
         if(m_energy <= 0)
         {
-        
-            MyEvent.Post(gameObject);
+            GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent);
             Destroy(gameObject);
         }
     }

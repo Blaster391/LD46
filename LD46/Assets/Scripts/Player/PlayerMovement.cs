@@ -79,16 +79,16 @@ public class PlayerMovement : MonoBehaviour
         {
             m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce * damp);
 
-            m_sprite.flipX = true;
-            m_headSprite.flipX = true;
+           // m_sprite.flipX = true;
+           // m_headSprite.flipX = true;
         }
 
         if (rightMoveDown)
         {
             m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * damp);
 
-            m_sprite.flipX = false;
-            m_headSprite.flipX = false;
+          //  m_sprite.flipX = false;
+          //  m_headSprite.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
