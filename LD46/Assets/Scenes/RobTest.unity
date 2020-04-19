@@ -1504,7 +1504,7 @@ PrefabInstance:
     - target: {fileID: 8967545703653543421, guid: 230cf5c3e6a1b534e9ed434e2025423e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5722656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8967545703653543421, guid: 230cf5c3e6a1b534e9ed434e2025423e,
         type: 3}
@@ -3269,7 +3269,7 @@ PrefabInstance:
     - target: {fileID: 8967545703653543421, guid: 230cf5c3e6a1b534e9ed434e2025423e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5722656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8967545703653543421, guid: 230cf5c3e6a1b534e9ed434e2025423e,
         type: 3}
@@ -3873,6 +3873,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349996381613480166, guid: 06597707d9d246641b2de7fc077e3257,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349996381613480166, guid: 06597707d9d246641b2de7fc077e3257,
+        type: 3}
+      propertyPath: far clip plane
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06597707d9d246641b2de7fc077e3257, type: 3}

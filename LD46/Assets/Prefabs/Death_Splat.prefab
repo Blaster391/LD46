@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3800841708222894540}
   - component: {fileID: 3800841708222894515}
   - component: {fileID: 3800841708222894514}
+  - component: {fileID: 4339323359379597202}
   m_Layer: 0
   m_Name: Death_Splat
   m_TagString: Untagged
@@ -4773,3 +4774,15 @@ MonoBehaviour:
   LightBleed: 1
   LightingTexture: {fileID: 0}
   lightingFrame: {fileID: 0}
+--- !u!114 &4339323359379597202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800841708222894512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7607d8422137824f9158bbb14b7a433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
