@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 822240017}
   - component: {fileID: 112754609}
   - component: {fileID: 112754610}
+  - component: {fileID: 5602487207210066326}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -52,7 +53,9 @@ MonoBehaviour:
   _spacing: 1.5
   _maxVerticalNodes: 30
   _maxHorizontalNodes: 30
-  m_nodeIndexes: []
+  m_navmeshFile: 
+  m_generateDiagonals: 0
+  m_debugDraw: 1
 --- !u!114 &899647910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +161,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_endGamePrefab: {fileID: 3770997177852878201, guid: 3ec1983b1809ec448b7adb4b25c98880,
     type: 3}
+--- !u!114 &5602487207210066326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27447131541504395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e3d3dd828291d41a870dd02da7fbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_exitGameTextPrefab: {fileID: 3308612597963457349, guid: ebdba25a7356b1e4ea14e5e577ae62b2,
+    type: 3}
+  m_timeToQuit: 3

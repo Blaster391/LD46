@@ -53,7 +53,7 @@ public class GameOverUI : MonoBehaviour
         m_playerScore.text += $"Score: {m_playerStats.Score} \n";
         m_playerScore.text += $"Kills: {m_playerStats.Kills} \n";
         m_playerScore.text += $"Time Alive: {Mathf.RoundToInt(m_playerStats.TimeAlive)} seconds\n";
-        m_playerScore.text += $"Energy Leached: {m_playerStats.EnergyLeached} \n";
+        m_playerScore.text += $"Energy Leached: {Mathf.RoundToInt(m_playerStats.EnergyLeached)} \n";
     }
 
     // Update is called once per frame
@@ -61,7 +61,7 @@ public class GameOverUI : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
         }
 
         if (!m_scoreSubmitted && Input.GetKeyDown(KeyCode.Return))
