@@ -131,10 +131,6 @@
 							<ShortName>turret_high-006.wav</ShortName>
 							<Path>SFX\turret_high-006_10C4C929.wem</Path>
 						</File>
-						<File Id="259285699" Language="SFX">
-							<ShortName>turret_low-003.wav</ShortName>
-							<Path>SFX\turret_low-003_10C4C929.wem</Path>
-						</File>
 						<File Id="559944824" Language="SFX">
 							<ShortName>turret_high-001.wav</ShortName>
 							<Path>SFX\turret_high-001_10C4C929.wem</Path>
@@ -142,14 +138,6 @@
 						<File Id="574119826" Language="SFX">
 							<ShortName>turret_high-005.wav</ShortName>
 							<Path>SFX\turret_high-005_10C4C929.wem</Path>
-						</File>
-						<File Id="626905238" Language="SFX">
-							<ShortName>turret_low-004.wav</ShortName>
-							<Path>SFX\turret_low-004_10C4C929.wem</Path>
-						</File>
-						<File Id="687047562" Language="SFX">
-							<ShortName>turret_low-001.wav</ShortName>
-							<Path>SFX\turret_low-001_10C4C929.wem</Path>
 						</File>
 						<File Id="722309184" Language="SFX">
 							<ShortName>turret_high-003.wav</ShortName>
@@ -163,42 +151,29 @@
 							<ShortName>turret_high-004.wav</ShortName>
 							<Path>SFX\turret_high-004_10C4C929.wem</Path>
 						</File>
-						<File Id="963565389" Language="SFX">
-							<ShortName>turret_low-002.wav</ShortName>
-							<Path>SFX\turret_low-002_10C4C929.wem</Path>
-						</File>
 						<File Id="1023117400" Language="SFX">
 							<ShortName>turret_high-002.wav</ShortName>
 							<Path>SFX\turret_high-002_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{EAB5D1A1-A342-4A45-82B2-2D4E7DFF421F}">
-							<Media>
-								<File Id="687047562"/>
-								<File Id="963565389"/>
-								<File Id="259285699"/>
-								<File Id="626905238"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{23F028BA-D8E2-4ED8-A530-6DEE01C65058}">
-							<Media>
-								<File Id="559944824"/>
-								<File Id="1023117400"/>
-								<File Id="722309184"/>
-								<File Id="935780839"/>
-								<File Id="574119826"/>
-								<File Id="76914504"/>
-								<File Id="800509450"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
 				</Event>
-				<Event Id="212920027" Name="Turret2" ObjectPath="\Events\Default Work Unit\TurretEvents\Turret2" DurationType="OneShot" DurationMin="1.144036" DurationMax="1.144036">
+				<Event Id="212920027" Name="Turret2" ObjectPath="\Events\Default Work Unit\TurretEvents\Turret2" DurationType="OneShot" DurationMin="1.120317" DurationMax="1.180159">
 					<IncludedMemoryFiles>
-						<File Id="559944824" Language="SFX">
-							<ShortName>turret_high-001.wav</ShortName>
-							<Path>SFX\turret_high-001_10C4C929.wem</Path>
+						<File Id="259285699" Language="SFX">
+							<ShortName>turret_low-003.wav</ShortName>
+							<Path>SFX\turret_low-003_10C4C929.wem</Path>
+						</File>
+						<File Id="626905238" Language="SFX">
+							<ShortName>turret_low-004.wav</ShortName>
+							<Path>SFX\turret_low-004_10C4C929.wem</Path>
+						</File>
+						<File Id="687047562" Language="SFX">
+							<ShortName>turret_low-001.wav</ShortName>
+							<Path>SFX\turret_low-001_10C4C929.wem</Path>
+						</File>
+						<File Id="963565389" Language="SFX">
+							<ShortName>turret_low-002.wav</ShortName>
+							<Path>SFX\turret_low-002_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -209,14 +184,6 @@
 					<Path>SFX\LD_ball_light_sound01_55EDB696.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
-			<SwitchGroups>
-				<SwitchGroup Id="1521021787" Name="TurretType" ObjectPath="\Switches\Default Work Unit\TurretType">
-					<Switches>
-						<Switch Id="3550808449" Name="High" ObjectPath="\Switches\Default Work Unit\TurretType\High"/>
-						<Switch Id="545371365" Name="Low" ObjectPath="\Switches\Default Work Unit\TurretType\Low"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

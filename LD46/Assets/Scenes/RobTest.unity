@@ -499,6 +499,37 @@ Transform:
   m_Father: {fileID: 1064795127}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &112754608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 27447131541504395, guid: 6ea38383c275e9f488c75fd3bc591c44,
+    type: 3}
+  m_PrefabInstance: {fileID: 27447130774740414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &112754609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112754608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c874f8040b4580a4eb8827d67279df0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: db8898367a094094ba31f1289f2a2205,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &240510566
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,37 +562,6 @@ Transform:
   m_Father: {fileID: 262536974}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &112754608 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 27447131541504395, guid: 6ea38383c275e9f488c75fd3bc591c44,
-    type: 3}
-  m_PrefabInstance: {fileID: 27447130774740414}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &112754609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112754608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c874f8040b4580a4eb8827d67279df0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: db8898367a094094ba31f1289f2a2205,
-      type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!1001 &253504117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -787,6 +787,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret1
       objectReference: {fileID: 0}
+    - target: {fileID: 5257890068139761143, guid: 18a68c2b403bf4c43b757d3757b5caee,
+        type: 3}
+      propertyPath: MyEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 362cdda47b625d740adaa3e3b15ad2d7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18a68c2b403bf4c43b757d3757b5caee, type: 3}
 --- !u!4 &283128788 stripped
@@ -1061,6 +1067,12 @@ PrefabInstance:
       propertyPath: m_energy
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8873470741719198371, guid: 80f4e1e1f3299b247b6145852e1341e8,
+        type: 3}
+      propertyPath: MyEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c8deb63f6bace6d44b18e2f4da6d6dff,
+        type: 2}
     - target: {fileID: 8873470741719198397, guid: 80f4e1e1f3299b247b6145852e1341e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2529,6 +2541,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret2
       objectReference: {fileID: 0}
+    - target: {fileID: 5257890068139761143, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: MyEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c55f4076af3c6164293e555dbb06d039,
+        type: 2}
     - target: {fileID: 5830912746736399443, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
       propertyPath: m_Distance

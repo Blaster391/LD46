@@ -5,21 +5,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
 	3249137159	EnemyDeath			\Default Work Unit\Enemies\EnemyDeath	
 
-Switch Group	ID	Name			Wwise Object Path	Notes
-	1521021787	TurretType			\Default Work Unit\TurretType	
-
-Switch	ID	Name	Switch Group			Notes
-	545371365	Low	TurretType			
-	3550808449	High	TurretType			
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	76914504	turret_high-006	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-006		202196
+	76914504	turret_high-006	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-006		202196
 	138984369	Short stab	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\short stab_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Short stab		1316636
 	154983699	Percussion2	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\percussion2-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Percussion2		1316636
 	170475520	lead	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\lead_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\lead		1316636
 	227414808	Arp high	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\arp high_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Arp high		1316636
 	230180277	Bass	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\bass-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Bass		1316636
-	259285699	turret_low-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-003		203024
+	259285699	turret_low-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-003		203024
 	329795044	enemy_death-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\enemy_death-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-001		202112
 	375230761	lead	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\lead-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\lead		1316636
 	400408087	sub hit	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\sub hit-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\sub hit		1316636
@@ -27,24 +20,24 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	454253465	Bass	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\bass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Bass		1316636
 	530134747	enemy_death-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\enemy_death-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-002		199520
 	546314522	sub hit	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\sub hit_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\sub hit		1316636
-	559944824	turret_high-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-001		201872
-	574119826	turret_high-005	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-005		198636
+	559944824	turret_high-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-001		201872
+	574119826	turret_high-005	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-005		198636
 	625988322	Drums	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\drums-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Drums		1316636
-	626905238	turret_low-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-004		207888
+	626905238	turret_low-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-004		207888
 	650933648	Percussion1	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\percusion_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Percussion1		1316636
 	661029702	Short stab	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\short stab-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Short stab		1316636
 	676701650	enemy_death-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\enemy_death-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-004		201296
 	679225109	LD_ball_light_sound01	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\LD_ball_light_sound01_55EDB696.wem		\Actor-Mixer Hierarchy\Default Work Unit\LD_ball_light_sound01		2293104
-	687047562	turret_low-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-001		197688
-	722309184	turret_high-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-003		194092
-	800509450	turret_high-007	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-007		209864
+	687047562	turret_low-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-001		197688
+	722309184	turret_high-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-003		194092
+	800509450	turret_high-007	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-007		209864
 	874794469	Percussion2	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\percussion2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Percussion2		1316636
 	886371755	Drums	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\drums_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Drums		1316636
-	935780839	turret_high-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-004		199360
-	963565389	turret_low-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretLow\turret_low-002		208244
+	935780839	turret_high-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-004		199360
+	963565389	turret_low-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-002		208244
 	985901520	Stabbyboys	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\Stabbyboys-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Stabbyboys		1316636
 	990031999	Percussion1	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\percusion-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Percussion1		1316636
-	1023117400	turret_high-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretsSwitch\TurretHigh\turret_high-002		195956
+	1023117400	turret_high-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-002		195956
 	1057502442	Stabbyboys	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\Stabbyboys_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Stabbyboys		1316636
 	1058263752	enemy_death-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\enemy_death-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-003		200860
 

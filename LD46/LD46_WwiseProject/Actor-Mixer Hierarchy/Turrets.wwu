@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Turrets" ID="{20A5500D-5B72-4242-BA15-938C851DF25C}" OwnerID="{875A71EA-CE74-4446-B881-2E780BE812D2}" PersistMode="Nested">
 			<ChildrenList>
-				<SwitchContainer Name="TurretsSwitch" ID="{57E3F92C-55FD-4922-B4B0-D29AB2AEDD93}" ShortID="542565025">
+				<RandomSequenceContainer Name="TurretHigh" ID="{9B743F8D-B649-483A-A423-75B47E2A389E}" ShortID="379723869">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
@@ -11,12 +11,175 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
 						</Reference>
-						<Reference Name="SwitchGroupOrStateGroup">
-							<ObjectRef Name="TurretType" ID="{F66FF432-15DD-4F38-B40D-83FBFEDD6DE2}" WorkUnitID="{5069D990-5BF4-4E50-938D-1EBDAC07D784}"/>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="turret_high-001" ID="{A77F2496-E449-4E67-840F-8FEB43CAD2F7}" ShortID="253623344">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-001" ID="{E18C9ABA-1D47-4E57-A022-EF4C4FD25CD0}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="559944824"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-001" ID="{E18C9ABA-1D47-4E57-A022-EF4C4FD25CD0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_high-002" ID="{884D680D-7243-457D-B245-E43C8FD8A21C}" ShortID="750490610">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-002" ID="{466AD776-F2C4-4D4F-89B4-C65C568BCFE1}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1023117400"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-002" ID="{466AD776-F2C4-4D4F-89B4-C65C568BCFE1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_high-003" ID="{87E61BB6-7BEE-4D9E-AE1B-297FB0C12103}" ShortID="7606427">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-003" ID="{F3A02592-FEAC-4E90-93A7-427259F062C4}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="722309184"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-003" ID="{F3A02592-FEAC-4E90-93A7-427259F062C4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_high-004" ID="{47A866F3-3B9A-472B-8997-E45EDAEE8C7A}" ShortID="629701893">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-004" ID="{FECB8111-4543-43DD-BE49-95DE5B8ABB71}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-004.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="935780839"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-004" ID="{FECB8111-4543-43DD-BE49-95DE5B8ABB71}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_high-005" ID="{1CB1D161-3D04-49CE-93C9-4EF02FE97F97}" ShortID="165457624">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-005" ID="{71D228E1-2C82-4A8E-A4D8-D29099FD5F23}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-005.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="574119826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-005" ID="{71D228E1-2C82-4A8E-A4D8-D29099FD5F23}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_high-006" ID="{50A60F61-948C-4E49-99A2-3CBF82018114}" ShortID="954682224">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-006" ID="{9E4B40EC-F808-49BF-97CC-43960DED4D3B}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-006.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="76914504"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-006" ID="{9E4B40EC-F808-49BF-97CC-43960DED4D3B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_high-007" ID="{541A6E7F-F47F-4D1C-A852-9DB4FDD1B1EB}" ShortID="555092465">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_high-007" ID="{E0889CC9-3D4C-4BA7-A990-E40FED467529}">
+									<Language>SFX</Language>
+									<AudioFile>turret_high-007.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="800509450"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_high-007" ID="{E0889CC9-3D4C-4BA7-A990-E40FED467529}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}" ShortID="864507507">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}" ShortID="864507507">
+						<Sound Name="turret_low-001" ID="{54982B0B-F9B8-4D70-92B1-D12C46F7EC9B}" ShortID="833133958">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
@@ -26,97 +189,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="turret_low-001" ID="{54982B0B-F9B8-4D70-92B1-D12C46F7EC9B}" ShortID="833133958">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_low-001" ID="{7C6B9572-92E5-45C9-9E67-06E094342D7D}">
-											<Language>SFX</Language>
-											<AudioFile>turret_low-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="687047562"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_low-001" ID="{7C6B9572-92E5-45C9-9E67-06E094342D7D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_low-002" ID="{F050E736-3501-4678-9049-15B9B688036C}" ShortID="841709748">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_low-002" ID="{3BEB45A1-B943-4E0B-8916-BDBAA22759BD}">
-											<Language>SFX</Language>
-											<AudioFile>turret_low-002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="963565389"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_low-002" ID="{3BEB45A1-B943-4E0B-8916-BDBAA22759BD}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_low-003" ID="{AC91362B-5D26-46EF-8677-8196F86790A8}" ShortID="394362638">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_low-003" ID="{CB943F58-EFC0-4DEC-822D-E19E2E9BCF4F}">
-											<Language>SFX</Language>
-											<AudioFile>turret_low-003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="259285699"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_low-003" ID="{CB943F58-EFC0-4DEC-822D-E19E2E9BCF4F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_low-004" ID="{29D6318F-8F20-42D3-A6A2-A9286FE84E90}" ShortID="909112297">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_low-004" ID="{128AC986-7885-42CF-9876-4C04543176F4}">
-											<Language>SFX</Language>
-											<AudioFile>turret_low-004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="626905238"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_low-004" ID="{128AC986-7885-42CF-9876-4C04543176F4}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								<AudioFileSource Name="turret_low-001" ID="{7C6B9572-92E5-45C9-9E67-06E094342D7D}">
+									<Language>SFX</Language>
+									<AudioFile>turret_low-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="687047562"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="TurretHigh" ID="{9B743F8D-B649-483A-A423-75B47E2A389E}" ShortID="379723869">
+							<ActiveSourceList>
+								<ActiveSource Name="turret_low-001" ID="{7C6B9572-92E5-45C9-9E67-06E094342D7D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_low-002" ID="{F050E736-3501-4678-9049-15B9B688036C}" ShortID="841709748">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
@@ -126,188 +211,64 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="turret_high-001" ID="{A77F2496-E449-4E67-840F-8FEB43CAD2F7}" ShortID="253623344">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-001" ID="{E18C9ABA-1D47-4E57-A022-EF4C4FD25CD0}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="559944824"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-001" ID="{E18C9ABA-1D47-4E57-A022-EF4C4FD25CD0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_high-002" ID="{884D680D-7243-457D-B245-E43C8FD8A21C}" ShortID="750490610">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-002" ID="{466AD776-F2C4-4D4F-89B4-C65C568BCFE1}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1023117400"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-002" ID="{466AD776-F2C4-4D4F-89B4-C65C568BCFE1}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_high-003" ID="{87E61BB6-7BEE-4D9E-AE1B-297FB0C12103}" ShortID="7606427">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-003" ID="{F3A02592-FEAC-4E90-93A7-427259F062C4}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="722309184"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-003" ID="{F3A02592-FEAC-4E90-93A7-427259F062C4}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_high-004" ID="{47A866F3-3B9A-472B-8997-E45EDAEE8C7A}" ShortID="629701893">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-004" ID="{FECB8111-4543-43DD-BE49-95DE5B8ABB71}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="935780839"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-004" ID="{FECB8111-4543-43DD-BE49-95DE5B8ABB71}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_high-005" ID="{1CB1D161-3D04-49CE-93C9-4EF02FE97F97}" ShortID="165457624">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-005" ID="{71D228E1-2C82-4A8E-A4D8-D29099FD5F23}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-005.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="574119826"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-005" ID="{71D228E1-2C82-4A8E-A4D8-D29099FD5F23}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_high-006" ID="{50A60F61-948C-4E49-99A2-3CBF82018114}" ShortID="954682224">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-006" ID="{9E4B40EC-F808-49BF-97CC-43960DED4D3B}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-006.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="76914504"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-006" ID="{9E4B40EC-F808-49BF-97CC-43960DED4D3B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="turret_high-007" ID="{541A6E7F-F47F-4D1C-A852-9DB4FDD1B1EB}" ShortID="555092465">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="turret_high-007" ID="{E0889CC9-3D4C-4BA7-A990-E40FED467529}">
-											<Language>SFX</Language>
-											<AudioFile>turret_high-007.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="800509450"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="turret_high-007" ID="{E0889CC9-3D4C-4BA7-A990-E40FED467529}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								<AudioFileSource Name="turret_low-002" ID="{3BEB45A1-B943-4E0B-8916-BDBAA22759BD}">
+									<Language>SFX</Language>
+									<AudioFile>turret_low-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="963565389"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
-						</RandomSequenceContainer>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_low-002" ID="{3BEB45A1-B943-4E0B-8916-BDBAA22759BD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_low-003" ID="{AC91362B-5D26-46EF-8677-8196F86790A8}" ShortID="394362638">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_low-003" ID="{CB943F58-EFC0-4DEC-822D-E19E2E9BCF4F}">
+									<Language>SFX</Language>
+									<AudioFile>turret_low-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="259285699"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_low-003" ID="{CB943F58-EFC0-4DEC-822D-E19E2E9BCF4F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="turret_low-004" ID="{29D6318F-8F20-42D3-A6A2-A9286FE84E90}" ShortID="909112297">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="turret_low-004" ID="{128AC986-7885-42CF-9876-4C04543176F4}">
+									<Language>SFX</Language>
+									<AudioFile>turret_low-004.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="626905238"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="turret_low-004" ID="{128AC986-7885-42CF-9876-4C04543176F4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<GroupingInfo>
-						<GroupingBehaviorList>
-							<GroupingBehavior>
-								<ItemRef Name="TurretHigh" ID="{9B743F8D-B649-483A-A423-75B47E2A389E}"/>
-							</GroupingBehavior>
-							<GroupingBehavior>
-								<ItemRef Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}"/>
-							</GroupingBehavior>
-						</GroupingBehaviorList>
-						<GroupingList>
-							<Grouping>
-								<SwitchRef Name="Low" ID="{EAB5D1A1-A342-4A45-82B2-2D4E7DFF421F}"/>
-								<ItemList>
-									<ItemRef Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="High" ID="{23F028BA-D8E2-4ED8-A530-6DEE01C65058}"/>
-								<ItemList>
-									<ItemRef Name="TurretHigh" ID="{9B743F8D-B649-483A-A423-75B47E2A389E}"/>
-								</ItemList>
-							</Grouping>
-						</GroupingList>
-					</GroupingInfo>
-				</SwitchContainer>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
