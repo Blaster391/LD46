@@ -234,6 +234,8 @@ public partial class L2DLDirectLightRenderer
         m_pointLightRenderingBuffer.SetGlobalFloat("_lightAttenuation", 1f / Mathf.Max(pointLight.Range * pointLight.Range, 0.00001f));
         m_pointLightRenderingBuffer.SetGlobalVector("_lightPosition", pointLight.transform.position);
 
+        m_pointLightRenderingBuffer.SetGlobalFloat("_maxIntensityOutput", pointLight.MaxIntensityOutput);
+
         m_pointLightRenderingBuffer.SetRenderTarget(new RenderTargetIdentifier[] { L2DLPipelineData.s_cameraDirectLightResultTextureId, L2DLPipelineData.s_cameraEmissionTextureId }, L2DLPipelineData.s_cameraFakeDepthTextureId);
         m_pointLightRenderingBuffer.Blit(null, BuiltinRenderTextureType.CurrentActive, PointLightPassMaterial);
 

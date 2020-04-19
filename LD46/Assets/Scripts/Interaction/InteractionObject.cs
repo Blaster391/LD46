@@ -23,8 +23,9 @@ public class InteractionObject : MonoBehaviour
 
     public float PickupRadius { get { return m_pickupRadius; } }
 
-    public System.Action<PlayerInteraction> OnUse = delegate { };
+    public System.Action<PlayerInteraction> Used = delegate { };
     public System.Action<PlayerInteraction> Dropped = delegate { };
+    public System.Action<PlayerInteraction> PickedUp = delegate { };
 
     private void OnSettle()
     {
@@ -99,6 +100,7 @@ public class InteractionObject : MonoBehaviour
     // Called when player picks up
     virtual public void OnPickup(GameObject player)
     {
+        PickedUp(player.GetComponent<PlayerInteraction>());
 
         m_joint2D.enabled = true;
         m_joint2D.connectedBody = player.GetComponent<Rigidbody2D>();
@@ -113,6 +115,6 @@ public class InteractionObject : MonoBehaviour
 
     virtual public void Use(GameObject player)
     {
-        OnUse(player.GetComponent<PlayerInteraction>());
+        Used(player.GetComponent<PlayerInteraction>());
     }
 }

@@ -59,7 +59,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.6
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -89,8 +89,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_intensity: 1
   m_color: {r: 1, g: 1, b: 1, a: 1}
-  m_range: 4.6
+  m_range: 5
   m_shadowmapSize: 2048
+  m_maxIntensityOutput: 0.39
 --- !u!1 &7459418591684140267
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +110,7 @@ GameObject:
   - component: {fileID: -1956138050813927739}
   - component: {fileID: -3127841447378706624}
   - component: {fileID: 1251154380}
+  - component: {fileID: 6498530770551655130}
   m_Layer: 10
   m_Name: Orb
   m_TagString: L2DLDirectLight
@@ -173,6 +175,8 @@ MonoBehaviour:
       m_range: 1
       m_intensity: 0.1
   m_shopUIPrefab: {fileID: 8726261674924298018, guid: 1dad66e763f5e8e4aa2e2653cb58626d,
+    type: 3}
+  m_orbUIPrefab: {fileID: 8518654407590878352, guid: aafac8fdd891ace4682899187b94a307,
     type: 3}
 --- !u!114 &1659119190
 MonoBehaviour:
@@ -249,7 +253,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ad49264904467354a851de86e1f7805b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,9 +273,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 762783f9d924a9349b040549932ff4de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: 073d66829208143ca88b6bc0f80a3ad5, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.9440751, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -351,3 +355,21 @@ MonoBehaviour:
   m_desiredHeight: 1
   m_heightThreshold: 1
   m_upwardsForce: 1
+--- !u!114 &6498530770551655130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459418591684140267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6651308ee65299498818449cf41c17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emission: 5
+  Occlusion: 0
+  Reflectance: 0.5
+  LightBleed: 0.5
+  LightingTexture: {fileID: 0}
+  lightingFrame: {fileID: 0}

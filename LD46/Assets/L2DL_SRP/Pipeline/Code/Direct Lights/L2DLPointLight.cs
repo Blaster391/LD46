@@ -19,6 +19,7 @@ public class L2DLPointLight : MonoBehaviour, IL2DLDirectLight
     public float Intensity { get { return m_intensity; } set { m_intensity = value; } }
     public Camera ShadowCamera { get; private set; }
     public L2DLTextureSize ShadowMapSize { get { return m_shadowmapSize; } }
+    public float MaxIntensityOutput { get { return m_maxIntensityOutput; } }
 
     [Header("Settings")]
     [SerializeField] private float m_intensity = 1f;
@@ -26,7 +27,9 @@ public class L2DLPointLight : MonoBehaviour, IL2DLDirectLight
     [SerializeField] private float m_range = 5f;
 
     [SerializeField] private L2DLTextureSize m_shadowmapSize = L2DLTextureSize.Size512;
-    
+
+    [SerializeField] private float m_maxIntensityOutput = 1f;
+
     // --------------------------------------------------------------------
     private void OnValidate()
     {
