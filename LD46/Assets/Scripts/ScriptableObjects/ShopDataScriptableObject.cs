@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class ShopOption
 {
-    public Turret m_turretPrefab;
+    public TurretBase m_turretPrefab;
     public float m_energyCost;
     public string m_title;
     public string m_subtitle;

@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float m_groundedEpsilon = 0.05f;
 
-
+    [SerializeField] private SpriteRenderer m_headSprite = null;
     private SpriteRenderer m_sprite = null;
     private Rigidbody2D m_rigidbody2D = null;
     private CapsuleCollider2D m_capsuleCollider2D = null;
@@ -79,14 +79,16 @@ public class PlayerMovement : MonoBehaviour
         {
             m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce * damp);
 
-            m_sprite.flipX = true;
+           // m_sprite.flipX = true;
+           // m_headSprite.flipX = true;
         }
 
         if (rightMoveDown)
         {
             m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * damp);
 
-            m_sprite.flipX = false;
+          //  m_sprite.flipX = false;
+          //  m_headSprite.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

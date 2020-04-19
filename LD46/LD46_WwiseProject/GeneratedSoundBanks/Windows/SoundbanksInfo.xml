@@ -29,6 +29,102 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3249137159" Name="EnemyDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyDeath" DurationType="OneShot" DurationMin="1.130703" DurationMax="1.145397">
+					<IncludedMemoryFiles>
+						<File Id="329795044" Language="SFX">
+							<ShortName>enemy_death-001.wav</ShortName>
+							<Path>SFX\enemy_death-001_10C4C929.wem</Path>
+						</File>
+						<File Id="530134747" Language="SFX">
+							<ShortName>enemy_death-002.wav</ShortName>
+							<Path>SFX\enemy_death-002_10C4C929.wem</Path>
+						</File>
+						<File Id="676701650" Language="SFX">
+							<ShortName>enemy_death-004.wav</ShortName>
+							<Path>SFX\enemy_death-004_10C4C929.wem</Path>
+						</File>
+						<File Id="1058263752" Language="SFX">
+							<ShortName>enemy_death-003.wav</ShortName>
+							<Path>SFX\enemy_death-003_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="417627684" Name="PlayMusic" ObjectPath="\Events\Default Work Unit\PlayMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="138984369" Language="SFX">
+							<ShortName>Chrod1\short stab.wav</ShortName>
+							<Path>SFX\Chrod1\short stab_D79FB2B7.wem</Path>
+						</File>
+						<File Id="154983699" Language="SFX">
+							<ShortName>Chord2\percussion2-01.wav</ShortName>
+							<Path>SFX\Chord2\percussion2-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="170475520" Language="SFX">
+							<ShortName>Chrod1\lead.wav</ShortName>
+							<Path>SFX\Chrod1\lead_D79FB2B7.wem</Path>
+						</File>
+						<File Id="227414808" Language="SFX">
+							<ShortName>Chrod1\arp high.wav</ShortName>
+							<Path>SFX\Chrod1\arp high_D79FB2B7.wem</Path>
+						</File>
+						<File Id="230180277" Language="SFX">
+							<ShortName>Chord2\bass-01.wav</ShortName>
+							<Path>SFX\Chord2\bass-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="375230761" Language="SFX">
+							<ShortName>Chord2\lead-01.wav</ShortName>
+							<Path>SFX\Chord2\lead-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="400408087" Language="SFX">
+							<ShortName>Chord2\sub hit-01.wav</ShortName>
+							<Path>SFX\Chord2\sub hit-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="407398589" Language="SFX">
+							<ShortName>Chord2\arp high-01.wav</ShortName>
+							<Path>SFX\Chord2\arp high-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="454253465" Language="SFX">
+							<ShortName>Chrod1\bass.wav</ShortName>
+							<Path>SFX\Chrod1\bass_D79FB2B7.wem</Path>
+						</File>
+						<File Id="546314522" Language="SFX">
+							<ShortName>Chrod1\sub hit.wav</ShortName>
+							<Path>SFX\Chrod1\sub hit_D79FB2B7.wem</Path>
+						</File>
+						<File Id="625988322" Language="SFX">
+							<ShortName>Chord2\drums-01.wav</ShortName>
+							<Path>SFX\Chord2\drums-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="650933648" Language="SFX">
+							<ShortName>Chrod1\percusion.wav</ShortName>
+							<Path>SFX\Chrod1\percusion_D79FB2B7.wem</Path>
+						</File>
+						<File Id="661029702" Language="SFX">
+							<ShortName>Chord2\short stab-01.wav</ShortName>
+							<Path>SFX\Chord2\short stab-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="874794469" Language="SFX">
+							<ShortName>Chrod1\percussion2.wav</ShortName>
+							<Path>SFX\Chrod1\percussion2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="886371755" Language="SFX">
+							<ShortName>Chrod1\drums.wav</ShortName>
+							<Path>SFX\Chrod1\drums_D79FB2B7.wem</Path>
+						</File>
+						<File Id="985901520" Language="SFX">
+							<ShortName>Chord2\Stabbyboys-01.wav</ShortName>
+							<Path>SFX\Chord2\Stabbyboys-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="990031999" Language="SFX">
+							<ShortName>Chord2\percusion-01.wav</ShortName>
+							<Path>SFX\Chord2\percusion-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1057502442" Language="SFX">
+							<ShortName>Chrod1\Stabbyboys.wav</ShortName>
+							<Path>SFX\Chrod1\Stabbyboys_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2674766611" Name="Turret" ObjectPath="\Events\Default Work Unit\TurretEvents\Turret" DurationType="OneShot" DurationMin="1.099932" DurationMax="1.189342">
 					<IncludedMemoryFiles>
 						<File Id="76914504" Language="SFX">

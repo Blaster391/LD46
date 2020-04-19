@@ -6,6 +6,9 @@ using static TurretSound;
 public class Turret : MonoBehaviour
 {
     [SerializeField]
+    private GameObject m_firingPoint = null;
+
+    [SerializeField]
     private GameObject m_currentTarget = null;
     [SerializeField]
     private float m_rateOfFire = 1.0f;
@@ -40,6 +43,13 @@ public class Turret : MonoBehaviour
         if (m_timeSinceUpdate > m_reactionTime)
         {
             UpdateFiringStatus();
+        }
+
+        if(m_currentTarget != null)
+        {
+            var directionToTarget = m_currentTarget.transform.position - transform.position;
+            var angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
         if(m_isFiring)
@@ -96,8 +106,9 @@ public class Turret : MonoBehaviour
         if (m_currentTarget != null)
         {
             GameObject spawnedProjectile = Instantiate<GameObject>(m_projectilePrefab);
-            spawnedProjectile.transform.position = transform.position;
 
+            Vector2 spawnPosition = (m_firingPoint != null) ? m_firingPoint.transform.position : transform.position;
+            spawnedProjectile.transform.position = spawnPosition;
             TurretProjectile projectile = spawnedProjectile.GetComponent<TurretProjectile>();
 
             Vector2 directionToTarget = (m_currentTarget.transform.position - spawnedProjectile.transform.position).normalized;

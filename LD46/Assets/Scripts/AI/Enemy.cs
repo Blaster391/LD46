@@ -17,25 +17,36 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float m_movementUpdateRate = 1.0f;
 
-    [SerializeField]
-    private AudioEventPosition m_deathObject = null;
-
     private List<Vector2> m_path = null;
     private Rigidbody2D m_rigidbody2D = null;
     private NavMesh m_mesh;
     private float m_timeSinceLastPathUpdate = 0.0f;
     private Vector2 m_targetPosition = new Vector2();
 
-    // Start is called before the first frame update
+    public AK.Wwise.Event MyEvent;
+
+    // Static tracking
+    private static List<Enemy> s_enemies = new List<Enemy>();
+    public static List<Enemy> Enemies { get { return new List<Enemy>(s_enemies); } }
+
+    private void Awake()
+    {
+        s_enemies.Add(this);
+    }
+
     void Start()
     {
-        m_target = GameObject.FindObjectOfType<OrbBehaviour>().gameObject;
+        m_target = FindObjectOfType<OrbBehaviour>().gameObject;
         m_mesh = GameHelper.GetManager<NavMesh>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_timeSinceLastPathUpdate = Random.Range(0, m_movementUpdateRate);
     }
 
-    // Update is called once per frame
+    void OnDestroy()
+    {
+        s_enemies.Remove(this);
+    }
+    
     void Update()
     {
 
@@ -103,10 +114,7 @@ public class Enemy : MonoBehaviour
         m_energy -= damage;
         if(m_energy <= 0)
         {
-
-            // PLAY AUDIO
-            //GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, EVENT);
-
+            GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent);
             Destroy(gameObject);
         }
     }
@@ -122,9 +130,9 @@ public class Enemy : MonoBehaviour
         HandleCollision(collision.gameObject);
     }
 
-    void HandleCollision(GameObject collision)
+    private void HandleCollision(GameObject otherObject)
     {
-        OrbBehaviour orb = collision.GetComponent<OrbBehaviour>();
+        OrbBehaviour orb = otherObject.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
             orb.TakeEnergy(m_energy * m_energyAttackModifier);

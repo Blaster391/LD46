@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3773419286250415913}
   - component: {fileID: 3773419286250415912}
   - component: {fileID: 4808419712798868137}
+  - component: {fileID: 3095962542701871400}
   m_Layer: 0
   m_Name: TurretProjectile
   m_TagString: Untagged
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 42407266e702dc349a8f50addbbd9c62, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d336a9d45f0c2a46a71a65c70e231b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_lifeSpan: 10
+  m_damage: 10
+--- !u!114 &3095962542701871400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773419286250415915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6651308ee65299498818449cf41c17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emission: 1
+  Occlusion: 0.5
+  Reflectance: 0.5
+  LightBleed: 0.5
+  LightingTexture: {fileID: 0}
+  lightingFrame: {fileID: 0}

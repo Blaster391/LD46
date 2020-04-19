@@ -5,8 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="MONOLITHICBIGBOYSOUNDBANK" ID="{BBE7E5B4-3698-4B1D-8EDE-1CF1F90376B0}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Enemies" ID="{255EFB3C-2A78-4054-821A-C628DD77E3D6}" WorkUnitID="{255EFB3C-2A78-4054-821A-C628DD77E3D6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="LD_ball_light_sound01" ID="{D2622844-FB17-420B-98AF-A949CBC34201}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BallOfLight" ID="{5890BBC6-553A-42A7-9A57-B8AB56B4CC14}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PlayMusic" ID="{14EEEA57-C03B-4813-A561-2909443BFFE6}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TurretEvents" ID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" WorkUnitID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

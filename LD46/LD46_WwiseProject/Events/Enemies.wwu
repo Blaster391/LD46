@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{255EFB3C-2A78-4054-821A-C628DD77E3D6}" SchemaVersion="97" RootDocumentID="{452AD202-D74C-4888-A71B-87243D501C2E}">
+	<Events>
+		<WorkUnit Name="Enemies" ID="{255EFB3C-2A78-4054-821A-C628DD77E3D6}" OwnerID="{452AD202-D74C-4888-A71B-87243D501C2E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="EnemyDeath" ID="{F3960A29-D11B-433F-A152-C1DC0AF790E7}">
+					<ChildrenList>
+						<Action Name="" ID="{0A708C88-A8EA-40E5-B37F-A774C5150583}" ShortID="752133305">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EnemyDeath" ID="{AF20D9AA-637F-4E9E-ABC8-407288A311FE}" WorkUnitID="{AFB9AD75-2560-4D0D-9A7D-27DF128BC3FB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
