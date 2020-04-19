@@ -1,5 +1,5 @@
-﻿#ifndef MYRP_L2DLSPRITE_INCLUDED
-#define MYRP_L2DLSPRITE_INCLUDED
+﻿#ifndef MYRP_L2DLSPRITEPARTICLES_INCLUDED
+#define MYRP_L2DLSPRITEPARTICLES_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 
@@ -51,7 +51,7 @@ struct FragOutput
     float4 additionalData : SV_Target3;
 };
 
-VertexOutput L2DLSpritePassVertex (VertexInput input) 
+VertexOutput L2DLSpriteParticlesPassVertex (VertexInput input) 
 {
 	VertexOutput output;
 
@@ -65,7 +65,7 @@ VertexOutput L2DLSpritePassVertex (VertexInput input)
 	return output;
 }
 
-FragOutput L2DLSpritePassFragment (VertexOutput input) 
+FragOutput L2DLSpriteParticlesPassFragment (VertexOutput input) 
 {
     ////  Sample Inputs ////
     float4 spriteColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
@@ -102,4 +102,4 @@ FragOutput L2DLSpritePassFragment (VertexOutput input)
     return output;
 }
 
-#endif // MYRP_L2DLSPRITE_INCLUDED
+#endif // MYRP_L2DLSPRITEPARTICLES_INCLUDED
