@@ -63,6 +63,7 @@ public class OrbBehaviour : MonoBehaviour
     public float CurrentEnergy { get; private set; }
     public float CurrentEnergyProp { get { return CurrentEnergy / m_maxEnergy; } }
     public float CurrentRange { get; private set; }
+    public bool IsShopOpen { get { return m_shopUI != null; } }
 
     // Components
     private GameWorldObjectManager m_gameWorldObjectManager = null;
