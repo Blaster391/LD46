@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private float m_energy = 10.0f;
+    private float m_maxEnergy = 10f;
     [SerializeField]
     private float m_energyAttackModifier = 1.0f;
 
@@ -24,6 +25,8 @@ public class Enemy : MonoBehaviour
     private Vector2 m_targetPosition = new Vector2();
     private float m_size = 0.1f;
 
+    public float CurrentEnergyProp { get { return m_energy / m_maxEnergy; } }
+
     public AK.Wwise.Event MyEvent;
     public AK.Wwise.Event MyEvent2;
 
@@ -31,7 +34,7 @@ public class Enemy : MonoBehaviour
     private static List<Enemy> s_enemies = new List<Enemy>();
     public static List<Enemy> Enemies { get { return new List<Enemy>(s_enemies); } }
 
-
+    public System.Action OnHit = delegate { };
 
     private void Awake()
     {
@@ -40,6 +43,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        m_maxEnergy = m_energy;
+
         m_target = FindObjectOfType<OrbBehaviour>().gameObject;
         m_mesh = GameHelper.GetManager<NavMesh>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
@@ -152,7 +157,8 @@ public class Enemy : MonoBehaviour
     public void DealDamage(float damage)
     {
         m_energy -= damage;
-        if(m_energy <= 0)
+        OnHit();
+        if (m_energy <= 0)
         {
             GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent);
             Destroy(gameObject);
