@@ -177,6 +177,8 @@ MonoBehaviour:
   m_standardColourTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_consumingEnergyColourTint: {r: 0.43921572, g: 0.9843138, b: 0.9921569, a: 1}
   m_gainingMaxHealthColourTint: {r: 0.099683836, g: 0.9150943, b: 0, a: 1}
+  m_lowHealthColourTint: {r: 1, g: 0, b: 0, a: 1}
+  m_lowHealthEnergyProp: 0.2
   m_shopUIPrefab: {fileID: 8726261674924298018, guid: 1dad66e763f5e8e4aa2e2653cb58626d,
     type: 3}
   m_orbUIPrefab: {fileID: 8518654407590878352, guid: aafac8fdd891ace4682899187b94a307,
