@@ -45,7 +45,7 @@ namespace Scoreboard
 
             private ScoreboardConnection m_connection = null;
 
-            public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete)
+            public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
             {
                 if(m_connection == null)
                 {
@@ -53,13 +53,13 @@ namespace Scoreboard
                     return;
                 }
 
-                StartCoroutine(GetHighscoresCoroutine(_onRequestComplete));
+                StartCoroutine(GetHighscoresCoroutine(_onRequestComplete, level));
             }
 
-            private IEnumerator GetHighscoresCoroutine(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete)
+            private IEnumerator GetHighscoresCoroutine(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
             {
 
-                string getUrl = "/api/scoreboard/" + m_connection.GameName;
+                string getUrl = "/api/scoreboard/" + m_connection.GameName + "?level=" + level;
                 var request = UnityWebRequest.Get(m_connection.DatabaseAddress + getUrl);
                 yield return request.SendWebRequest();
 

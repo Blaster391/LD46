@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class StatsManager : MonoBehaviour
 {
+
     public float EnergyLeached { get; private set; } = 0;
     public int Score { get; private set; } = 0;
     public int Kills { get; private set; } = 0;
     public float TimeAlive { get; private set; } = 0;
 
-    public bool IsAlive { get { return m_alive; } }
+    public bool IsAlive { get; private set; } = false;
 
-    private bool m_alive = false;
+    public string Level { get { return m_level; } }
+
+    [SerializeField]
+    private string m_level = "";
+
     public void AddLeachedEnergy(float energy)
     {
-        if(m_alive)
+        if(IsAlive)
         {
             EnergyLeached += energy;
         }
@@ -23,7 +28,7 @@ public class StatsManager : MonoBehaviour
 
     public void IncrementKills()
     {
-        if (m_alive)
+        if (IsAlive)
         {
             Kills++;
         }
@@ -31,7 +36,7 @@ public class StatsManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        if (m_alive)
+        if (IsAlive)
         {
             Score += amount;
         }
@@ -39,19 +44,19 @@ public class StatsManager : MonoBehaviour
 
     public void StartAliveTimer()
     {
-        m_alive = true;
+        IsAlive = true;
         TimeAlive = 0;
     }
 
     public void EndAliveTimer()
     {
-        m_alive = false;
+        IsAlive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(m_alive)
+        if(IsAlive)
         {
             TimeAlive += Time.deltaTime;
         }
