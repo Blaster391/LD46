@@ -92,7 +92,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 // Occlusion check
                 bool fail = false;
-                RaycastHit2D[] hits = Physics2D.RaycastAll(myPos, toObj.normalized, toObj.magnitude, ~(1 << 9)); // not player.
+                RaycastHit2D[] hits = Physics2D.RaycastAll(myPos, toObj.normalized, toObj.magnitude, (1 << 8)); // not player.
                 foreach(RaycastHit2D hit in hits)
                 {
                     if (hit.rigidbody?.gameObject == collider.gameObject) continue;
