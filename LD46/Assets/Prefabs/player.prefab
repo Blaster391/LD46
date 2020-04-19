@@ -115,7 +115,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 2.31
   m_AngularDrag: 0.05
   m_GravityScale: 2.62
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxVelocity: {x: 10, y: 17.5}
-  m_baseMovementForce: 30
-  m_baseJumpForce: 18.5
+  m_baseMovementForce: 300
+  m_baseJumpForce: 180.5
   m_airDampening: 0.45
   m_groundedEpsilon: 0.05
   m_headSprite: {fileID: 0}
