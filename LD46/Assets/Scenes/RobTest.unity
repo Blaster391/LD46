@@ -3625,6 +3625,12 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6557974974070466240, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: MyEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: da2d51a4aa3e55347ac1ef7ec61ac715,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72290825666b00a41a7fdb3f345f714a, type: 3}
 --- !u!1001 &4748663229070943281

@@ -39,6 +39,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ForcePush" ID="{24BCCADD-2F6E-48A0-BB3C-E6B4D5650564}">
+					<ChildrenList>
+						<Action Name="" ID="{D811E1B5-0B4D-4D50-B7AF-61A44CB77D07}" ShortID="307320410">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForcePush" ID="{F6078162-2592-4554-A306-8785E5FF93CE}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID BALLOFLIGHT = 2769336799U;
         static const AkUniqueID ENEMYDEATH = 3249137159U;
+        static const AkUniqueID FORCEPUSH = 3137565726U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
         static const AkUniqueID TAKEDAMAGE = 2784187423U;
         static const AkUniqueID TREEDYING = 591859596U;

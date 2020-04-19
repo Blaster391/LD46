@@ -27,8 +27,8 @@ public class PlayerInteraction : MonoBehaviour
     private bool m_mouse1WasDown = false;
 
     private float m_timeMouseWasDownFor = 0.0f;
-   
 
+    public AK.Wwise.Event MyEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +107,7 @@ public class PlayerInteraction : MonoBehaviour
                 float angMul = Mathf.Lerp(0.45f, 1.0f, (dot / cosConeAngle));
                 float mul = m_timeMouseWasDownFor * m_forcePushMultiplier * angMul * (inverse ? -1.0f : 1.0f);
                 collider.attachedRigidbody.AddForce(toObj * mul);
+                MyEvent.Post(gameObject);
             }
         }
     }

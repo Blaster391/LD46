@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
 	2784187423	TakeDamage			\Default Work Unit\TakeDamage	
+	3137565726	ForcePush			\Default Work Unit\ForcePush	
 	3249137159	EnemyDeath			\Default Work Unit\Enemies\EnemyDeath	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -38,6 +39,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	259285699	turret_low-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_low-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-003		203024
 	329795044	enemy_death-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\enemy_death-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-001		202112
 	375230761	lead	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\lead-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\lead		1316636
+	390091028	ForcePush	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\ForcePush_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ForcePush		41208
 	400408087	sub hit	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\sub hit-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\sub hit		1316636
 	407398589	Arp high	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\arp high-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Arp high		1316636
 	454253465	Bass	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\bass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Bass		1316636

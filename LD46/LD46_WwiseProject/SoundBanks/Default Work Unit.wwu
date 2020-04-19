@@ -11,6 +11,7 @@
 						<ObjectRef Name="BallOfLight" ID="{5890BBC6-553A-42A7-9A57-B8AB56B4CC14}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayMusic" ID="{14EEEA57-C03B-4813-A561-2909443BFFE6}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TakeDamage" ID="{DFEF9674-DCD1-4813-934C-5E30A88408D2}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ForcePush" ID="{24BCCADD-2F6E-48A0-BB3C-E6B4D5650564}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TurretEvents" ID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" WorkUnitID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
