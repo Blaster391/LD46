@@ -153,11 +153,7 @@ public class OrbBehaviour : MonoBehaviour
     private void UpdateEnergy(float _energyChange)
     {
         CurrentEnergy = Mathf.Clamp(CurrentEnergy + _energyChange, 0f, m_maxEnergy);
-<<<<<<< HEAD
         if(CurrentEnergy == 0f && !m_isDead)
-=======
-        if (CurrentEnergy == 0f)
->>>>>>> 309ed95fcfd5c64ff9faf5eeaf67ef7bbe18c2ea
         {
             m_isDead = true;
             GameHelper.GetManager<GameSceneManager>().OnGameOver();
