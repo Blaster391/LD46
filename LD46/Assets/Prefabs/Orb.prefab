@@ -166,11 +166,6 @@ MonoBehaviour:
   m_energyLostPerSecond: 2
   m_energyDrainedPerSecond: 5
   m_maxEnergyGainPerSecondAtFullEnergy: 0
-  MyEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e4fa4c599cae56444bc865a916ebceb1,
-      type: 2}
   m_healthScalingEffects:
     m_usePointLightSettingsAtFullHealth: 1
     m_propsAtFullHealth:
@@ -182,6 +177,8 @@ MonoBehaviour:
   m_standardColourTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_consumingEnergyColourTint: {r: 1, g: 0.5, b: 0, a: 1}
   m_gainingMaxHealthColourTint: {r: 0, g: 1, b: 1, a: 1}
+  m_lowHealthColourTint: {r: 1, g: 0, b: 0, a: 1}
+  m_lowHealthEnergyProp: 0.2
   m_shopUIPrefab: {fileID: 8726261674924298018, guid: 1dad66e763f5e8e4aa2e2653cb58626d,
     type: 3}
   m_orbUIPrefab: {fileID: 8518654407590878352, guid: aafac8fdd891ace4682899187b94a307,

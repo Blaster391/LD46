@@ -3520,6 +3520,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6033589080152006136, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6212587735602788994, guid: 72290825666b00a41a7fdb3f345f714a,
         type: 3}
       propertyPath: m_RootOrder
@@ -3651,11 +3656,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 262536974}
     m_Modifications:
-    - target: {fileID: 56167292, guid: 41a882a7cd13cc844aa8fceb1ccac0c1, type: 3}
-      propertyPath: MyEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: e4fa4c599cae56444bc865a916ebceb1,
-        type: 2}
     - target: {fileID: 7459418591684140264, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -47,6 +47,8 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private Color m_standardColourTint = Color.yellow;
     [SerializeField] private Color m_consumingEnergyColourTint = new Color(1f, 0.5f, 0f);
     [SerializeField] private Color m_gainingMaxHealthColourTint = Color.cyan;
+    [SerializeField] private Color m_lowHealthColourTint = Color.red;
+    [SerializeField] private float m_lowHealthEnergyProp = 0.1f;
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
@@ -56,6 +58,7 @@ public class OrbBehaviour : MonoBehaviour
     private bool m_isDead = false;
     private ShopUIBehaviour m_shopUI = null;
     private OrbUIBehaviour m_orbUI = null;
+    private bool m_drainedEnergyThisFrame = false;
     // Public interface
     public float CurrentEnergy { get; private set; }
     public float CurrentEnergyProp { get { return CurrentEnergy / m_maxEnergy; } }
@@ -112,7 +115,7 @@ public class OrbBehaviour : MonoBehaviour
             m_orbUI.Initialise(this);
         }
     }
-    
+
     void Update()
     {
         m_spriteRenderer.color = m_standardColourTint;
@@ -143,7 +146,9 @@ public class OrbBehaviour : MonoBehaviour
         if (drainedEnergy)
         {
             m_spriteRenderer.color = m_consumingEnergyColourTint;
+            
         }
+        m_drainedEnergyThisFrame = drainedEnergy;
     }
 
     void IncreaseMaxEnergy()
@@ -163,6 +168,11 @@ public class OrbBehaviour : MonoBehaviour
 
         m_pointLight.Range = currentRange;
         m_pointLight.Intensity = m_healthScalingEffects.GetIntensityAtProp(energyProp);
+
+        if(energyProp < m_lowHealthEnergyProp && !m_drainedEnergyThisFrame)
+        {
+            m_spriteRenderer.color = m_lowHealthColourTint;
+        }
     }
 
     private void UpdateEnergy(float _energyChange)
