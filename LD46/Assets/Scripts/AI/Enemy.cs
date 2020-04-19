@@ -25,16 +25,28 @@ public class Enemy : MonoBehaviour
 
     public AK.Wwise.Event MyEvent;
 
-    // Start is called before the first frame update
+    // Static tracking
+    private static List<Enemy> s_enemies = new List<Enemy>();
+    public static List<Enemy> Enemies { get { return new List<Enemy>(s_enemies); } }
+
+    private void Awake()
+    {
+        s_enemies.Add(this);
+    }
+
     void Start()
     {
-        m_target = GameObject.FindObjectOfType<OrbBehaviour>().gameObject;
+        m_target = FindObjectOfType<OrbBehaviour>().gameObject;
         m_mesh = GameHelper.GetManager<NavMesh>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_timeSinceLastPathUpdate = Random.Range(0, m_movementUpdateRate);
     }
 
-    // Update is called once per frame
+    void OnDestroy()
+    {
+        s_enemies.Remove(this);
+    }
+    
     void Update()
     {
 
@@ -111,7 +123,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OrbBehaviour orb = collision.gameObject.GetComponent<OrbBehaviour>();
+        HandleCollision(collision.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        HandleCollision(collision.gameObject);
+    }
+
+    private void HandleCollision(GameObject otherObject)
+    {
+        OrbBehaviour orb = otherObject.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
             orb.TakeEnergy(m_energy * m_energyAttackModifier);
