@@ -10,6 +10,8 @@ public class BackgroundParallax : MonoBehaviour
     private float m_maxScrollAmountForeground = 10.0f;
     [SerializeField]
     private float m_maxScrollAmountBackground = 1.0f;
+    [SerializeField]
+    private float m_backgroundZ = 10f;
 
     [SerializeField]
     private GameObject m_foreground;
@@ -23,8 +25,8 @@ public class BackgroundParallax : MonoBehaviour
         scrollAmount = Mathf.Clamp(scrollAmount, -1, 1);
         scrollAmount = -scrollAmount;
 
-        m_foreground.transform.localPosition = new Vector3(scrollAmount * m_maxScrollAmountForeground, 0, 100);
-        m_background.transform.localPosition = new Vector3(scrollAmount * m_maxScrollAmountBackground, 0, 100);
+        m_foreground.transform.localPosition = new Vector3(scrollAmount * m_maxScrollAmountForeground, 0, m_backgroundZ);
+        m_background.transform.localPosition = new Vector3(scrollAmount * m_maxScrollAmountBackground, 0, m_backgroundZ);
 
     }
 }

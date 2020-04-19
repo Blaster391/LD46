@@ -145,6 +145,94 @@
 						<ActiveSource Name="Yeet" ID="{7D6453D4-D47C-4721-982B-5D85C8548AE8}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="Jumps" ID="{7ABC8401-54A4-4A9D-AE0F-EF73788DA34C}" ShortID="755382102">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+							<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="jump" ID="{A9055722-119E-4553-8219-CA742C4A11E5}" ShortID="422761036">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="jump" ID="{B78CBC17-027A-4298-B009-C11B74FEA45C}">
+									<Language>SFX</Language>
+									<AudioFile>jump.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="615552399"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="jump" ID="{B78CBC17-027A-4298-B009-C11B74FEA45C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="jump-01" ID="{F429B434-C666-4F12-AD1D-F3A4F3F6E4B6}" ShortID="1011725360">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="jump-01" ID="{36CE97B2-B6EF-4F78-847F-2D3BEC920C3D}">
+									<Language>SFX</Language>
+									<AudioFile>jump-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="91380339"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="jump-01" ID="{36CE97B2-B6EF-4F78-847F-2D3BEC920C3D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="jump-02" ID="{060FEF10-B6A3-4C8F-8A7D-323288201217}" ShortID="470589631">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="jump-02" ID="{6A05D77F-75E4-4B46-AF63-AF252063635C}">
+									<Language>SFX</Language>
+									<AudioFile>jump-02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="272060669"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="jump-02" ID="{6A05D77F-75E4-4B46-AF63-AF252063635C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

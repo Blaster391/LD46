@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float m_baseJumpForce = 1.0f;
 
+    [SerializeField]
+    private GameObject m_jetpackObject;
+    [SerializeField]
+    private float m_jetpackTickDownTime = 0.5f;
+
     [Range(0.0f, 1.0f)]
     [SerializeField]
     private float m_airDampening = 0.45f;
@@ -25,17 +30,23 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D m_rigidbody2D = null;
     private CapsuleCollider2D m_capsuleCollider2D = null;
+    private ParticleSystem m_jetpackParticles = null;
 
     private RaycastHit2D m_lastGroundHit;
     private bool m_isGrounded = true;
 
     private bool m_canDoubleJump = true;
 
+    private float m_jetpackTickDownCounter = 0.0f;
+
+    public AK.Wwise.Event MyEvent;
+
     // Start is called before the first frame update
     void Start()
     {
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_capsuleCollider2D = GetComponent<CapsuleCollider2D>();
+        m_jetpackParticles = m_jetpackObject.GetComponent<ParticleSystem>();
     }
 
     private void OnDrawGizmos()
@@ -72,30 +83,25 @@ public class PlayerMovement : MonoBehaviour
             m_canDoubleJump = true;
         }
 
-        bool leftMoveDown = Input.GetKey(KeyCode.A);
-        bool rightMoveDown = Input.GetKey(KeyCode.D);
-
+        float horiz = Input.GetAxis("Horizontal");
         float damp = m_isGrounded ? 1.0f : m_airDampening;
+        m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * horiz * damp);
 
-        if (leftMoveDown)
+        if (horiz < -0.1)
         {
-            m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce * damp);
-
             m_bodySprite.flipX = true;
             m_legsSprite.flipX = true;
            // m_headSprite.flipX = true;
         }
 
-        if (rightMoveDown)
+        if (horiz > 0.1)
         {
-            m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * damp);
-
             m_bodySprite.flipX = false;
             m_legsSprite.flipX = false;
             //  m_headSprite.flipX = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             bool doJump = m_isGrounded;
             if(!m_isGrounded && m_canDoubleJump)
@@ -106,10 +112,20 @@ public class PlayerMovement : MonoBehaviour
 
             if(doJump)
             {
+                MyEvent.Post(gameObject);
                 m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
             }
         }
 
         m_rigidbody2D.velocity = Vector2.Min(m_rigidbody2D.velocity, m_maxVelocity);
+
+        if(m_jetpackTickDownCounter > 0.0f)
+        {
+            m_jetpackTickDownCounter -= Time.deltaTime;
+            if(m_jetpackTickDownCounter <= 0.0f)
+            {
+                m_jetpackParticles.Stop();
+            }
+        }
     }
 }

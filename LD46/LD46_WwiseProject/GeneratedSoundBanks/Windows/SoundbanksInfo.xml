@@ -65,6 +65,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump" DurationType="OneShot" DurationMin="0.428583" DurationMax="0.428583">
+					<IncludedMemoryFiles>
+						<File Id="91380339" Language="SFX">
+							<ShortName>jump-01.wav</ShortName>
+							<Path>SFX\jump-01_10C4C929.wem</Path>
+						</File>
+						<File Id="272060669" Language="SFX">
+							<ShortName>jump-02.wav</ShortName>
+							<Path>SFX\jump-02_10C4C929.wem</Path>
+						</File>
+						<File Id="615552399" Language="SFX">
+							<ShortName>jump.wav</ShortName>
+							<Path>SFX\jump_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="0.642854" DurationMax="0.642854">
 					<IncludedMemoryFiles>
 						<File Id="981600971" Language="SFX">

@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     private float m_size = 0.1f;
 
     public AK.Wwise.Event MyEvent;
+    public AK.Wwise.Event MyEvent2;
 
     // Static tracking
     private static List<Enemy> s_enemies = new List<Enemy>();
@@ -174,6 +175,7 @@ public class Enemy : MonoBehaviour
         OrbBehaviour orb = otherObject.GetComponent<OrbBehaviour>();
         if (orb != null)
         {
+            GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent2);
             orb.TakeEnergy(m_energy * m_energyAttackModifier);
             Destroy(gameObject);
         }
