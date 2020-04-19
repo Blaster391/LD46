@@ -125,7 +125,13 @@ MonoBehaviour:
   MyEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c8deb63f6bace6d44b18e2f4da6d6dff,
+      type: 2}
+  MyEvent2:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e4fa4c599cae56444bc865a916ebceb1,
+      type: 2}
 --- !u!114 &939087069
 MonoBehaviour:
   m_ObjectHideFlags: 0
