@@ -542,6 +542,13 @@ MonoBehaviour:
   m_scoreboardText: {fileID: 7572740539145222427}
   m_scoreboardTitleText: {fileID: 6937245260590726309}
   m_submitScoreText: {fileID: 4571435873516291380}
+  WWiseState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 050aabe03fa09684aad74d7d51579d3c,
+      type: 2}
 --- !u!114 &278905084183505089
 MonoBehaviour:
   m_ObjectHideFlags: 0

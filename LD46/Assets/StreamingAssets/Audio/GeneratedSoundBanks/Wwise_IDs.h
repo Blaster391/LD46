@@ -16,10 +16,27 @@ namespace AK
         static const AkUniqueID BALLOFLIGHT = 2769336799U;
         static const AkUniqueID ENEMYDEATH = 3249137159U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
+        static const AkUniqueID TAKEDAMAGE = 2784187423U;
         static const AkUniqueID TREEDYING = 591859596U;
         static const AkUniqueID TURRET = 2674766611U;
         static const AkUniqueID TURRET2 = 212920027U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace DEADORALIVE
+        {
+            static const AkUniqueID GROUP = 2826692331U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEAD = 2044049779U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace DEADORALIVE
+
+    } // namespace STATES
 
     namespace SWITCHES
     {

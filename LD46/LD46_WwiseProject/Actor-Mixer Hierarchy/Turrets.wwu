@@ -168,6 +168,27 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{A97C0B20-2B9E-422F-9AD0-BC2A83437780}" ShortID="1068275131"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{36F98390-9749-4B94-85CF-C6814AD16C76}" ShortID="646236596">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}" ShortID="864507507">
 					<ReferenceList>
@@ -268,6 +289,27 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{0931B510-A89C-4202-B410-892DD3ABC4DC}" ShortID="514261556"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{53444195-AE5A-4E7A-87F5-E3A228FFCE13}" ShortID="1061646398">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>

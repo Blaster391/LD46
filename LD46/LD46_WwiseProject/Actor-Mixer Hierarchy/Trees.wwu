@@ -86,6 +86,27 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{62525A57-B845-4985-9545-CC7ED70385F8}" ShortID="290532981"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{887D8FE4-4DD9-40C7-9A0F-8A37A989FC00}" ShortID="140986714">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="Noise" ID="{CF7A6B40-63D3-4529-93D6-D7AE5AC209F7}" Platform="Linked"/>
 					</ActiveSourceList>

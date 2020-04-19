@@ -28,6 +28,17 @@
 					</ChildrenList>
 				</Event>
 				<WorkUnit Name="Tree" ID="{DC2A1D46-7FD5-4171-8F64-D560E95C65AD}" PersistMode="Reference"/>
+				<Event Name="TakeDamage" ID="{DFEF9674-DCD1-4813-934C-5E30A88408D2}">
+					<ChildrenList>
+						<Action Name="" ID="{ED934C94-E7A4-4B0C-9AEF-B7EDC58F7122}" ShortID="540494233">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="takingDamage" ID="{A64F30C4-BFED-4549-8824-C2BA445CEAA1}" WorkUnitID="{AFB9AD75-2560-4D0D-9A7D-27DF128BC3FB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

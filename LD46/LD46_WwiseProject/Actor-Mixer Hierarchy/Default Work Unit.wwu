@@ -29,6 +29,27 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{89B31819-A0E9-43CB-80A2-CD6117812ECA}" ShortID="5987750"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{BAFAEB52-FBDE-4072-AFB8-7277B8B6CAC9}" ShortID="766378916">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="LD_ball_light_sound01" ID="{FB9CBD59-A54B-492F-A70A-D2811E6DCF1E}" Platform="Linked"/>
 					</ActiveSourceList>

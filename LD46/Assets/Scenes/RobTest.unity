@@ -1365,6 +1365,37 @@ Transform:
   m_Father: {fileID: 1064795127}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &582185660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229337032596592003, guid: 72290825666b00a41a7fdb3f345f714a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1229337033270278601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &582185667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582185660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf74cf3627647e4da7ffda3592d18af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 54a9dea6d4d258a409c5162725dbcd43,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1 &592549661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3672,6 +3703,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 262536974}
     m_Modifications:
+    - target: {fileID: 56167292, guid: 41a882a7cd13cc844aa8fceb1ccac0c1, type: 3}
+      propertyPath: MyEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e4fa4c599cae56444bc865a916ebceb1,
+        type: 2}
     - target: {fileID: 7459418591684140264, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
         type: 3}
       propertyPath: m_LocalPosition.x

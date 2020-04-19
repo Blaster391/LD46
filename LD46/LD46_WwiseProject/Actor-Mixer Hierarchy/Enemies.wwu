@@ -102,7 +102,71 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{531A5317-38C0-4B6F-8BCF-426383406948}" ShortID="430284736"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{D785BDA1-D330-4714-9287-FD08D5120674}" ShortID="240871500">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
+				<Sound Name="takingDamage" ID="{A64F30C4-BFED-4549-8824-C2BA445CEAA1}" ShortID="665895897">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="takingDamage" ID="{B366B91D-02E0-4334-9F6F-776C25C16FF9}">
+							<Language>SFX</Language>
+							<AudioFile>takingDamage.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="662843151"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{7990F342-4974-4EF8-95A5-CA624F21783F}" ShortID="97908118"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{0F455833-75C2-4062-B426-8D4DB4D73278}" ShortID="1051102969">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="takingDamage" ID="{B366B91D-02E0-4334-9F6F-776C25C16FF9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

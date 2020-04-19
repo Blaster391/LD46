@@ -4,13 +4,31 @@ Event	ID	Name			Wwise Object Path	Notes
 	591859596	TreeDying			\Default Work Unit\Tree\TreeDying	
 	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
+	2784187423	TakeDamage			\Default Work Unit\TakeDamage	
 	3249137159	EnemyDeath			\Default Work Unit\Enemies\EnemyDeath	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2826692331	DeadorAlive			\Default Work Unit\DeadorAlive	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	DeadorAlive			
+	748895195	None	DeadorAlive			
+	2044049779	Dead	DeadorAlive			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	112132226	Dead	DeadorAlive	\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container		
+	140986714	Dead	DeadorAlive	\Actor-Mixer Hierarchy\Default Work Unit\Trees\Noise		
+	240871500	Dead	DeadorAlive	\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath		
+	646236596	Dead	DeadorAlive	\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh		
+	766378916	Dead	DeadorAlive	\Actor-Mixer Hierarchy\Default Work Unit\LD_ball_light_sound01		
+	1051102969	Dead	DeadorAlive	\Actor-Mixer Hierarchy\Default Work Unit\Enemies\takingDamage		
+	1061646398	Dead	DeadorAlive	\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	591859596	TreeDying			\Default Work Unit\TreeDying	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	72802340	Noise	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Noise_D20EA1F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Trees\Noise		669488
+	72802340	Noise	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Noise_AF70457A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Trees\Noise		669488
 	76914504	turret_high-006	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-006		202196
 	138984369	Short stab	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\short stab_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Short stab		1316636
 	154983699	Percussion2	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\percussion2-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Percussion2		1316636
@@ -31,6 +49,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	626905238	turret_low-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-004		207888
 	650933648	Percussion1	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\percusion_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Percussion1		1316636
 	661029702	Short stab	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\short stab-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Short stab		1316636
+	662843151	takingDamage	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\takingDamage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\takingDamage		51496
 	676701650	enemy_death-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\enemy_death-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-004		201296
 	679225109	LD_ball_light_sound01	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\LD_ball_light_sound01_55EDB696.wem		\Actor-Mixer Hierarchy\Default Work Unit\LD_ball_light_sound01		2293104
 	687047562	turret_low-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-001		197688

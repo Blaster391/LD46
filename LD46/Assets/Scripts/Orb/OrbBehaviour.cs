@@ -18,6 +18,8 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private float m_energyDrainedPerSecond = 0f;
     [SerializeField] private float m_maxEnergyGainPerSecondAtFullEnergy = 0f;
 
+    public AK.Wwise.Event MyEvent;
+
     [System.Serializable]
     public class HealthScalingEffects
     {
@@ -62,6 +64,10 @@ public class OrbBehaviour : MonoBehaviour
 
     public void TakeEnergy(float _energyAmount)
     {
+        if(_energyAmount>8)
+        {
+            MyEvent.Post(gameObject);
+        }
         UpdateEnergy(-_energyAmount);
     }
 

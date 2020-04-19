@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e3c5e58064bcd24d87221585ecaead5d
     GuidInternal: 
-    m_lastTime: -8586143708132474658
+    m_lastTime: -8586143111308621005
     List:
     - name: MONOLITHICBIGBOYSOUNDBANK
       guid: b4e5e7bb98361d4b8ede1cf1f90376b0
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 02d22a454cd78848a71b87243d501c2e
     GuidInternal: 
-    m_lastTime: -8586143161351853442
+    m_lastTime: -8586143111308810500
     List:
     - name: BallOfLight
       guid: c6bb90583a55a7429a57b8ab56b4cc14
@@ -82,6 +82,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: TakeDamage
+      guid: 7496efdfd1dc1348934c5e30a88408d2
+      id: 2784187423
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TakeDamage
+        ObjectType: 3
+      Path: Default Work Unit\TakeDamage
+      maxAttenuation: 0
+      maxDuration: 0.267875
+      minDuration: 0.267875
   - PhysicalPath: Events\Enemies.wwu
     ParentPath: Default Work Unit\Enemies
     guid: 3cfb5e25782a5440821ac628dd77e3d6
@@ -106,7 +118,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Tree
     guid: 461d2adcd57f71418f64d560e95c65ad
     GuidInternal: 
-    m_lastTime: -8586143161351354776
+    m_lastTime: -8586143145353622966
     List:
     - name: TreeDying
       guid: 2441eb2c40c25247a46f955b2ca32ed7
@@ -161,7 +173,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: eaa12a7ebb48d247961ac224d4e4df09
     GuidInternal: 
-    m_lastTime: -8586143161351564217
+    m_lastTime: -8586143145353612990
     List:
     - name: TreeDying
       guid: dab77a41880c724a879b0e5e95f00db3
@@ -177,8 +189,39 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ac4c970edf2025458d03972854704174
     GuidInternal: 
-    m_lastTime: -8586144058791828516
-    List: []
+    m_lastTime: -8586143111308621005
+    List:
+    - name: DeadorAlive
+      guid: 903a878b7b4f954194e07b8e5b588a8e
+      id: 2826692331
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DeadorAlive
+        ObjectType: 9
+      Path: Default Work Unit\DeadorAlive
+      values:
+      - name: Alive
+        guid: 851c759b11b76a40baa8ffdfbe9fd4f7
+        id: 655265632
+        PathAndIcons:
+        - ElementName: Alive
+          ObjectType: 8
+      - name: Dead
+        guid: 53fad89af163fe4195869f7607e3ef6d
+        id: 2044049779
+        PathAndIcons:
+        - ElementName: Dead
+          ObjectType: 8
+      - name: None
+        guid: eb4521c8c1a70e40826d170902ae2505
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -220,10 +263,10 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /LD46_WwiseProject
-  - /LD46_WwiseProject/Auxiliary Busses
-  - /LD46_WwiseProject/SoundBanks
-  - /LD46_WwiseProject/Switches
-  - /LD46_WwiseProject/Switches/Default Work Unit
-  - /LD46_WwiseProject/Switches/Default Work Unit/TurretType
+  - /LD46_WwiseProject/Events
+  - /LD46_WwiseProject/Events/Default Work Unit
+  - /LD46_WwiseProject/States
+  - /LD46_WwiseProject/States/Default Work Unit
+  - /LD46_WwiseProject/States/Default Work Unit/DeadorAlive
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

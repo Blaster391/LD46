@@ -125,11 +125,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2784187423" Name="TakeDamage" ObjectPath="\Events\Default Work Unit\TakeDamage" DurationType="OneShot" DurationMin="0.267875" DurationMax="0.267875">
+					<IncludedMemoryFiles>
+						<File Id="662843151" Language="SFX">
+							<ShortName>takingDamage.wav</ShortName>
+							<Path>SFX\takingDamage_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="591859596" Name="TreeDying" ObjectPath="\Events\Default Work Unit\Tree\TreeDying" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="72802340" Language="SFX">
 							<ShortName>Noise.wav</ShortName>
-							<Path>SFX\Noise_D20EA1F1.wem</Path>
+							<Path>SFX\Noise_AF70457A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

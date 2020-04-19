@@ -183,7 +183,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>4.17291</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -581,7 +581,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>3.22767</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -629,7 +629,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>3.18056</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -825,7 +825,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>1.88522</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -1197,7 +1197,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>1.35167</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -1380,6 +1380,27 @@
 							</CueList>
 						</MusicSegment>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="DeadorAlive" ID="{8B873A90-4F7B-4195-94E0-7B8E5B588A8E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{9B751C85-B711-406A-BAA8-FFDFBE9FD4F7}"/>
+								<CustomState Name="" ID="{AE3DF60B-2841-44C4-851D-12F752E45A48}" ShortID="857322826"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{9AD8FA53-63F1-41FE-9586-9F7607E3EF6D}"/>
+								<CustomState Name="" ID="{40503DC5-13D9-488C-A98F-4BDEDE743950}" ShortID="112132226">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{A3AB8246-C462-406A-9EBB-E0DAD33EB37D}">
 							<PropertyList>
