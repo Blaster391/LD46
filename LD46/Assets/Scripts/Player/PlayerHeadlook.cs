@@ -34,13 +34,13 @@ public class PlayerHeadlook : MonoBehaviour
             m_headSprite.flipY = true;
             m_bodySprite.flipX = true;
 
-            if(angle > 0 && angle < 90 + m_maxAngle)
+            if((angle > 0) && angle < (90 + m_maxAngle))
             {
                 angle = 90 + m_maxAngle;
             }
 
-            angle = -Mathf.Min(angle, -m_minAngle);
-            angle = -Mathf.Max(angle, -m_maxAngle);
+            //angle = -Mathf.Min(angle, -m_minAngle);
+            //angle = -Mathf.Max(angle, -m_maxAngle);
 
         }                     
         else                  
