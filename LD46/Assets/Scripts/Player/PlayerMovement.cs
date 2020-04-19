@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float m_jetpackTickDownTime = 0.5f;
 
+    [SerializeField]
+    private float m_jetpackFlipOffset = 0.2f;
+
     [Range(0.0f, 1.0f)]
     [SerializeField]
     private float m_airDampening = 0.45f;
@@ -27,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer m_bodySprite = null;
     [SerializeField]
     private SpriteRenderer m_legsSprite = null;
+
+    [SerializeField]
+    private Animator m_feetAnimator = null;
 
     private Rigidbody2D m_rigidbody2D = null;
     private CapsuleCollider2D m_capsuleCollider2D = null;
@@ -87,18 +93,36 @@ public class PlayerMovement : MonoBehaviour
         float damp = m_isGrounded ? 1.0f : m_airDampening;
         m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * horiz * damp);
 
+        if(Mathf.Abs(horiz) < 0.1f)
+        {
+            m_feetAnimator.SetBool("WALK", false);
+        }
+        else
+        {
+            m_feetAnimator.SetBool("WALK", true);
+        }
+
         if (horiz < -0.1)
         {
+            if (!m_bodySprite.flipX)
+            {
+
+            }
+
             m_bodySprite.flipX = true;
             m_legsSprite.flipX = true;
-           // m_headSprite.flipX = true;
+
         }
 
         if (horiz > 0.1)
         {
+            if (m_bodySprite.flipX)
+            {
+
+            }
+
             m_bodySprite.flipX = false;
             m_legsSprite.flipX = false;
-            //  m_headSprite.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
