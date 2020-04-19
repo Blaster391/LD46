@@ -15,13 +15,14 @@ public class L2DLSpotLight : MonoBehaviour, IL2DLDirectLight
     public float Range { get { return m_range; } set { m_range = value; } }
     public float Angle { get { return m_angle; } set { m_angle = value; } }
     private float Width { get { return 2 * Mathf.Tan(Angle / 2f * Mathf.Deg2Rad) * Range; } }
+    public float MaxIntensityOutput { get { return m_maxIntensityOutput; } }
+    public float StartingRange { get { return m_startingRange; } }
 
     // IL2DLDirectLight
     public Color Color { get { return m_color; } set { m_color = value; } }
     public float Intensity { get { return m_intensity; } set { m_intensity = value; } }
     public Camera ShadowCamera { get; private set; }
     public L2DLTextureSize ShadowMapSize { get { return m_shadowmapSize; } }
-    public float MaxIntensityOutput { get { return m_maxIntensityOutput; } }
 
     [Header("Settings")]
     [SerializeField] private float m_intensity = 1f;
@@ -32,6 +33,7 @@ public class L2DLSpotLight : MonoBehaviour, IL2DLDirectLight
     [SerializeField] private L2DLTextureSize m_shadowmapSize = L2DLTextureSize.Size512;
 
     [SerializeField] private float m_maxIntensityOutput = 1f;
+    [SerializeField] private float m_startingRange = 0.5f;
 
     // --------------------------------------------------------------------
     private void OnValidate()

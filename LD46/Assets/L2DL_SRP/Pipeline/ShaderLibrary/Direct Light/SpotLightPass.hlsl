@@ -11,6 +11,7 @@ CBUFFER_START(_LightBuffer)
     float _lightAttenuation;
     float2 _lightFade;
     float _maxIntensityOutput;
+    float _startingRange;
 CBUFFER_END
 
 FragOutput SpotLightPassFragment (VertexOutput input)
@@ -28,6 +29,11 @@ FragOutput SpotLightPassFragment (VertexOutput input)
     spotFade *= spotFade;
 
     float distanceSqr = max(dot(lightVector, lightVector), 0.00001);
+
+    if(distanceSqr < _startingRange * _startingRange)
+    {
+        spotFade = 0;
+    }
 
     float attenuation = spotFade * rangeFade / distanceSqr;
     
