@@ -93,7 +93,9 @@ public class PlayerMovement : MonoBehaviour
         float damp = m_isGrounded ? 1.0f : m_airDampening;
         m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * horiz * damp);
 
-        if(Mathf.Abs(horiz) < 0.1f)
+        m_feetAnimator.SetBool("GROUNDED", m_isGrounded);
+
+        if (m_rigidbody2D.velocity.magnitude < 0.5f)
         {
             m_feetAnimator.SetBool("WALK", false);
         }
