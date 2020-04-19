@@ -74,9 +74,7 @@ namespace Scoreboard
                     Debug.Log("Get request complete!");
 
                     string resultsString = request.downloadHandler.text;
-                    Debug.Log(resultsString);
                     List<ScoreboardCore.Data.ScoreResult> results = JsonConvert.DeserializeObject<List<ScoreboardCore.Data.ScoreResult>>(resultsString);
-                    Debug.Log(results.Count);
 
                     _onRequestComplete(results, true);
                 }
