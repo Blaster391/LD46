@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!61 &7725016798215666678
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257890068005515321}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.15}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.756, y: 1.756}
+    newSize: {x: 17.56, y: 17.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &5830912745562047527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,6 +36,10 @@ PrefabInstance:
     - target: {fileID: 1241722996, guid: 5fbc7559e93f4624fbf3425b815c5b95, type: 3}
       propertyPath: m_Distance
       value: 2.9017236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241722998, guid: 5fbc7559e93f4624fbf3425b815c5b95, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1737359314299122713, guid: 5fbc7559e93f4624fbf3425b815c5b95,
         type: 3}
@@ -113,3 +143,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fbc7559e93f4624fbf3425b815c5b95, type: 3}
+--- !u!1 &5257890068005515321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1737359314299122718, guid: 5fbc7559e93f4624fbf3425b815c5b95,
+    type: 3}
+  m_PrefabInstance: {fileID: 5830912745562047527}
+  m_PrefabAsset: {fileID: 0}
