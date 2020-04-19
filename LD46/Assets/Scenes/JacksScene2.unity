@@ -414,7 +414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_turretsParentObject: {fileID: 863384008}
-  m_uiParentObject: {fileID: 1306204863}
 --- !u!1 &563400137
 GameObject:
   m_ObjectHideFlags: 0
