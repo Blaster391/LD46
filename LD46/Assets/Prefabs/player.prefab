@@ -9814,6 +9814,7 @@ GameObject:
   - component: {fileID: 1229337032596592025}
   - component: {fileID: 6557974974070466240}
   - component: {fileID: 1688706803}
+  - component: {fileID: 2300761890277105927}
   m_Layer: 9
   m_Name: player
   m_TagString: Untagged
@@ -9891,7 +9892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxVelocity: {x: 10, y: 17.5}
-  m_baseMovementForce: 300
+  m_baseMovementForce: 500
   m_baseJumpForce: 180.5
   m_jetpackObject: {fileID: 6033589080152006139}
   m_jetpackTickDownTime: 0.5
@@ -9922,7 +9923,7 @@ MonoBehaviour:
   m_forcePushMultiplier: 75
   m_forcePushRadius: 7.5
   m_forcePushConeAngle: 45
-  m_timeDownForMaxHelmetLight: 3
+  m_timeDownForMaxHelmetLight: 1.5
   MyEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -9959,6 +9960,31 @@ MonoBehaviour:
   m_pullParticleSystem: {fileID: 1026532984}
   m_particlesAtFullCharge: 50
   m_minParticles: 20
+--- !u!114 &2300761890277105927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229337032596592003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf74cf3627647e4da7ffda3592d18af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 54a9dea6d4d258a409c5162725dbcd43,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1 &2072905595466686080
 GameObject:
   m_ObjectHideFlags: 0
