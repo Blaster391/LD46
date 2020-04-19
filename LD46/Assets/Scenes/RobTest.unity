@@ -3516,6 +3516,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6f07ab297217fac4196f99a3a7bc3138,
         type: 2}
+    - target: {fileID: 7776197267701152846, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: m_leftOffset
+      value: -0.377
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776197267701152846, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: m_maxAngle
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776197267701152846, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: m_minAngle
+      value: -30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72290825666b00a41a7fdb3f345f714a, type: 3}
 --- !u!1001 &4748663229070943281
