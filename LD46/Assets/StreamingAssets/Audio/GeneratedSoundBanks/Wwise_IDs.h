@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID BALLOFLIGHT = 2769336799U;
         static const AkUniqueID ENEMYDEATH = 3249137159U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
+        static const AkUniqueID TREEDYING = 591859596U;
         static const AkUniqueID TURRET = 2674766611U;
         static const AkUniqueID TURRET2 = 212920027U;
     } // namespace EVENTS
@@ -34,6 +35,11 @@ namespace AK
         } // namespace TURRETTYPE
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID TREEDYING = 591859596U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

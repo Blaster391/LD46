@@ -146,6 +146,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxEnergy: 50
+  MyEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1e377b92194dfc44980db04a7d730b18,
+      type: 2}
+  MyRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0003286fdf37bad449e6e1b60d554909,
+      type: 2}
 --- !u!114 &8967545703653543423
 MonoBehaviour:
   m_ObjectHideFlags: 0

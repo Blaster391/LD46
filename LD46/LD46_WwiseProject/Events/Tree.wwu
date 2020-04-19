@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DC2A1D46-7FD5-4171-8F64-D560E95C65AD}" SchemaVersion="97" RootDocumentID="{452AD202-D74C-4888-A71B-87243D501C2E}">
+	<Events>
+		<WorkUnit Name="Tree" ID="{DC2A1D46-7FD5-4171-8F64-D560E95C65AD}" OwnerID="{452AD202-D74C-4888-A71B-87243D501C2E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="TreeDying" ID="{2CEB4124-C240-4752-A46F-955B2CA32ED7}">
+					<ChildrenList>
+						<Action Name="" ID="{802CCDD5-E3B0-4302-B802-D2CBFAAFF0F6}" ShortID="727300262">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Noise" ID="{8B10FA59-F115-4822-B7BF-D35CA304627E}" WorkUnitID="{98D44C02-0610-4122-B2E0-CB4B303022BB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -125,6 +125,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="591859596" Name="TreeDying" ObjectPath="\Events\Default Work Unit\Tree\TreeDying" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="72802340" Language="SFX">
+							<ShortName>Noise.wav</ShortName>
+							<Path>SFX\Noise_D20EA1F1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2674766611" Name="Turret" ObjectPath="\Events\Default Work Unit\TurretEvents\Turret" DurationType="OneShot" DurationMin="1.099932" DurationMax="1.189342">
 					<IncludedMemoryFiles>
 						<File Id="76914504" Language="SFX">
@@ -184,6 +192,9 @@
 					<Path>SFX\LD_ball_light_sound01_55EDB696.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="591859596" Name="TreeDying" ObjectPath="\Game Parameters\Default Work Unit\TreeDying"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

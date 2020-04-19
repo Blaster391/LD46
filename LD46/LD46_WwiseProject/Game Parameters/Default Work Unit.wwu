@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7E2AA1EA-48BB-47D2-961A-C224D4E4DF09}" SchemaVersion="97">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{7E2AA1EA-48BB-47D2-961A-C224D4E4DF09}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7E2AA1EA-48BB-47D2-961A-C224D4E4DF09}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="TreeDying" ID="{417AB7DA-0C88-4A72-879B-0E5E95F00DB3}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

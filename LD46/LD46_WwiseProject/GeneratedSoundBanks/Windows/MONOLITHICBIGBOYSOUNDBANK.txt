@@ -1,11 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
 	212920027	Turret2			\Default Work Unit\TurretEvents\Turret2	
 	417627684	PlayMusic			\Default Work Unit\PlayMusic	
+	591859596	TreeDying			\Default Work Unit\Tree\TreeDying	
 	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
 	3249137159	EnemyDeath			\Default Work Unit\Enemies\EnemyDeath	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	591859596	TreeDying			\Default Work Unit\TreeDying	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	72802340	Noise	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Noise_D20EA1F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Trees\Noise		669488
 	76914504	turret_high-006	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_high-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-006		202196
 	138984369	Short stab	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\short stab_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Short stab		1316636
 	154983699	Percussion2	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\percussion2-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Percussion2		1316636

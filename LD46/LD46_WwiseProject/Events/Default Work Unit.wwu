@@ -27,6 +27,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<WorkUnit Name="Tree" ID="{DC2A1D46-7FD5-4171-8F64-D560E95C65AD}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

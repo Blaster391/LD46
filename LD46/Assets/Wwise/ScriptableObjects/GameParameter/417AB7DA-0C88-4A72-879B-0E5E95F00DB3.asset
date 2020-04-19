@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc113f178e4fbb443a2a65efed35da95, type: 3}
+  m_Name: 417AB7DA-0C88-4A72-879B-0E5E95F00DB3
+  m_EditorClassIdentifier: 
+  objectName: TreeDying
+  id: 591859596
+  guid: 417AB7DA-0C88-4A72-879B-0E5E95F00DB3

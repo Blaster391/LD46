@@ -35,6 +35,7 @@
 				</Sound>
 				<WorkUnit Name="Turrets" ID="{20A5500D-5B72-4242-BA15-938C851DF25C}" PersistMode="Reference"/>
 				<WorkUnit Name="Enemies" ID="{AFB9AD75-2560-4D0D-9A7D-27DF128BC3FB}" PersistMode="Reference"/>
+				<WorkUnit Name="Trees" ID="{98D44C02-0610-4122-B2E0-CB4B303022BB}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

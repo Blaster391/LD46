@@ -6,10 +6,14 @@ using UnityEngine;
 public class DrainableBehaviour : MonoBehaviour
 {
     [SerializeField] private float m_maxEnergy;
+    private bool takingDamage = false;
 
     public float CurrentEnergy { get; private set; }
     public float MaxEnergy { get { return m_maxEnergy; } }
     public float CurrentEnergyProp { get { return CurrentEnergy / m_maxEnergy; } }
+
+    public AK.Wwise.Event MyEvent;
+    public AK.Wwise.RTPC MyRTPC;
 
     // Callbacks for visuals if we separate
     public System.Action<DrainableBehaviour> EnergyChange = delegate { }; // Energy remaining, energy prop remaining
@@ -22,8 +26,18 @@ public class DrainableBehaviour : MonoBehaviour
     void Start()
     {
         s_drainables.Add(this);
-
+        MyEvent.Post(gameObject);
+        MyRTPC.SetValue(gameObject, 100);
         CurrentEnergy = m_maxEnergy;
+    }
+
+    private void Update()
+    {
+        if(!takingDamage)
+        {
+            MyRTPC.SetValue(gameObject, 100);
+        }
+        takingDamage = false;
     }
 
     void OnDestroy()
@@ -36,12 +50,14 @@ public class DrainableBehaviour : MonoBehaviour
     {
         float previousEnergy = CurrentEnergy;
         CurrentEnergy = Mathf.Clamp(CurrentEnergy - _energy, 0f, m_maxEnergy);
-        
+        MyRTPC.SetValue(gameObject,CurrentEnergy);
         EnergyChange(this);
         if(CurrentEnergy == 0f)
         {
+            MyEvent.Stop(gameObject);
             Die();
         }
+        takingDamage = true;
         return previousEnergy - CurrentEnergy;
     }
 

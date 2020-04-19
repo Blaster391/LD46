@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{98D44C02-0610-4122-B2E0-CB4B303022BB}" SchemaVersion="97" RootDocumentID="{875A71EA-CE74-4446-B881-2E780BE812D2}">
+	<AudioObjects>
+		<WorkUnit Name="Trees" ID="{98D44C02-0610-4122-B2E0-CB4B303022BB}" OwnerID="{875A71EA-CE74-4446-B881-2E780BE812D2}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="Noise" ID="{8B10FA59-F115-4822-B7BF-D35CA304627E}" ShortID="1017148911">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{3FC49705-8627-4E4C-B8A3-4E3E56683241}" ShortID="389384141">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="TreeDying" ID="{417AB7DA-0C88-4A72-879B-0E5E95F00DB3}" WorkUnitID="{7E2AA1EA-48BB-47D2-961A-C224D4E4DF09}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{FDBE0DC4-335F-4300-A94C-E26972478701}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>38</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>60</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{B8441769-2332-4107-89C9-A1FD2D24E102}" ShortID="95768214">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="TreeDying" ID="{417AB7DA-0C88-4A72-879B-0E5E95F00DB3}" WorkUnitID="{7E2AA1EA-48BB-47D2-961A-C224D4E4DF09}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{99DFB413-12AB-4B42-9B94-7A437E6A3238}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>4800</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6B19D996-3730-4647-8489-5787570EF55B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Noise" ID="{CF7A6B40-63D3-4529-93D6-D7AE5AC209F7}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="1.09559993734336"/>
+								<Property Name="TrimEnd" Type="Real64" Value="4.58218562030075"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Noise.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="72802340"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Noise" ID="{CF7A6B40-63D3-4529-93D6-D7AE5AC209F7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
