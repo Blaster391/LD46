@@ -229,10 +229,17 @@ MonoBehaviour:
   m_maxVelocity: {x: 10, y: 17.5}
   m_baseMovementForce: 300
   m_baseJumpForce: 180.5
+  m_jetpackObject: {fileID: 0}
+  m_jetpackTickDownTime: 0.5
   m_airDampening: 0.45
   m_groundedEpsilon: 0.05
   m_bodySprite: {fileID: 461759859216939917}
   m_legsSprite: {fileID: 1413874802743802373}
+  MyEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9ffa078154788fe4f9388dcf89548249,
+      type: 2}
 --- !u!114 &6557974974070466240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,15 +259,18 @@ MonoBehaviour:
   MyEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: da2d51a4aa3e55347ac1ef7ec61ac715,
+      type: 2}
   MyEvent2:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c4a94af71f7a137438346f58bd9bf42e,
+      type: 2}
   MyEvent3:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 156538efb0214624f883f2fb0f382a83,
+      type: 2}
 --- !u!1 &2072905595466686080
 GameObject:
   m_ObjectHideFlags: 0

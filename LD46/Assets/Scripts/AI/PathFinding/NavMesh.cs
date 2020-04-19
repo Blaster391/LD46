@@ -530,8 +530,7 @@ public class NavMesh : MonoBehaviour
 }
 
 
-[CustomEditor(typeof(NavMesh))] 
-public class NavMeshEditor : Editor
+/*public class NavMeshEditor : Editor
 {
     public override void OnInspectorGUI() 
     {
@@ -545,4 +544,4 @@ public class NavMeshEditor : Editor
         }
         GUILayout.EndHorizontal();
     }
-}
+}*/
