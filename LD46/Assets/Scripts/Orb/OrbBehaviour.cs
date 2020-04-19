@@ -45,11 +45,12 @@ public class OrbBehaviour : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
-    private ShopUIBehaviour m_shopUI = null;
+    [SerializeField] private OrbUIBehaviour m_orbUIPrefab = null;
 
     // Working fields
     private bool m_isDead = false;
-
+    private ShopUIBehaviour m_shopUI = null;
+    private OrbUIBehaviour m_orbUI = null;
     // Public interface
     public float CurrentEnergy { get; private set; }
     public float CurrentEnergyProp { get { return CurrentEnergy / m_maxEnergy; } }
@@ -77,7 +78,7 @@ public class OrbBehaviour : MonoBehaviour
     {
         m_gameWorldObjectManager = GetComponentInParent<GameWorldObjectManager>();
         m_interactionComponent = GetComponent<InteractionObject>();
-        m_interactionComponent.OnUse += Use;
+        m_interactionComponent.Used += Use;
         m_interactionComponent.Dropped += Dropped;
     }
 
@@ -94,6 +95,14 @@ public class OrbBehaviour : MonoBehaviour
                 m_range = m_pointLight.Range,
                 m_intensity = m_pointLight.Intensity
             };
+        }
+
+        // Spawn UI
+        Canvas canvas = FindObjectOfType<Canvas>();
+        if (canvas)
+        {
+            m_orbUI = Instantiate(m_orbUIPrefab, canvas.transform);
+            m_orbUI.Initialise(this);
         }
     }
     
@@ -144,7 +153,11 @@ public class OrbBehaviour : MonoBehaviour
     private void UpdateEnergy(float _energyChange)
     {
         CurrentEnergy = Mathf.Clamp(CurrentEnergy + _energyChange, 0f, m_maxEnergy);
+<<<<<<< HEAD
         if(CurrentEnergy == 0f && !m_isDead)
+=======
+        if (CurrentEnergy == 0f)
+>>>>>>> 309ed95fcfd5c64ff9faf5eeaf67ef7bbe18c2ea
         {
             m_isDead = true;
             GameHelper.GetManager<GameSceneManager>().OnGameOver();
