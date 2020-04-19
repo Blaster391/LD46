@@ -9,8 +9,13 @@ public class PlayerHeadlook : MonoBehaviour
     [SerializeField]
     private float m_minAngle = -75.0f;
 
+    [SerializeField]
+    private float m_leftOffset = 0.4f;
+
     private SpriteRenderer m_bodySprite = null;
     private SpriteRenderer m_headSprite = null;
+
+
 
 
     // Start is called before the first frame update
@@ -29,30 +34,42 @@ public class PlayerHeadlook : MonoBehaviour
 
         if (Mathf.Abs(angle) > 90)
         {
-            m_headSprite.flipY = true;
-            m_bodySprite.flipX = true;
-
-            if((angle > 0) && angle < (90 + m_maxAngle))
+            if(!m_headSprite.flipY)
             {
-                angle = (90 + m_maxAngle);
+                m_headSprite.flipY = true;
+                m_bodySprite.flipX = true;
+
+                transform.position = transform.position + new Vector3(m_leftOffset, 0, 0);
             }
 
-            if ((angle < 0) && (angle > m_minAngle - 90))
+
+            if((angle > 0) && angle < (180 - m_maxAngle))
             {
-                angle = (m_minAngle - 90);
+                angle = (180 - m_maxAngle);
+            }
+
+            // I want to die
+            if ((angle < 0) && (angle > -180 - m_minAngle))
+            {
+                angle = (-180 - m_minAngle);
             }
         }
         else                  
-        {                     
-            m_headSprite.flipY = false;
-            m_bodySprite.flipX = false;
+        {   
+            if(m_headSprite.flipY)
+            {
+
+
+                m_headSprite.flipY = false;
+                m_bodySprite.flipX = false;
+
+                transform.position = transform.position - new Vector3(m_leftOffset, 0, 0);
+            }
+
 
             angle = Mathf.Max(angle, m_minAngle);
             angle = Mathf.Min(angle, m_maxAngle);
         }
-
-        //
-        //
 
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
