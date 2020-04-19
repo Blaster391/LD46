@@ -57,6 +57,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2996467687" Name="ForceYeet" ObjectPath="\Events\Default Work Unit\ForceYeet" DurationType="OneShot" DurationMin="0.642854" DurationMax="0.642854">
+					<IncludedMemoryFiles>
+						<File Id="980062080" Language="SFX">
+							<ShortName>Yeet.wav</ShortName>
+							<Path>SFX\Yeet_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3978245845" Name="PickUp" ObjectPath="\Events\Default Work Unit\PickUp" DurationType="OneShot" DurationMin="0.642854" DurationMax="0.642854">
+					<IncludedMemoryFiles>
+						<File Id="981600971" Language="SFX">
+							<ShortName>Pick up.wav</ShortName>
+							<Path>SFX\Pick up_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="417627684" Name="PlayMusic" ObjectPath="\Events\Default Work Unit\PlayMusic" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="138984369" Language="SFX">
@@ -198,6 +214,14 @@
 						<File Id="963565389" Language="SFX">
 							<ShortName>turret_low-002.wav</ShortName>
 							<Path>SFX\turret_low-002_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="516313049" Name="UIInteraction" ObjectPath="\Events\Default Work Unit\UIInteraction" DurationType="OneShot" DurationMin="0.642854" DurationMax="0.642854">
+					<IncludedMemoryFiles>
+						<File Id="777790945" Language="SFX">
+							<ShortName>UI.wav</ShortName>
+							<Path>SFX\UI_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -4,12 +4,15 @@
 		<UserProjectSettings Name="" ID="{F3AEADFC-9D25-45EF-B60D-26BCB7E85A3E}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\User\Documents\LD46WWIse\"/>
+				<Property Name="Event Action List\{047CFAEE-E28D-4EA7-97E1-381CE25D88A2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{14EEEA57-C03B-4813-A561-2909443BFFE6}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{1FEDE110-7DE7-4CF6-AEB2-24F107BE3B95}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{24BCCADD-2F6E-48A0-BB3C-E6B4D5650564}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2BC1094D-409A-4009-A4FC-D7B9DFCA5535}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2CEB4124-C240-4752-A46F-955B2CA32ED7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4F105C7D-1A72-4458-9F2A-C2BBC791E6D5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5890BBC6-553A-42A7-9A57-B8AB56B4CC14}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CFB18A1A-7446-48D3-92B2-2B97D6CE0D64}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{DFEF9674-DCD1-4813-934C-5E30A88408D2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{F3960A29-D11B-433F-A152-C1DC0AF790E7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>

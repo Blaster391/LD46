@@ -50,6 +50,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ForceYeet" ID="{CFB18A1A-7446-48D3-92B2-2B97D6CE0D64}">
+					<ChildrenList>
+						<Action Name="" ID="{47A1015D-0AD3-4FB5-910B-5D2243429111}" ShortID="236423317">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Yeet" ID="{1EB4DAFB-ED20-4D8B-B335-5ECA4B639907}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UIInteraction" ID="{1FEDE110-7DE7-4CF6-AEB2-24F107BE3B95}">
+					<ChildrenList>
+						<Action Name="" ID="{939A3899-F697-4635-BA3C-22EE42E6CA02}" ShortID="396932230">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI" ID="{93174F09-CAB2-49D0-9AA7-374F8AE8AAB4}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PickUp" ID="{047CFAEE-E28D-4EA7-97E1-381CE25D88A2}">
+					<ChildrenList>
+						<Action Name="" ID="{8AAAC521-1C0D-4208-8D80-5307A9CC6857}" ShortID="853099161">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pick up" ID="{EC2D06F1-F6AA-4836-B34C-0A059CED344F}" WorkUnitID="{875A71EA-CE74-4446-B881-2E780BE812D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
