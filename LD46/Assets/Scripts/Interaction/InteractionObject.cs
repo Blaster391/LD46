@@ -18,6 +18,12 @@ public class InteractionObject : MonoBehaviour
     [SerializeField]
     private float m_maxYeetVelocity = 20.0f;
 
+    [Header("Collision Damage")]
+    [SerializeField] private bool m_dealsCollisonDamageOnYeeting = false;
+    [SerializeField] private float m_collisionDamage = 10f;
+    [SerializeField] private float m_minimumVelocityForDamage = 10f;
+    private bool m_canDealCollisionDamage = true; // Reset on settle
+
     private bool m_isPickedUp = false;
     private bool m_isSettling = false;
 
@@ -52,6 +58,11 @@ public class InteractionObject : MonoBehaviour
         if(m_isPickedUp)
         {
             AimTowardsMouse();
+        }
+
+        if (m_canDealCollisionDamage && m_rigidBody2D.velocity.magnitude < m_minimumVelocityForDamage)
+        {
+            m_canDealCollisionDamage = false;
         }
 
         //if(m_isSettling)
@@ -95,6 +106,8 @@ public class InteractionObject : MonoBehaviour
             force = force.normalized * m_maxYeetVelocity;   
         }
         m_rigidBody2D.AddForce(force, ForceMode2D.Impulse);
+
+        m_canDealCollisionDamage = true;
     }
 
     // Called when player picks up
@@ -116,5 +129,18 @@ public class InteractionObject : MonoBehaviour
     virtual public void Use(GameObject player)
     {
         Used(player.GetComponent<PlayerInteraction>());
+    }
+
+    private void OnCollisionEnter2D (Collision2D collision)
+    {
+        if(m_dealsCollisonDamageOnYeeting)
+        {
+            Enemy enemyHit = collision.gameObject.GetComponent<Enemy>();
+            if(enemyHit != null)
+            {
+                enemyHit.DealDamage(m_collisionDamage);
+                m_canDealCollisionDamage = false;
+            }
+        }
     }
 }
