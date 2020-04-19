@@ -14,10 +14,23 @@ public class EnemySpawner : MonoBehaviour
 
     private float m_timeSinceAvailabilityUpdate = 0.0f;
 
+    private static List<EnemySpawner> s_enemySpawners = new List<EnemySpawner>();
+    public static List<EnemySpawner> EnemySpawners { get { return new List<EnemySpawner>(s_enemySpawners); } }
+
+    private void Awake()
+    {
+        s_enemySpawners.Add(this);
+    }
+
     private void Start()
     {
         UpdateAvailability();
         m_timeSinceAvailabilityUpdate = Random.Range(0, m_availabilityUpdate);
+    }
+
+    private void OnDestroy()
+    {
+        s_enemySpawners.Remove(this);
     }
 
     // Update is called once per frame
