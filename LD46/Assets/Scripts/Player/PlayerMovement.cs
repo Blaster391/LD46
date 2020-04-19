@@ -108,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!m_bodySprite.flipX)
             {
-
+                m_jetpackObject.transform.position += new Vector3(m_jetpackFlipOffset, 0, 0);
             }
 
             m_bodySprite.flipX = true;
@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (m_bodySprite.flipX)
             {
-
+                m_jetpackObject.transform.position -= new Vector3(m_jetpackFlipOffset, 0, 0);
             }
 
             m_bodySprite.flipX = false;
