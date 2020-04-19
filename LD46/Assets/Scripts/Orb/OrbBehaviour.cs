@@ -181,6 +181,11 @@ public class OrbBehaviour : MonoBehaviour
         if(CurrentEnergy == 0f && !m_isDead)
         {
             m_isDead = true;
+            if(m_shopUI != null)
+            {
+                DestroyShopUI();
+            }
+
             GameHelper.GetManager<GameSceneManager>().OnGameOver();
         }
     }
@@ -213,6 +218,11 @@ public class OrbBehaviour : MonoBehaviour
     // UI
     private void SpawnShopUI()
     {
+        if(m_isDead)
+        {
+            return;
+        }
+
         m_shopUI = Instantiate(m_shopUIPrefab, m_gameWorldObjectManager.UIParent);
         m_shopUI.Initialise(this);
     }

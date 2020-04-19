@@ -50,10 +50,20 @@ public class PlayerHeadlook : MonoBehaviour
         var directionToTarget = GameHelper.MouseToWorldPosition() - myPosition;
         var angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
 
+        bool dontApply = false;
+
         if (Mathf.Abs(angle) > 90)
         {
+            if(Mathf.Abs(angle) > 95)
+            {
+                m_headSprite.flipY = true;
+                
+            }
+            else
+            {
+                dontApply = true;
+            }
 
-             m_headSprite.flipY = true;
 
             if((angle > 0) && angle < (180 - m_maxAngle))
             {
@@ -67,15 +77,27 @@ public class PlayerHeadlook : MonoBehaviour
             }
         }
         else                  
-        {   
+        {
 
-           m_headSprite.flipY = false;
-            
+            if (Mathf.Abs(angle) < 85)
+            {
+                m_headSprite.flipY = false;
+            }
+            else
+            {
+                dontApply = true;
+            }
+
+
             angle = Mathf.Max(angle, m_minAngle);
             angle = Mathf.Min(angle, m_maxAngle);
         }
 
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        if(!dontApply)
+        {
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+
 
 
     }

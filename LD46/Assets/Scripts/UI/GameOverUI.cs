@@ -79,6 +79,8 @@ public class GameOverUI : MonoBehaviour
         {
             if(success)
             {
+                m_scoreboardTitleText.text = $"Leaderboard ({m_playerStats.Level})";
+
                 m_scoreboardText.text = "";
                 for (int i = 0; i < results.Count; ++i)
                 {
@@ -97,7 +99,7 @@ public class GameOverUI : MonoBehaviour
             return true;
         };
 
-        m_scoreboardComponent.GetHighscores(callback);
+        m_scoreboardComponent.GetHighscores(callback, m_playerStats.Level);
     }
 
     void SubmitScore()
@@ -108,7 +110,7 @@ public class GameOverUI : MonoBehaviour
 
             Score playerScore = new Score();
             playerScore.User = m_playerName.text.Trim();
-            playerScore.Level = "Main";
+            playerScore.Level = m_playerStats.Level;
             playerScore.ScoreValue = m_playerStats.Score;
             m_playerName.gameObject.SetActive(false);
 
