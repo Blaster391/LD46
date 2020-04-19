@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
             if(doJump)
             {
+                MyEvent.Post(gameObject);
                 m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
             }
         }
