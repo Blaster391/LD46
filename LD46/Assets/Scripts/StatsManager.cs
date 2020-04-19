@@ -12,17 +12,27 @@ public class StatsManager : MonoBehaviour
     private bool m_alive = false;
     public void AddLeachedEnergy(float energy)
     {
-        EnergyLeached += energy;
+        if(m_alive)
+        {
+            EnergyLeached += energy;
+        }
+
     }
 
     public void IncrementKills()
     {
-        Kills++;
+        if (m_alive)
+        {
+            Kills++;
+        }
     }
 
     public void AddScore(int amount)
     {
-        Score += amount;
+        if (m_alive)
+        {
+            Score += amount;
+        }
     }
 
     public void StartAliveTimer()

@@ -47,10 +47,10 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
     [SerializeField] private OrbUIBehaviour m_orbUIPrefab = null;
 
+    // Working fields
+    private bool m_isDead = false;
     private ShopUIBehaviour m_shopUI = null;
     private OrbUIBehaviour m_orbUI = null;
-    
-
     // Public interface
     public float CurrentEnergy { get; private set; }
     public float CurrentEnergyProp { get { return CurrentEnergy / m_maxEnergy; } }
@@ -153,10 +153,10 @@ public class OrbBehaviour : MonoBehaviour
     private void UpdateEnergy(float _energyChange)
     {
         CurrentEnergy = Mathf.Clamp(CurrentEnergy + _energyChange, 0f, m_maxEnergy);
-        if (CurrentEnergy == 0f)
+        if(CurrentEnergy == 0f && !m_isDead)
         {
-            //Dead
-            GameHelper.GetManager<StatsManager>().EndAliveTimer();
+            m_isDead = true;
+            GameHelper.GetManager<GameSceneManager>().OnGameOver();
         }
     }
 
