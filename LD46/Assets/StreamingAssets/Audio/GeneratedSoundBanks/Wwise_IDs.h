@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BALLOFLIGHT = 2769336799U;
+        static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID ENEMYDEATH = 3249137159U;
         static const AkUniqueID FORCEPUSH = 3137565726U;
         static const AkUniqueID FORCEYEET = 2996467687U;
