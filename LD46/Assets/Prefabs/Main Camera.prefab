@@ -189,7 +189,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8349996381613480165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_maxScrollDistance: 100
   m_maxScrollAmountForeground: 10
-  m_maxScrollAmountBackground: 1
+  m_maxScrollAmountBackground: 3
   m_backgroundZ: 10
   m_foreground: {fileID: 131813516031731335}
   m_background: {fileID: 6254145972727398471}
