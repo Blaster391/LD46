@@ -530,6 +530,7 @@ public class NavMesh : MonoBehaviour
 }
 
 #if UNITY_EDITOR
+[CustomEditor(typeof(NavMesh))]
 public class NavMeshEditor : Editor
 {
     public override void OnInspectorGUI()

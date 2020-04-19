@@ -189,6 +189,9 @@ MonoBehaviour:
   m_pickupRadius: 1.5
   m_sleepVelocityThreshold: 0.5
   m_maxYeetVelocity: 20
+  m_dealsCollisonDamageOnYeeting: 0
+  m_collisionDamage: 10
+  m_minimumVelocityForDamage: 10
 --- !u!1001 &1737359313767440655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,6 +199,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1737359314299122719}
     m_Modifications:
+    - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+      propertyPath: m_rateOfFire
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+      propertyPath: m_range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+      propertyPath: m_damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+      propertyPath: m_projectileSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
+      propertyPath: m_reactionTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5350828436446108364, guid: 7373382353344a342a7727952bb3c084,
         type: 3}
       propertyPath: m_LocalPosition.x
