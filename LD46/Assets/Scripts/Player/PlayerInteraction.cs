@@ -23,7 +23,9 @@ public class PlayerInteraction : MonoBehaviour
 
     private InteractionObject m_objectInHands = null;
 
-    private bool m_mouseWasDown = false;
+    private bool m_mouse0WasDown = false;
+    private bool m_mouse1WasDown = false;
+
     private float m_timeMouseWasDownFor = 0.0f;
    
 
@@ -68,11 +70,12 @@ public class PlayerInteraction : MonoBehaviour
         m_objectInHands = null;
     }
 
-    void ForcePush()
+    void ForcePush(bool inverse)
     {
         Vector3 myPos = transform.position;
         Vector3 mousePos = Input.mousePosition;
         Vector3 dir = Camera.main.ScreenToWorldPoint(mousePos) - myPos;
+        dir.z = 0.0f;
 
         float cosConeAngle = Mathf.Cos(Mathf.Deg2Rad * m_forcePushConeAngle);
 
@@ -88,7 +91,7 @@ public class PlayerInteraction : MonoBehaviour
 
             Vector3 toObj = collider.transform.position - myPos;
             float dot = Vector3.Dot(toObj.normalized, dir.normalized);
-            if (toObj.magnitude < m_forcePushRadius && dot < cosConeAngle)
+            if (toObj.magnitude < m_forcePushRadius && dot > cosConeAngle)
             {
                 // Occlusion check
                 bool fail = false;
@@ -102,7 +105,7 @@ public class PlayerInteraction : MonoBehaviour
 
                 // Push the thing.
                 float angMul = Mathf.Lerp(0.45f, 1.0f, (dot / cosConeAngle));
-                float mul = m_timeMouseWasDownFor * m_forcePushMultiplier * angMul;
+                float mul = m_timeMouseWasDownFor * m_forcePushMultiplier * angMul * (inverse ? -1.0f : 1.0f);
                 collider.attachedRigidbody.AddForce(toObj * mul);
             }
         }
@@ -130,30 +133,33 @@ public class PlayerInteraction : MonoBehaviour
     {
         bool interactionPressed = Input.GetKeyDown(KeyCode.F);
         bool usePressed = Input.GetKeyDown(KeyCode.E);
-        bool mouseDown = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(0) : false;
+        bool mouse0Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(0) : false;
+        bool mouse1Down = !EventSystem.current.IsPointerOverGameObject() ? Input.GetMouseButton(1) : false;
+         
+        bool mouse0Release = m_mouse0WasDown && !mouse0Down;
+        bool mouse1Release = m_mouse1WasDown && !mouse1Down;
 
-        if (m_mouseWasDown)
+        if(mouse0Down || mouse1Down)
         {
-            if (mouseDown)
+            m_timeMouseWasDownFor += Time.deltaTime;
+        }
+
+        if((mouse0Release || mouse1Release) && !(mouse0Down || mouse1Down))
+        {
+            if(m_objectInHands)
             {
-                m_timeMouseWasDownFor += Time.deltaTime;
+                YeetTheThing();
             }
             else
             {
-                if(m_objectInHands)
-                {
-                    YeetTheThing();
-                }
-                else
-                {
-                    ForcePush();
-                }
-                m_mouseWasDown = false;
-                m_timeMouseWasDownFor = 0.0f;
+                bool isInverted = mouse1Release;
+                ForcePush(isInverted);
             }
+            m_timeMouseWasDownFor = 0.0f;
         }
 
-        m_mouseWasDown = mouseDown;
+        m_mouse0WasDown = mouse0Down;
+        m_mouse1WasDown = mouse1Down;
 
         if (interactionPressed)
         {
