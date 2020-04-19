@@ -25,6 +25,10 @@ public class TurretProjectile : MonoBehaviour
     public void SetVelocity(Vector2 _velocity)
     {
         GetComponent<Rigidbody2D>().velocity = _velocity;
+
+        var directionToTarget = _velocity;
+        var angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     public void SetDamage(float damage)

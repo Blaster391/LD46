@@ -8,7 +8,7 @@
 						<Action Name="" ID="{41F49FE9-2CB8-4EA6-BCC3-0DE74A4C300C}" ShortID="571541206">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="TurretsSwitch" ID="{57E3F92C-55FD-4922-B4B0-D29AB2AEDD93}" WorkUnitID="{20A5500D-5B72-4242-BA15-938C851DF25C}"/>
+									<ObjectRef Name="TurretHigh" ID="{9B743F8D-B649-483A-A423-75B47E2A389E}" WorkUnitID="{20A5500D-5B72-4242-BA15-938C851DF25C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -19,7 +19,7 @@
 						<Action Name="" ID="{1572ECE9-79C7-4201-A812-E3BBD7548981}" ShortID="261930535">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="turret_high-001" ID="{A77F2496-E449-4E67-840F-8FEB43CAD2F7}" WorkUnitID="{20A5500D-5B72-4242-BA15-938C851DF25C}"/>
+									<ObjectRef Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}" WorkUnitID="{20A5500D-5B72-4242-BA15-938C851DF25C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

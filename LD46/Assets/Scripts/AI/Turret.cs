@@ -47,13 +47,9 @@ public class Turret : MonoBehaviour
 
         if(m_currentTarget != null)
         {
-           // Vector2 directionToTarget = (m_currentTarget.transform.position - transform.position).normalized;
-
-            var dir = m_currentTarget.transform.position - transform.position;
-            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            var directionToTarget = m_currentTarget.transform.position - transform.position;
+            var angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-            //transform.LookAt(m_currentTarget.transform, Vector2.up);
         }
 
         if(m_isFiring)
