@@ -259,6 +259,7 @@ public partial class L2DLDirectLightRenderer
         m_spotLightRenderingBuffer.SetGlobalVector("_lightFade", new Vector2(spotFade, -outerCos * spotFade));
 
         m_spotLightRenderingBuffer.SetGlobalFloat("_maxIntensityOutput", spotLight.MaxIntensityOutput);
+        m_spotLightRenderingBuffer.SetGlobalFloat("_startingRange", spotLight.StartingRange);
         
         m_spotLightRenderingBuffer.SetRenderTarget(new RenderTargetIdentifier[] { L2DLPipelineData.s_cameraDirectLightResultTextureId, L2DLPipelineData.s_cameraEmissionTextureId }, L2DLPipelineData.s_cameraFakeDepthTextureId);
         m_spotLightRenderingBuffer.Blit(null, BuiltinRenderTextureType.CurrentActive, SpotLightPassMaterial);
