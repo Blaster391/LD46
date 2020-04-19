@@ -231,7 +231,8 @@ MonoBehaviour:
   m_baseJumpForce: 180.5
   m_airDampening: 0.45
   m_groundedEpsilon: 0.05
-  m_headSprite: {fileID: 0}
+  m_bodySprite: {fileID: 461759859216939917}
+  m_legsSprite: {fileID: 1413874802743802373}
 --- !u!114 &6557974974070466240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +303,7 @@ GameObject:
   - component: {fileID: 5884730914938406420}
   - component: {fileID: 461759859216939917}
   - component: {fileID: 4258498614108213756}
+  - component: {fileID: 5486690693264929915}
   m_Layer: 9
   m_Name: TorsoRender
   m_TagString: Untagged
@@ -317,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123309745412579684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.022, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7949739591159359540}
@@ -391,6 +393,25 @@ MonoBehaviour:
   LightBleed: 0
   LightingTexture: {fileID: 0}
   lightingFrame: {fileID: 0}
+--- !u!95 &5486690693264929915
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123309745412579684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37e3bb0a9d3751b4fb01e58466497bfc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3702450632903234221
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3829831408359010495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.134, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6547981386203994285}
@@ -678,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5412285143521674101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.169, y: 0.502, z: 0}
+  m_LocalPosition: {x: 0.169, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1759678221045381820}
@@ -700,7 +721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_maxAngle: 30
   m_minAngle: -25
-  m_leftOffset: 0.4
+  m_leftOffset: 0.17
+  m_bodySprite: {fileID: 0}
 --- !u!1 &6705873017452496664
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +834,7 @@ GameObject:
   - component: {fileID: 5806969239526696509}
   - component: {fileID: 1413874802743802373}
   - component: {fileID: 4422656322959494625}
+  - component: {fileID: 2074092202774759528}
   m_Layer: 9
   m_Name: LegsRender
   m_TagString: Untagged
@@ -901,6 +924,25 @@ MonoBehaviour:
   LightBleed: 0
   LightingTexture: {fileID: 0}
   lightingFrame: {fileID: 0}
+--- !u!95 &2074092202774759528
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7915409690434598404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7057d3228b12ec49906d56e78d79392, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7968296618343825562
 GameObject:
   m_ObjectHideFlags: 0

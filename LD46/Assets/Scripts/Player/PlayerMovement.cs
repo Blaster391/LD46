@@ -18,8 +18,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float m_groundedEpsilon = 0.05f;
 
-    [SerializeField] private SpriteRenderer m_headSprite = null;
-    private SpriteRenderer m_sprite = null;
+    [SerializeField]
+    private SpriteRenderer m_bodySprite = null;
+    [SerializeField]
+    private SpriteRenderer m_legsSprite = null;
+
     private Rigidbody2D m_rigidbody2D = null;
     private CapsuleCollider2D m_capsuleCollider2D = null;
 
@@ -31,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_sprite = GetComponent<SpriteRenderer>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_capsuleCollider2D = GetComponent<CapsuleCollider2D>();
     }
@@ -79,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
         {
             m_rigidbody2D.AddForce(-Vector2.right * m_baseMovementForce * damp);
 
-           // m_sprite.flipX = true;
+            m_bodySprite.flipX = true;
+            m_legsSprite.flipX = true;
            // m_headSprite.flipX = true;
         }
 
@@ -87,8 +90,9 @@ public class PlayerMovement : MonoBehaviour
         {
             m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * damp);
 
-          //  m_sprite.flipX = false;
-          //  m_headSprite.flipX = false;
+            m_bodySprite.flipX = false;
+            m_legsSprite.flipX = false;
+            //  m_headSprite.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
