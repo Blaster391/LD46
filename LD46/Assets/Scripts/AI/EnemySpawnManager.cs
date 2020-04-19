@@ -46,13 +46,17 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField]
     private List<EnemySpawnWaveSetting> m_enemySpawnWaveSettings = new List<EnemySpawnWaveSetting>();
 
-    [SerializeField] private GameWorldObjectManager m_gameWorldObjectManager;
+    private GameWorldObjectManager m_gameWorldObjectManager;
 
     private int m_currentWaveIndex = 0;
     private float m_currentWaveDuration = 0f;
 
     private float m_lastSpawnTime = 0.0f;
-    
+
+    private void Start()
+    {
+        m_gameWorldObjectManager = FindObjectOfType<GameWorldObjectManager>();
+    }
 
     void Update()
     {
