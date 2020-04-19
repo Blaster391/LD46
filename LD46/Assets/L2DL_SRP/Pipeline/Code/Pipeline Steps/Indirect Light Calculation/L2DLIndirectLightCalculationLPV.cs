@@ -287,7 +287,6 @@ public class L2DLIndirectLightCalculationLPV : IL2DLIndirectLightCalculationStep
             {
                 m_lpvIterationsBuffer.SetComputeIntParam(m_lpvIterationsComputeShader, "Iteration", j);
                 m_lpvIterationsBuffer.DispatchCompute(m_lpvIterationsComputeShader, (totalIterationsSoFar + j) % 2 == 0 ? m_lpvIterationsFlipKernel : m_lpvIterationsFlopKernel, threadGroupsX, threadGroupsY, 1);
-                m_lpvIterationsBuffer.WaitOnAsyncGraphicsFence(m_lpvIterationsBuffer.CreateAsyncGraphicsFence());
             }
 
             totalIterationsSoFar += _lpvIterationsData[i].Iterations;
