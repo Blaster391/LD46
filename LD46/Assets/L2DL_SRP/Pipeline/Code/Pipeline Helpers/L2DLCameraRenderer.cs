@@ -154,8 +154,8 @@ public partial class L2DLCameraRenderer
         m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraEmissionTextureId, bufferTextureDescriptor, FilterMode.Point);
         m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraOcclusionTextureId, bufferTextureDescriptor, FilterMode.Point);
         m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraAdditionalDataTextureId, bufferTextureDescriptor, FilterMode.Point);
-        m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraDirectLightResultTextureId, bufferTextureDescriptor, FilterMode.Point);
-        m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraIndirectLightResultTextureId, bufferTextureDescriptor, FilterMode.Point);
+        m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraDirectLightResultTextureId, bufferTextureDescriptor, FilterMode.Bilinear);
+        m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraIndirectLightResultTextureId, bufferTextureDescriptor, FilterMode.Bilinear);
         
         m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraDepthTextureId, bufferDepthTextureDescriptor, FilterMode.Point);
         m_textureHandlerBuffer.GetTemporaryRT(L2DLPipelineData.s_cameraFakeDepthTextureId, bufferDepthTextureDescriptor, FilterMode.Point);
