@@ -66,10 +66,6 @@ v2f SpriteVert(appdata_t IN)
     OUT.color = UNITY_ACCESS_INSTANCED_PROP(PerDrawSprite, _InstancedColor); //IN.color * _Color * _RendererColor;
     OUT.color.rgb *= UNITY_ACCESS_INSTANCED_PROP(PerDrawSprite, _InstancedAlpha); //IN.color * _Color * _RendererColor;
 
-    #ifdef PIXELSNAP_ON
-    OUT.vertex = UnityPixelSnap (OUT.vertex);
-    #endif
-
     return OUT;
 }
 

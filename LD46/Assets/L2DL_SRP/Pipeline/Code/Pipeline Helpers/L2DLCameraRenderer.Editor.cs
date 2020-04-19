@@ -10,7 +10,7 @@ partial class L2DLCameraRenderer
     partial void DrawGizmos();
     partial void PrepareBuffer();
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR 
         
     // --------------------------------------------------------------------
     partial void DrawGizmos()
@@ -22,9 +22,9 @@ partial class L2DLCameraRenderer
         }
     }
 
-#else 
+#elif DEVELOPMENT_BUILD
     
-    string SampleName => m_bufferName;
+    //string SampleName => m_bufferName;
 
 #endif // UNITY_EDITOR
 }

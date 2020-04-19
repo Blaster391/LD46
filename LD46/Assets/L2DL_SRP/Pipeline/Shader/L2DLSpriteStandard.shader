@@ -31,7 +31,6 @@
 			#pragma target 3.5
 
 			#pragma multi_compile_instancing
-			#pragma multi_compile_local _ PIXELSNAP_ON
 
 			#pragma vertex SpriteVert
 			#pragma fragment SpriteFrag
