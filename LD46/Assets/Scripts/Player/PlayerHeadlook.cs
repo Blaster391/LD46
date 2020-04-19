@@ -27,8 +27,6 @@ public class PlayerHeadlook : MonoBehaviour
         var directionToTarget = GameHelper.MouseToWorldPosition() - myPosition;
         var angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
 
-        Debug.Log(angle);
-
         if (Mathf.Abs(angle) > 90)
         {
             m_headSprite.flipY = true;
@@ -36,13 +34,14 @@ public class PlayerHeadlook : MonoBehaviour
 
             if((angle > 0) && angle < (90 + m_maxAngle))
             {
-                angle = 90 + m_maxAngle;
+                angle = (90 + m_maxAngle);
             }
 
-            //angle = -Mathf.Min(angle, -m_minAngle);
-            //angle = -Mathf.Max(angle, -m_maxAngle);
-
-        }                     
+            if ((angle < 0) && (angle > m_minAngle - 90))
+            {
+                angle = (m_minAngle - 90);
+            }
+        }
         else                  
         {                     
             m_headSprite.flipY = false;
