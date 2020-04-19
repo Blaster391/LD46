@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float m_jetpackTickDownCounter = 0.0f;
 
+    public AK.Wwise.Event MyEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,8 +97,6 @@ public class PlayerMovement : MonoBehaviour
             if(doJump)
             {
                 m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
-                m_jetpackParticles.Play();
-                m_jetpackTickDownCounter = m_jetpackTickDownTime;
             }
         }
 

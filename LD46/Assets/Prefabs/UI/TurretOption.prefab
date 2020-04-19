@@ -414,7 +414,7 @@ MonoBehaviour:
   MyEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 156538efb0214624f883f2fb0f382a83,
+    WwiseObjectReference: {fileID: 11400000, guid: 6f07ab297217fac4196f99a3a7bc3138,
       type: 2}
 --- !u!1 &6357545384704106023
 GameObject:

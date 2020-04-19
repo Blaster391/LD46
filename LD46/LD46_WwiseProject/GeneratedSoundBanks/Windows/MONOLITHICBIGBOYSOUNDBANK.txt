@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2996467687	ForceYeet			\Default Work Unit\ForceYeet	
 	3137565726	ForcePush			\Default Work Unit\ForcePush	
 	3249137159	EnemyDeath			\Default Work Unit\Enemies\EnemyDeath	
+	3833651337	Jump			\Default Work Unit\Jump	
 	3978245845	PickUp			\Default Work Unit\PickUp	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -32,15 +33,20 @@ Custom State	ID	Name	State Group	Owner		Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	591859596	TreeDying			\Default Work Unit\TreeDying	
 
+Effect plug-ins	ID	Name	Type				Notes
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	72802340	Noise	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Noise_AF70457A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Trees\Noise		669488
 	76914504	turret_high-006	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_high-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-006		202196
+	91380339	jump-01	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\jump-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jumps\jump-01		82352
 	138984369	Short stab	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\short stab_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Short stab		1316636
 	154983699	Percussion2	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\percussion2-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Percussion2		1316636
 	170475520	lead	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\lead_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\lead		1316636
 	227414808	Arp high	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\arp high_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Arp high		1316636
 	230180277	Bass	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\bass-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Bass		1316636
 	259285699	turret_low-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_low-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-003		203024
+	272060669	jump-02	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\jump-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jumps\jump-02		82352
 	329795044	enemy_death-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\enemy_death-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyDeath\enemy_death-001		202112
 	375230761	lead	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\lead-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\lead		1316636
 	390091028	ForcePush	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\ForcePush_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ForcePush		41208
@@ -51,6 +57,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	546314522	sub hit	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\sub hit_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\sub hit		1316636
 	559944824	turret_high-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_high-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-001		201872
 	574119826	turret_high-005	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_high-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-005		198636
+	615552399	jump	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jumps\jump		82352
 	625988322	Drums	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chord2\drums-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Drums		1316636
 	626905238	turret_low-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\turret_low-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-004		207888
 	650933648	Percussion1	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Windows\SFX\Chrod1\percusion_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Percussion1		1316636
