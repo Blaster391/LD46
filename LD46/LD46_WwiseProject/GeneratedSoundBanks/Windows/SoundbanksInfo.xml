@@ -29,6 +29,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="779278001" Name="DEATH" ObjectPath="\Events\Default Work Unit\DEATH" DurationType="OneShot" DurationMin="1.178583" DurationMax="1.178583">
+					<IncludedMemoryFiles>
+						<File Id="246482562" Language="SFX">
+							<ShortName>DEATH.wav</ShortName>
+							<Path>SFX\DEATH_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3249137159" Name="EnemyDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyDeath" DurationType="OneShot" DurationMin="1.130703" DurationMax="1.145397">
 					<IncludedMemoryFiles>
 						<File Id="329795044" Language="SFX">

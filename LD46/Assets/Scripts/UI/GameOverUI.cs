@@ -27,6 +27,7 @@ public class GameOverUI : MonoBehaviour
     bool m_scoreSubmitted = false;
 
     public AK.Wwise.State WWiseState;
+    public AK.Wwise.Event MyEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,7 @@ public class GameOverUI : MonoBehaviour
         LoadHighscores();
 
         WWiseState.SetValue();
-        
+        MyEvent.Post(gameObject);
     }
 
     void ShowScore()
