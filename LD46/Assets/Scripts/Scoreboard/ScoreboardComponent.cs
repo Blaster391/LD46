@@ -26,18 +26,18 @@ namespace Scoreboard
 
         public class ScoreboardComponent : MonoBehaviour
         {
-            private void Start()
+            private void Awake()
             {
                 m_connection = JsonConvert.DeserializeObject<ScoreboardConnection>(File.ReadAllText(m_scoreboardConnectionFile));
 
                 // For testing
-                Score score = new Score();
-                score.Level = "Test";
-                score.User = "Oscar Biggs";
-                score.ScoreValue = 123;
-                score.ExtraData.Add("test", "data");
+                //Score score = new Score();
+                //score.Level = "Test";
+                //score.User = "Oscar Biggs";
+                //score.ScoreValue = 123;
+                //score.ExtraData.Add("test", "data");
 
-                SubmitResult(score);
+                //SubmitResult(score);
             }
 
             [SerializeField]
@@ -47,6 +47,12 @@ namespace Scoreboard
 
             public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete)
             {
+                if(m_connection == null)
+                {
+                    _onRequestComplete(null, false);
+                    return;
+                }
+
                 StartCoroutine(GetHighscoresCoroutine(_onRequestComplete));
             }
 
@@ -72,16 +78,22 @@ namespace Scoreboard
                     List<ScoreboardCore.Data.ScoreResult> results = JsonConvert.DeserializeObject<List<ScoreboardCore.Data.ScoreResult>>(resultsString);
                     Debug.Log(results.Count);
 
-                    _onRequestComplete(results, false);
+                    _onRequestComplete(results, true);
                 }
             }
 
-            public void SubmitResult(ScoreboardCore.Data.Score score)
+            public void SubmitResult(ScoreboardCore.Data.Score score, Func<bool, string, bool> _onRequestComplete)
             {
-                StartCoroutine(SubmitResultCoroutine(score));
+                if (m_connection == null)
+                {
+                    _onRequestComplete(false, "NO CONNECTION FILE");
+                    return;
+                }
+
+                StartCoroutine(SubmitResultCoroutine(score, _onRequestComplete));
             }
 
-            private IEnumerator SubmitResultCoroutine(ScoreboardCore.Data.Score score)
+            private IEnumerator SubmitResultCoroutine(ScoreboardCore.Data.Score score, Func<bool, string, bool> _onRequestComplete)
             {
 
                 string submissionUrl = "/api/scoreboard/" + m_connection.GameName + "/submit";
@@ -99,7 +111,7 @@ namespace Scoreboard
                 if (request.isNetworkError || request.isHttpError)
                 {
                     Debug.LogError(request.error);
-
+                    _onRequestComplete(false, request.error);
                 }
                 else
                 {
@@ -107,6 +119,7 @@ namespace Scoreboard
 
                     string resultsString = request.downloadHandler.text;
                     Debug.Log(resultsString);
+                    _onRequestComplete(true, resultsString);
                 }
             }
         }

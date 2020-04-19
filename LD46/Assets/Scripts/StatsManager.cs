@@ -9,6 +9,8 @@ public class StatsManager : MonoBehaviour
     public int Kills { get; private set; } = 0;
     public float TimeAlive { get; private set; } = 0;
 
+    public bool IsAlive { get { return m_alive; } }
+
     private bool m_alive = false;
     public void AddLeachedEnergy(float energy)
     {
