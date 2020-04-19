@@ -141,7 +141,7 @@ public class NavMesh : MonoBehaviour
             }
 
             // Sort open list
-            m_openList = m_openList.OrderBy(x => x.TotalCost).ToList();
+            m_openList.Sort((a, b) => { return a.TotalCost.CompareTo(b.TotalCost); });
 
             // Select new current node
             currentNode = m_openList.First();

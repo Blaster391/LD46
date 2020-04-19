@@ -16,11 +16,14 @@ namespace AK
         static const AkUniqueID BALLOFLIGHT = 2769336799U;
         static const AkUniqueID ENEMYDEATH = 3249137159U;
         static const AkUniqueID FORCEPUSH = 3137565726U;
+        static const AkUniqueID FORCEYEET = 2996467687U;
+        static const AkUniqueID PICKUP = 3978245845U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
         static const AkUniqueID TAKEDAMAGE = 2784187423U;
         static const AkUniqueID TREEDYING = 591859596U;
         static const AkUniqueID TURRET = 2674766611U;
         static const AkUniqueID TURRET2 = 212920027U;
+        static const AkUniqueID UIINTERACTION = 516313049U;
     } // namespace EVENTS
 
     namespace STATES

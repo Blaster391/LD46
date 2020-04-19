@@ -1,12 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
 	212920027	Turret2			\Default Work Unit\TurretEvents\Turret2	
 	417627684	PlayMusic			\Default Work Unit\PlayMusic	
+	516313049	UIInteraction			\Default Work Unit\UIInteraction	
 	591859596	TreeDying			\Default Work Unit\Tree\TreeDying	
 	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
 	2784187423	TakeDamage			\Default Work Unit\TakeDamage	
+	2996467687	ForceYeet			\Default Work Unit\ForceYeet	
 	3137565726	ForcePush			\Default Work Unit\ForcePush	
 	3249137159	EnemyDeath			\Default Work Unit\Enemies\EnemyDeath	
+	3978245845	PickUp			\Default Work Unit\PickUp	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2826692331	DeadorAlive			\Default Work Unit\DeadorAlive	
@@ -56,11 +59,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	679225109	LD_ball_light_sound01	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\LD_ball_light_sound01_55EDB696.wem		\Actor-Mixer Hierarchy\Default Work Unit\LD_ball_light_sound01		2293104
 	687047562	turret_low-001	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-001		197688
 	722309184	turret_high-003	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-003		194092
+	777790945	UI	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\UI_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI		123492
 	800509450	turret_high-007	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-007		209864
 	874794469	Percussion2	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\percussion2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Percussion2		1316636
 	886371755	Drums	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chrod1\drums_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord1\Drums		1316636
 	935780839	turret_high-004	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-004		199360
 	963565389	turret_low-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_low-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretLow\turret_low-002		208244
+	980062080	Yeet	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Yeet_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Yeet		123492
+	981600971	Pick up	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Pick up_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pick up		123492
 	985901520	Stabbyboys	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\Stabbyboys-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Stabbyboys		1316636
 	990031999	Percussion1	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\Chord2\percusion-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Playlist Container\Chord2\Percussion1		1316636
 	1023117400	turret_high-002	C:\Users\User\Documents\LD46\LD46\LD46\LD46_WwiseProject\.cache\Mac\SFX\turret_high-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turrets\TurretHigh\turret_high-002		195956
