@@ -529,19 +529,20 @@ public class NavMesh : MonoBehaviour
     }
 }
 
-
-/*public class NavMeshEditor : Editor
+#if UNITY_EDITOR
+public class NavMeshEditor : Editor
 {
-    public override void OnInspectorGUI() 
+    public override void OnInspectorGUI()
     {
 
         base.DrawDefaultInspector();
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Generate Navmesh"))
         {
-            NavMesh navMesh = (NavMesh)target; //1
+            NavMesh navMesh = (NavMesh)target;
             navMesh.OutputNavmesh();
         }
         GUILayout.EndHorizontal();
     }
-}*/
+}
+#endif
