@@ -10,6 +10,7 @@ CBUFFER_START(_LightBuffer)
     float _lightIntensity;
     float _lightAttenuation;
     float2 _lightFade;
+    float _maxIntensityOutput;
 CBUFFER_END
 
 FragOutput SpotLightPassFragment (VertexOutput input)
@@ -31,7 +32,7 @@ FragOutput SpotLightPassFragment (VertexOutput input)
     float attenuation = spotFade * rangeFade / distanceSqr;
     
     FragOutput output;
-	output.directLight = _lightColor * _lightIntensity * attenuation * float4(shadowMap.remainingLight, 1) /** _DirectLightMultiplier*/;
+	output.directLight = _lightColor * clamp(_lightIntensity * attenuation, 0, _maxIntensityOutput) * float4(shadowMap.remainingLight, 1) /** _DirectLightMultiplier*/;
     output.emissiveLight = output.directLight * shadowMap.color * shadowMap.reflectivity;
     return output;
 }
