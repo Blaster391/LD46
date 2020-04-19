@@ -149,6 +149,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1917263390" Name="StopMusic" ObjectPath="\Events\Default Work Unit\StopMusic" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2784187423" Name="TakeDamage" ObjectPath="\Events\Default Work Unit\TakeDamage" DurationType="OneShot" DurationMin="0.267875" DurationMax="0.267875">
 					<IncludedMemoryFiles>
 						<File Id="662843151" Language="SFX">

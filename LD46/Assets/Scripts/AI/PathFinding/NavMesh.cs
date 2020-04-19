@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class NavMesh : MonoBehaviour
@@ -44,21 +47,29 @@ public class NavMesh : MonoBehaviour
     private int _maxVerticalNodes = 100;
     [SerializeField]
     private int _maxHorizontalNodes = 100;
+    [SerializeField]
+    private string m_navmeshFile = "";
+
+    [SerializeField]
+    private bool m_debugDraw = true;
+
 
     private Vector2 _origin = new Vector2(0, 0);
 
     // private List<PathNode> _nodes = new List<PathNode>();
     private Dictionary<Vector2Int, PathNode> _nodeMap = new Dictionary<Vector2Int, PathNode>();
 
-    [SerializeField]
-    private List<Vector2Int> m_nodeIndexes = null;
-    [SerializeField]
-    private List<PathNode> m_pathNodes = null;
-
     // Start is called before the first frame update
     void Start()
     {
-        GeneratePathNodes(gameObject.transform.position);
+        if(m_navmeshFile == "")
+        {
+            GeneratePathNodes(gameObject.transform.position);
+        }
+        else
+        {
+            LoadNavmeshFromFile();
+        }
        // GameHelper.GetManager<PathManager>().Register(this);
     }
 
@@ -218,6 +229,7 @@ public class NavMesh : MonoBehaviour
     private void GeneratePathNodes(Vector2 origin)
     {
         _origin = origin;
+        _nodeMap.Clear();
 
         // Create nodes
         for (int x = 0; x < _maxHorizontalNodes; ++x)
@@ -265,7 +277,60 @@ public class NavMesh : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void LoadNavmeshFromFile()
+    {
+        _nodeMap.Clear();
+
+        List<PathNodeSerializable> serializableNodes = JsonConvert.DeserializeObject<List<PathNodeSerializable>>(File.ReadAllText(("Assets/NavMeshs/" + m_navmeshFile + ".path")));
+
+        foreach(var node in serializableNodes)
+        {
+            PathNode newNode = new PathNode(node.Position.Get(), node.Index.Get());
+            newNode.ConnectedNodes.Capacity = node.ConnectedNodes.Count;
+            _nodeMap.Add(node.Index.Get(), newNode);
+        }
+
+
+        foreach (var serializedNode in serializableNodes)
+        {
+            PathNode realNode = _nodeMap[serializedNode.Index.Get()];
+            foreach(var connectedNode in serializedNode.ConnectedNodes)
+            {
+                realNode.AddConnectedNodes(_nodeMap[connectedNode.Get()]);
+            }
+            
+        }
+
+    }
+
+    public void OutputNavmesh()
+    {
+        if(m_navmeshFile == "")
+        {
+            Debug.LogError("GIVE NAVMESH FILE NAME");
+            return;
+        }
+
+        string file = "Assets/NavMeshs/" + m_navmeshFile + ".path";
+        if (File.Exists(file))
+        {
+            File.Delete(file);
+        }
+
+        GeneratePathNodes(gameObject.transform.position);
+
+        List<PathNodeSerializable> serializableNodes = new List<PathNodeSerializable>();
         
+        foreach (var node in _nodeMap)
+        {
+            serializableNodes.Add(node.Value.GetSerializable());
+        }
+
+        string output = JsonConvert.SerializeObject(serializableNodes);
+        Debug.Log(output);
+        File.WriteAllText(file, output);
     }
 
     private void GenerateNode(Vector2 position, Vector2Int index)
@@ -361,7 +426,11 @@ public class NavMesh : MonoBehaviour
     //List<Vector2> _debugPath = null;
     private void OnDrawGizmosSelected()
     {
-        DebugDraw();
+        if(m_debugDraw)
+        {
+            DebugDraw();
+        }
+   
         //if (Input.GetKey(KeyCode.Y))
         //{
         //    _debugPath = RequestPath(new Vector2(0, 0), GameHelper.MouseToWorldPosition());
@@ -396,5 +465,23 @@ public class NavMesh : MonoBehaviour
                 Gizmos.DrawLine(path[i - 1], path[i]);
             }
         }
+    }
+}
+
+
+[CustomEditor(typeof(NavMesh))] 
+public class NavMeshEditor : Editor
+{
+    public override void OnInspectorGUI() 
+    {
+
+        base.DrawDefaultInspector();
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button("Generate Navmesh"))
+        {
+            NavMesh navMesh = (NavMesh)target; //1
+            navMesh.OutputNavmesh();
+        }
+        GUILayout.EndHorizontal();
     }
 }

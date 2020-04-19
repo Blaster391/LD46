@@ -4,6 +4,13 @@
 		<WorkUnit Name="Turrets" ID="{20A5500D-5B72-4242-BA15-938C851DF25C}" OwnerID="{875A71EA-CE74-4446-B881-2E780BE812D2}" PersistMode="Nested">
 			<ChildrenList>
 				<RandomSequenceContainer Name="TurretHigh" ID="{9B743F8D-B649-483A-A423-75B47E2A389E}" ShortID="379723869">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>
@@ -191,6 +198,13 @@
 					</StateInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="TurretLow" ID="{240C02D3-9F76-4B37-BB55-0A2C8FB951C1}" ShortID="864507507">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D153C17E-F577-4D60-B89C-281725C57AB8}"/>

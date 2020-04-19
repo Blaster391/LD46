@@ -1408,6 +1408,7 @@ GameObject:
   - component: {fileID: 592549662}
   - component: {fileID: 592549665}
   - component: {fileID: 592549664}
+  - component: {fileID: 592549666}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1468,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613137842bf291349bd45b7e951e173d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
+  triggerList: ae8d9d44
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
@@ -1512,6 +1513,40 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &592549666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592549661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613137842bf291349bd45b7e951e173d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d3e5efc13a1656c428c43caf49c3a957,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1 &618821257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,7 +2524,7 @@ PrefabInstance:
     - target: {fileID: 5257890068005515320, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.56
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 5257890068005515320, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
@@ -3535,6 +3570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 27447131541504393, guid: 6ea38383c275e9f488c75fd3bc591c44,
+        type: 3}
+      propertyPath: m_navmeshFile
+      value: test
       objectReference: {fileID: 0}
     - target: {fileID: 27447131541504395, guid: 6ea38383c275e9f488c75fd3bc591c44,
         type: 3}

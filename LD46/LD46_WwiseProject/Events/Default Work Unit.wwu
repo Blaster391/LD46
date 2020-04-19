@@ -83,6 +83,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="StopMusic" ID="{AEC8A332-5465-49A9-B7BB-32B3B9F0C324}">
+					<ChildrenList>
+						<Action Name="" ID="{043537EA-87CD-4929-9BC8-073B8AE783C7}" ShortID="971747108">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="New Music Playlist Container" ID="{EB2B7BB4-D084-4359-912C-478EDD9AB9D1}" WorkUnitID="{DF25BD0F-4297-48F2-B0A0-A3404A34C4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

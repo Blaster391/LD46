@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	417627684	PlayMusic			\Default Work Unit\PlayMusic	
 	516313049	UIInteraction			\Default Work Unit\UIInteraction	
 	591859596	TreeDying			\Default Work Unit\Tree\TreeDying	
+	1917263390	StopMusic			\Default Work Unit\StopMusic	
 	2674766611	Turret			\Default Work Unit\TurretEvents\Turret	
 	2769336799	BallOfLight			\Default Work Unit\BallOfLight	
 	2784187423	TakeDamage			\Default Work Unit\TakeDamage	

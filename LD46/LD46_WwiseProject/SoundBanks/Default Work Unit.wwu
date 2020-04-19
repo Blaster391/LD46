@@ -14,6 +14,7 @@
 						<ObjectRef Name="ForcePush" ID="{24BCCADD-2F6E-48A0-BB3C-E6B4D5650564}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ForceYeet" ID="{CFB18A1A-7446-48D3-92B2-2B97D6CE0D64}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TurretEvents" ID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" WorkUnitID="{9397DBE6-9B40-499F-8FAE-98A2689BEB26}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StopMusic" ID="{AEC8A332-5465-49A9-B7BB-32B3B9F0C324}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UIInteraction" ID="{1FEDE110-7DE7-4CF6-AEB2-24F107BE3B95}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PickUp" ID="{047CFAEE-E28D-4EA7-97E1-381CE25D88A2}" WorkUnitID="{452AD202-D74C-4888-A71B-87243D501C2E}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
