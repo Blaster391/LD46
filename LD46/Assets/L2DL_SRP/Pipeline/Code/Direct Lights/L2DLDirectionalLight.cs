@@ -31,6 +31,12 @@ public class L2DLDirectionalLight : MonoBehaviour, IL2DLDirectLight
     [SerializeField] private L2DLTextureSize m_shadowmapSize = L2DLTextureSize.Size512;
 
     // --------------------------------------------------------------------
+    private void Start()
+    {
+        UpdateShadowCamera();
+    }
+
+    // --------------------------------------------------------------------
     private void OnValidate()
     {
         UpdateShadowCamera();

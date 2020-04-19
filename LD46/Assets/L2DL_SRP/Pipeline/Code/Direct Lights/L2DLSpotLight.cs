@@ -36,6 +36,12 @@ public class L2DLSpotLight : MonoBehaviour, IL2DLDirectLight
     [SerializeField] private float m_startingRange = 0.5f;
 
     // --------------------------------------------------------------------
+    private void Start()
+    {
+        UpdateShadowCamera();
+    }
+
+    // --------------------------------------------------------------------
     private void OnValidate()
     {
         UpdateShadowCamera();

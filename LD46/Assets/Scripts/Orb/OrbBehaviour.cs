@@ -44,6 +44,9 @@ public class OrbBehaviour : MonoBehaviour
     }
     [Header("Visuals")]
     [SerializeField] private HealthScalingEffects m_healthScalingEffects;
+    [SerializeField] private Color m_standardColourTint = Color.yellow;
+    [SerializeField] private Color m_consumingEnergyColourTint = new Color(1f, 0.5f, 0f);
+    [SerializeField] private Color m_gainingMaxHealthColourTint = Color.cyan;
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
@@ -61,6 +64,7 @@ public class OrbBehaviour : MonoBehaviour
     // Components
     private GameWorldObjectManager m_gameWorldObjectManager = null;
     private InteractionObject m_interactionComponent = null;
+    private SpriteRenderer m_spriteRenderer = null;
 
     public void TakeEnergy(float _energyAmount)
     {
@@ -86,6 +90,7 @@ public class OrbBehaviour : MonoBehaviour
         m_interactionComponent = GetComponent<InteractionObject>();
         m_interactionComponent.Used += Use;
         m_interactionComponent.Dropped += Dropped;
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Start()
@@ -114,6 +119,7 @@ public class OrbBehaviour : MonoBehaviour
     
     void Update()
     {
+        m_spriteRenderer.color = m_standardColourTint;
         LoseEnergy();
         DrainEnergy();
         IncreaseMaxEnergy();
@@ -127,6 +133,7 @@ public class OrbBehaviour : MonoBehaviour
 
     void DrainEnergy()
     {
+        bool drainedEnergy = false;
         foreach(DrainableBehaviour drainable in DrainableBehaviour.Drainables)
         {
             if (Vector3.Distance(transform.position, drainable.transform.position) < CurrentRange)
@@ -134,7 +141,12 @@ public class OrbBehaviour : MonoBehaviour
                 float energyTaken = drainable.TakeEnergy(m_energyDrainedPerSecond * Time.deltaTime);
                 GameHelper.GetManager<StatsManager>().AddLeachedEnergy(energyTaken);
                 UpdateEnergy(energyTaken);
+                drainedEnergy = true;
             }
+        }
+        if (drainedEnergy)
+        {
+            m_spriteRenderer.color = m_consumingEnergyColourTint;
         }
     }
 
@@ -143,6 +155,7 @@ public class OrbBehaviour : MonoBehaviour
         if(CurrentEnergyProp == 1f)
         {
             m_maxEnergy += m_maxEnergyGainPerSecondAtFullEnergy * Time.deltaTime;
+            m_spriteRenderer.color = m_gainingMaxHealthColourTint;
         }
     }
 
