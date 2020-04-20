@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_rigidbody2D = null;
     private CapsuleCollider2D m_capsuleCollider2D = null;
     private ParticleSystem m_jetpackParticles = null;
+    private StatsManager m_statsManager = null;
 
     private RaycastHit2D m_lastGroundHit;
     private bool m_isGrounded = true;
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         m_jetpackParticles = m_jetpackObject.GetComponent<ParticleSystem>();
+        m_statsManager = GameHelper.GetManager<StatsManager>();
     }
 
     private void OnDrawGizmos()
@@ -79,6 +81,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!m_statsManager.IsAlive)
+        {
+            return;
+        }
+
         bool wasGrounded = m_isGrounded;
         DoGroundCast();
 
