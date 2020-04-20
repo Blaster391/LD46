@@ -8,6 +8,7 @@ TagManager:
   - UnwalkableArea
   - StaticWorld
   - Enemy
+  - BlockProjectiles
   layers:
   - Default
   - TransparentFX

@@ -8,4 +8,5 @@ public static class Tags
     public static string StaticWorld { get; } = "StaticWorld";
     public static string Enemy { get; } = "Enemy";
     public static string Player { get; } = "Player";
+    public static string BlockProjectiles { get; } = "BlockProjectiles";
 }
