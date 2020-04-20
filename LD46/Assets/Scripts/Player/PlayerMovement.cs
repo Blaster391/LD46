@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 m_maxVelocity = new Vector2(10.0f, 17.5f);
-    [SerializeField]
     private float m_baseMovementForce = 1.0f;
     [SerializeField]
     private float m_baseJumpForce = 1.0f;
@@ -144,8 +142,6 @@ public class PlayerMovement : MonoBehaviour
                 m_rigidbody2D.AddForce(Vector2.up * m_baseJumpForce, ForceMode2D.Impulse);
             }
         }
-
-        m_rigidbody2D.velocity = Vector2.Min(m_rigidbody2D.velocity, m_maxVelocity);
 
         if(m_jetpackTickDownCounter > 0.0f)
         {
