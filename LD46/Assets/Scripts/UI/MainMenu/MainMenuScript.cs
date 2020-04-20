@@ -56,6 +56,11 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
 
+    public void TutorialLevel()
+    {
+        SceneManager.LoadScene(4, LoadSceneMode.Single);
+    }
+
     public void Quit()
     {
         Application.Quit();
