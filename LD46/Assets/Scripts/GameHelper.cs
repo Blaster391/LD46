@@ -24,8 +24,9 @@ public static class GameHelper
         int layerMask = 1 << 8;
         Vector2 fromPosition2D = from.transform.position;
         Vector2 toPosition2D = to.transform.position;
+        Vector2 direction = toPosition2D - fromPosition2D;
         float distance = (fromPosition2D - toPosition2D).magnitude;
-        RaycastHit2D result = Physics2D.Raycast(fromPosition2D, toPosition2D, distance, layerMask);
+        RaycastHit2D result = Physics2D.Raycast(fromPosition2D, direction, distance, layerMask);
         if (result)
         {
             return (result.collider.gameObject == to);
