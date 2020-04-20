@@ -38,7 +38,7 @@ public class MainMenuScript : MonoBehaviour
             m_movementAmount -= m_movementSpeed * Time.deltaTime;
         }
 
-        m_camera.transform.position = new Vector3(m_movementAmount, 0, 0);
+        m_camera.transform.position = new Vector3(m_movementAmount, 0, -10);
     }
 
     public void EasyLevel()
