@@ -52,8 +52,10 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private Color m_consumingEnergyColourTint = new Color(1f, 0.5f, 0f);
     [SerializeField] private Color m_gainingMaxHealthColourTint = Color.cyan;
     [SerializeField] private Color m_lowHealthColourTint = Color.red;
+    [SerializeField] private Color m_yeetColourTint = Color.red;
     [SerializeField] private float m_lowHealthEnergyProp = 0.1f;
     [SerializeField] private ParticleSystem m_maxHealthGainParticleSystem = null;
+    [SerializeField] private ParticleSystem m_yeetParticleSystem = null;
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
@@ -75,9 +77,14 @@ public class OrbBehaviour : MonoBehaviour
     private InteractionObject m_interactionComponent = null;
     private SpriteRenderer m_spriteRenderer = null;
 
-    public void TakeEnergy(float _energyAmount)
+    public bool TakeEnergy(float _energyAmount)
     {
-        UpdateEnergy(-_energyAmount);
+        if (!m_interactionComponent.IsInDamagingThrowState)
+        {
+            UpdateEnergy(-_energyAmount);
+            return true;
+        }
+        return false;
     }
 
     public void PurchaseItem(GameObject _itemPrefab, float _energyCost)
@@ -130,6 +137,10 @@ public class OrbBehaviour : MonoBehaviour
             m_orbUI = Instantiate(m_orbUIPrefab, canvas.transform);
             m_orbUI.Initialise(this);
         }
+
+        // Stop particle systems in case they're playing in the editor
+        m_maxHealthGainParticleSystem.Stop();
+        m_yeetParticleSystem.Stop();
     }
 
     void Update()
@@ -141,6 +152,20 @@ public class OrbBehaviour : MonoBehaviour
             LoseEnergy();
         }
         IncreaseMaxEnergy();
+
+        if(m_interactionComponent.IsInDamagingThrowState)
+        {
+            if(!m_yeetParticleSystem.isPlaying)
+            {
+                m_yeetParticleSystem.Play();
+            }
+            m_spriteRenderer.color = m_yeetColourTint;
+        }
+        else if (m_yeetParticleSystem.isPlaying)
+        {
+            m_yeetParticleSystem.Stop();
+        }
+
         UpdateHealthScalingEffects();
     }
 

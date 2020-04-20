@@ -26,6 +26,11 @@ public class EnemySpawnWaveSetting
             totalWeight += spawnWeight.m_weight;
         }
 
+        if(totalWeight == 0)
+        {
+            return null;
+        }
+
         float selectedWeight = Random.Range(0f, totalWeight);
 
         float currentTotalWeight = 0f;
@@ -91,8 +96,12 @@ public class EnemySpawnManager : MonoBehaviour
 
     void SpawnAtSpawner(EnemySpawner spawner)
     {
-        var newEnemy = Instantiate(GetEnemy(), m_gameWorldObjectManager.EnemyParent != null ? m_gameWorldObjectManager.EnemyParent : transform);
-        newEnemy.transform.position = spawner.transform.position;
+        Enemy enemyToSpawn = GetEnemy();
+        if (enemyToSpawn != null)
+        {
+            var newEnemy = Instantiate(GetEnemy(), m_gameWorldObjectManager.EnemyParent != null ? m_gameWorldObjectManager.EnemyParent : transform);
+            newEnemy.transform.position = spawner.transform.position;
+        }
     }
 
     EnemySpawnWaveSetting GetCurrentWave()

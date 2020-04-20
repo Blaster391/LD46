@@ -46,8 +46,6 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
 
         if (CanBuy())
         {
-
-
             m_button.image.color = Color.white;
         }
         else
@@ -69,16 +67,21 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
             return false;
         }
 
-        return (m_orbBehavior.CurrentEnergy > m_shopOption.m_energyCost + m_orbBehavior.ShopEnergyBuffer);
+        return (m_orbBehavior.CurrentEnergy > GetCurrentCost() + m_orbBehavior.ShopEnergyBuffer);
     }
 
     private void ButtonClicked()
     {
         if(CanBuy())
         {
-
             MyEvent.Post(gameObject);
-            m_orbBehavior.PurchaseItem(m_shopItemPrefab, m_shopOption.m_energyCost);
+            m_orbBehavior.PurchaseItem(m_shopItemPrefab, GetCurrentCost());
+            m_energyCostText.text = GetCurrentCost().ToString() + "E";
         }
+    }
+
+    private float GetCurrentCost()
+    {
+        return m_shopOption.m_energyCost + (m_orbBehavior.GetPurchasedAmount(m_shopItemPrefab) * m_shopOption.m_energyIncreasePerPurchase);
     }
 }

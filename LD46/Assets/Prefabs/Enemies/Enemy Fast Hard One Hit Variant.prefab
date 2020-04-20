@@ -7,6 +7,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 815242808105735354, guid: b6264ef57e909d74798be70b0f19b871,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0be2b479364078f49bf3f0afa2dc0fcd,
+        type: 3}
+    - target: {fileID: 815242808105735354, guid: b6264ef57e909d74798be70b0f19b871,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 815242808105735354, guid: b6264ef57e909d74798be70b0f19b871,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 815242808105735354, guid: b6264ef57e909d74798be70b0f19b871,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.77521896
+      objectReference: {fileID: 0}
+    - target: {fileID: 815242808105735357, guid: b6264ef57e909d74798be70b0f19b871,
+        type: 3}
+      propertyPath: Emission
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 815242808105735357, guid: b6264ef57e909d74798be70b0f19b871,
+        type: 3}
+      propertyPath: Occlusion
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8103301343383231816, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
       propertyPath: m_Name
