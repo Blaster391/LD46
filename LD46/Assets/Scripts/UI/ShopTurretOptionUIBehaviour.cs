@@ -38,9 +38,11 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
         if (!InStock())
         {
             m_subtitleText.text = "OUT OF STOCK";
+            m_energyCostText.text = "N/A";
         }
         else
         {
+            m_energyCostText.text = GetCurrentCost().ToString() + "E";
             m_subtitleText.text = m_shopOption.m_subtitle + $" ({m_orbBehavior.GetPurchasedAmount(m_shopItemPrefab)}/{m_shopOption.m_itemLimit})";
         }
 
