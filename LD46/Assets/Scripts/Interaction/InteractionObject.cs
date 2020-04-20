@@ -23,7 +23,8 @@ public class InteractionObject : MonoBehaviour
     [SerializeField] private bool m_dealsCollisonDamageOnYeeting = false;
     [SerializeField] private float m_collisionDamage = 10f;
     [SerializeField] private float m_minimumVelocityForDamage = 10f;
-    private bool m_canDealCollisionDamage = true; // Reset on settle
+    public bool IsInDamagingThrowState { get; private set; } = true;
+
 
     private bool m_isPickedUp = false;
     private bool m_isSettling = false;
@@ -61,9 +62,9 @@ public class InteractionObject : MonoBehaviour
             AimTowardsMouse();
         }
 
-        if (m_canDealCollisionDamage && m_rigidBody2D.velocity.magnitude < m_minimumVelocityForDamage)
+        if (IsInDamagingThrowState && m_rigidBody2D.velocity.magnitude < m_minimumVelocityForDamage)
         {
-            m_canDealCollisionDamage = false;
+            IsInDamagingThrowState = false;
         }
 
         //if(m_isSettling)
@@ -109,7 +110,7 @@ public class InteractionObject : MonoBehaviour
         }
         m_rigidBody2D.AddForce(force, ForceMode2D.Impulse);
 
-        m_canDealCollisionDamage = true;
+        IsInDamagingThrowState = true;
     }
 
     // Called when player picks up
@@ -135,13 +136,13 @@ public class InteractionObject : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        if(m_dealsCollisonDamageOnYeeting && m_canDealCollisionDamage)
+        if(m_dealsCollisonDamageOnYeeting && IsInDamagingThrowState)
         {
             Enemy enemyHit = collision.gameObject.GetComponent<Enemy>();
             if(enemyHit != null)
             {
                 enemyHit.DealDamage(m_collisionDamage);
-                m_canDealCollisionDamage = false;
+                IsInDamagingThrowState = false;
             }
         }
     }

@@ -7,6 +7,7 @@ public class ShopOption
 {
     public GameObject m_shopItemPrefab;
     public float m_energyCost;
+    public float m_energyIncreasePerPurchase;
     public string m_title;
     public string m_subtitle;
     public Sprite m_sprite;

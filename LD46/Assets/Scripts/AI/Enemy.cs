@@ -186,8 +186,10 @@ public class Enemy : MonoBehaviour
         if (orb != null)
         {
             GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent2);
-            orb.TakeEnergy(m_energy * m_energyAttackModifier);
-            Destroy(gameObject);
+            if (orb.TakeEnergy(m_energy * m_energyAttackModifier))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

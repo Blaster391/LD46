@@ -41,9 +41,17 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1241722997, guid: 5fbc7559e93f4624fbf3425b815c5b95, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1241722998, guid: 5fbc7559e93f4624fbf3425b815c5b95, type: 3}
       propertyPath: m_Offset.y
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241722999, guid: 5fbc7559e93f4624fbf3425b815c5b95, type: 3}
+      propertyPath: m_yeetForceMultiplier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1737359314299122713, guid: 5fbc7559e93f4624fbf3425b815c5b95,
         type: 3}

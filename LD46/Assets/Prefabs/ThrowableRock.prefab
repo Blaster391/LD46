@@ -159,8 +159,9 @@ MonoBehaviour:
   m_pickupRadius: 2
   m_sleepVelocityThreshold: 0.05
   m_maxYeetVelocity: 30
+  m_yeetForceMultiplier: 3
   m_dealsCollisonDamageOnYeeting: 1
-  m_collisionDamage: 10
+  m_collisionDamage: 1000
   m_minimumVelocityForDamage: 5
 --- !u!60 &2317163407303973169
 PolygonCollider2D:
