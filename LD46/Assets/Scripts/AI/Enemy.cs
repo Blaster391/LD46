@@ -161,6 +161,7 @@ public class Enemy : MonoBehaviour
         OnHit();
         if (m_energy <= 0)
         {
+            GameHelper.GetManager<StatsManager>().IncrementKills();
             OnDeath();
             GameHelper.GetManager<AudioEventManager>().MakeAudioEvent(transform.position, 5.0f, MyEvent);
             Destroy(gameObject);
