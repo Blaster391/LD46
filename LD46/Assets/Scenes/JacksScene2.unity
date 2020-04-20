@@ -1914,27 +1914,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1820351294}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1638405317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1229337032975385013, guid: 72290825666b00a41a7fdb3f345f714a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1091801442}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1638405318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638405317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1553d0e3c1c0a32498c12c4f193aef7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_focus: {fileID: 1091801443}
-  m_propFromFocusToMouse: 0.3
-  m_followSpeed: 0.9
 --- !u!1 &1672128933
 GameObject:
   m_ObjectHideFlags: 0
