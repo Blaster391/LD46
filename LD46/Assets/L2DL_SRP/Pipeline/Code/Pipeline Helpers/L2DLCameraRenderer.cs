@@ -64,9 +64,12 @@ public partial class L2DLCameraRenderer
         RenderSetup();
 
         m_sceneDataRenderer.Render(m_context, m_camera);
-        
-        m_directLightRenderer.Render(m_context, m_camera, directLights);
-        m_indirectLightRenderer.Render(m_context, m_camera);
+
+        if (m_textureToView == L2DLBufferTextures.None)
+        {
+            m_directLightRenderer.Render(m_context, m_camera, directLights);
+            m_indirectLightRenderer.Render(m_context, m_camera);
+        }
 
         RenderStep_PresentFinalImage();
         
