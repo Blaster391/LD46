@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 8103301343383231829, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
       propertyPath: m_moveForce
-      value: 4
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8103301343383231829, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
@@ -100,12 +100,12 @@ PrefabInstance:
     - target: {fileID: 8284630857675532204, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
       propertyPath: m_maxVelocity.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8284630857675532204, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
       propertyPath: m_maxVelocity.y
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6264ef57e909d74798be70b0f19b871, type: 3}

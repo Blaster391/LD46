@@ -58,6 +58,8 @@ public class Enemy : MonoBehaviour
         m_timeSinceLastPathUpdate = Random.Range(0, m_movementUpdateRate);
 
         m_size = GetComponent<CircleCollider2D>().radius;
+
+        Physics2D.IgnoreCollision(FindObjectOfType<PlayerMovement>().GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
     }
 
     void OnDestroy()
@@ -80,10 +82,9 @@ public class Enemy : MonoBehaviour
             UpdatePath();
         }
 
-        if(m_path != null)
-        {
-            UpdatePathProgress();
-        }
+
+        UpdatePathProgress();
+        
 
         Vector2 myPosition = transform.position;
         Vector2 directionToTarget = (m_targetPosition - myPosition).normalized;
@@ -108,7 +109,7 @@ public class Enemy : MonoBehaviour
 
     void UpdatePathProgress()
     {
-        if (m_path.Count == 0)
+        if (m_path == null || m_path.Count == 0 || GameHelper.HasLineOfSight(gameObject, m_target))
         {
             m_targetPosition = m_target.transform.position;
             return;
