@@ -58,6 +58,8 @@ public class Enemy : MonoBehaviour
         m_timeSinceLastPathUpdate = Random.Range(0, m_movementUpdateRate);
 
         m_size = GetComponent<CircleCollider2D>().radius;
+
+        Physics2D.IgnoreCollision(FindObjectOfType<PlayerMovement>().GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
     }
 
     void OnDestroy()
