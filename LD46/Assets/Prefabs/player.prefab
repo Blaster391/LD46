@@ -119,12 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 12.47
+  m_intensity: 10
   m_color: {r: 0.97904414, g: 1, b: 0.5330188, a: 1}
   m_range: 10
   m_angle: 53.29
   m_shadowmapSize: 2048
-  m_maxIntensityOutput: 0.34
+  m_maxIntensityOutput: 1
   m_startingRange: 0.39
 --- !u!114 &642069897
 MonoBehaviour:
@@ -10822,7 +10822,7 @@ PrefabInstance:
     - target: {fileID: 1075065202693076959, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955916686029275213, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
