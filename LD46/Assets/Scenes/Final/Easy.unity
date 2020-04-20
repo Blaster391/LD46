@@ -1870,15 +1870,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1673774947}
     m_Modifications:
+    - target: {fileID: 2317163407303973172, guid: a2fecb765402e7149a3cac80a5fa373a,
+        type: 3}
+      propertyPath: m_yeetForceMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2317163407303973175, guid: a2fecb765402e7149a3cac80a5fa373a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.595829
+      value: -6.7
       objectReference: {fileID: 0}
     - target: {fileID: 2317163407303973175, guid: a2fecb765402e7149a3cac80a5fa373a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.959302
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 2317163407303973175, guid: a2fecb765402e7149a3cac80a5fa373a,
         type: 3}
@@ -13020,6 +13025,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 476184889}
     m_Modifications:
+    - target: {fileID: 56167292, guid: 41a882a7cd13cc844aa8fceb1ccac0c1, type: 3}
+      propertyPath: m_energyDrainedPerSecond
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 56167292, guid: 41a882a7cd13cc844aa8fceb1ccac0c1, type: 3}
+      propertyPath: m_energyLostPerSecond
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56167292, guid: 41a882a7cd13cc844aa8fceb1ccac0c1, type: 3}
+      propertyPath: m_maxEnergyGainPerSecondAtFullEnergy
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7459418591684140264, guid: 41a882a7cd13cc844aa8fceb1ccac0c1,
         type: 3}
       propertyPath: m_LocalPosition.x

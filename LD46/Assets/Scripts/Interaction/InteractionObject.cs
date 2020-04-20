@@ -17,6 +17,7 @@ public class InteractionObject : MonoBehaviour
 
     [SerializeField]
     private float m_maxYeetVelocity = 20.0f;
+    [SerializeField] private float m_yeetForceMultiplier = 1f;
 
     [Header("Collision Damage")]
     [SerializeField] private bool m_dealsCollisonDamageOnYeeting = false;
@@ -96,9 +97,11 @@ public class InteractionObject : MonoBehaviour
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), m_collider2D, false);
     }
 
-    virtual public void OnYeeted(GameObject player, Vector3 force)
+    virtual public void OnYeeted(GameObject player, Vector2 force)
     {
         OnDropped(player);
+
+        force *= m_yeetForceMultiplier;
 
         if(force.magnitude > m_maxYeetVelocity)
         {

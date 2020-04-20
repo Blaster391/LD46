@@ -75,9 +75,9 @@ public class PlayerInteraction : MonoBehaviour
     void YeetTheThing()
     {
         Vector3 mousePos = Input.mousePosition;
-        Vector3 dir = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
+        Vector2 dir = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
 
-        Vector3 v = dir.normalized * m_timeMouseWasDownFor * m_yeetSpeedMultiplier;
+        Vector2 v = dir.normalized * m_timeMouseWasDownFor * m_yeetSpeedMultiplier;
         m_objectInHands.OnYeeted(gameObject, v);
         m_objectInHands = null;
     }

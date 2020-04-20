@@ -133,8 +133,11 @@ public class OrbBehaviour : MonoBehaviour
     void Update()
     {
         m_spriteRenderer.color = m_standardColourTint;
-        LoseEnergy();
         DrainEnergy();
+        if (!m_drainedEnergyThisFrame)
+        {
+            LoseEnergy();
+        }
         IncreaseMaxEnergy();
         UpdateHealthScalingEffects();
     }
