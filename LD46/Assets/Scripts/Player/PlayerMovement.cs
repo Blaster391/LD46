@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         float horiz = Input.GetAxis("Horizontal");
         float damp = m_isGrounded ? 1.0f : m_airDampening;
-        m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * horiz * damp);
+        m_rigidbody2D.AddForce(Vector2.right * m_baseMovementForce * horiz * damp * Time.deltaTime * 60);
 
         m_feetAnimator.SetBool("GROUNDED", m_isGrounded);
 
