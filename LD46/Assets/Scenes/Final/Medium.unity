@@ -12771,7 +12771,7 @@ MonoBehaviour:
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 60
   m_angle: 60
-  m_shadowmapSize: 512
+  m_shadowmapSize: 1024
   m_maxIntensityOutput: 1
   m_startingRange: 0.5
 --- !u!20 &217618752
@@ -16028,7 +16028,7 @@ PrefabInstance:
     - target: {fileID: 6640687545889858684, guid: c5aab2ee0cb2f9e429ff520af430b698,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -78.7
+      value: -79.56
       objectReference: {fileID: 0}
     - target: {fileID: 6640687545889858684, guid: c5aab2ee0cb2f9e429ff520af430b698,
         type: 3}
@@ -16063,7 +16063,7 @@ PrefabInstance:
     - target: {fileID: 6640687545889858684, guid: c5aab2ee0cb2f9e429ff520af430b698,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6640687545889858684, guid: c5aab2ee0cb2f9e429ff520af430b698,
         type: 3}
