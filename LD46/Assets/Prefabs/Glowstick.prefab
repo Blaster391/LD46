@@ -286,7 +286,7 @@ MonoBehaviour:
   m_pickupRadius: 2
   m_sleepVelocityThreshold: 0.05
   m_maxYeetVelocity: 20
-  m_yeetForceMultiplier: 1
+  m_yeetForceMultiplier: 0.05
   m_dealsCollisonDamageOnYeeting: 1
   m_collisionDamage: 5
   m_minimumVelocityForDamage: 10
