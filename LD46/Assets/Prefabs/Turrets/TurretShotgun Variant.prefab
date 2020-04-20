@@ -371,6 +371,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5830912746736399442, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5830912746736399443, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
       propertyPath: m_Distance
