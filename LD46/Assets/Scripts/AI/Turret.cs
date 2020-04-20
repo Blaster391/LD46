@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static TurretSound;
 
@@ -74,15 +75,12 @@ public class Turret : MonoBehaviour
             m_isFiring = false;
 
             var allEnemies = FindObjectsOfType<Enemy>();
-            Vector2 myPosition = gameObject.transform.position;
+            float rangeSq = m_range * m_range;
+
+            allEnemies = allEnemies.Where(x => (transform.position - x.transform.position).sqrMagnitude < rangeSq).OrderBy(x => (transform.position - x.transform.position).sqrMagnitude).ToArray();
+
             foreach(Enemy e in allEnemies)
             {
-                Vector2 enemyPosition = e.transform.position;
-                if ((enemyPosition - myPosition).magnitude > m_range)
-                {
-                    continue;
-                }
-
                 if(CanSeeTarget(e.gameObject))
                 {
                     m_currentTarget = e.gameObject;
@@ -98,7 +96,7 @@ public class Turret : MonoBehaviour
 
     bool CanSeeTarget(GameObject _target)
     {
-        return GameHelper.HasLineOfSight(gameObject, _target);
+        return GameHelper.HasLineOfSight(m_firingPoint, _target);
     }
 
     void Fire()
