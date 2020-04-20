@@ -10842,17 +10842,22 @@ PrefabInstance:
     - target: {fileID: 5254827953810643757, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.8968599
       objectReference: {fileID: 0}
     - target: {fileID: 5254827953810643757, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.89686
       objectReference: {fileID: 0}
     - target: {fileID: 5254827953810643757, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254827953810643757, guid: 06597707d9d246641b2de7fc077e3257,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3549
       objectReference: {fileID: 0}
     - target: {fileID: 5326770346089170282, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
@@ -10872,17 +10877,22 @@ PrefabInstance:
     - target: {fileID: 8184096937469884865, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.8968599
       objectReference: {fileID: 0}
     - target: {fileID: 8184096937469884865, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.89686
       objectReference: {fileID: 0}
     - target: {fileID: 8184096937469884865, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184096937469884865, guid: 06597707d9d246641b2de7fc077e3257,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3549
       objectReference: {fileID: 0}
     - target: {fileID: 8349996381613479961, guid: 06597707d9d246641b2de7fc077e3257,
         type: 3}
@@ -10953,6 +10963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: far clip plane
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349996381613480166, guid: 06597707d9d246641b2de7fc077e3257,
+        type: 3}
+      propertyPath: orthographic size
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06597707d9d246641b2de7fc077e3257, type: 3}

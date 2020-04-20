@@ -12,6 +12,7 @@ public class OrbBehaviour : MonoBehaviour
 
     [Header("General")]
     [SerializeField] private float m_maxEnergy = 100f;
+    [SerializeField] private float m_startingEnergy = 50f;
 
     [Header("Energy")]
     [SerializeField] private float m_energyLostPerSecond = 0f;
@@ -52,6 +53,7 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private Color m_gainingMaxHealthColourTint = Color.cyan;
     [SerializeField] private Color m_lowHealthColourTint = Color.red;
     [SerializeField] private float m_lowHealthEnergyProp = 0.1f;
+    [SerializeField] private ParticleSystem m_maxHealthGainParticleSystem = null;
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
@@ -110,7 +112,7 @@ public class OrbBehaviour : MonoBehaviour
     {
         GameHelper.GetManager<StatsManager>().StartAliveTimer();
 
-        CurrentEnergy = m_maxEnergy;
+        CurrentEnergy = m_startingEnergy;
 
         if (m_healthScalingEffects.m_usePointLightSettingsAtFullHealth)
         {
@@ -133,8 +135,11 @@ public class OrbBehaviour : MonoBehaviour
     void Update()
     {
         m_spriteRenderer.color = m_standardColourTint;
-        LoseEnergy();
         DrainEnergy();
+        if (!m_drainedEnergyThisFrame)
+        {
+            LoseEnergy();
+        }
         IncreaseMaxEnergy();
         UpdateHealthScalingEffects();
     }
@@ -171,6 +176,18 @@ public class OrbBehaviour : MonoBehaviour
         {
             m_maxEnergy += m_maxEnergyGainPerSecondAtFullEnergy * Time.deltaTime;
             m_spriteRenderer.color = m_gainingMaxHealthColourTint;
+
+            if(!m_maxHealthGainParticleSystem.isPlaying)
+            {
+                m_maxHealthGainParticleSystem.Play();
+            }
+        }
+        else
+        {
+            if(m_maxHealthGainParticleSystem.isPlaying)
+            {
+                m_maxHealthGainParticleSystem.Stop();
+            }
         }
     }
 
