@@ -76,14 +76,14 @@ MonoBehaviour:
       m_weight: 1
     m_spawnRate: 3
     m_maxEnemies: 5
-  - m_waveDuration: 30
+  - m_waveDuration: 20
     m_enemySpawnWeights:
     - m_enemyPrefab: {fileID: 1656771657698826109, guid: 8a17d290d69298a4e9e5fb89ae0dd974,
         type: 3}
       m_weight: 1
     - m_enemyPrefab: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}
-      m_weight: 0.5
+      m_weight: 0.25
     m_spawnRate: 2
     m_maxEnemies: 10
   - m_waveDuration: 10
@@ -106,7 +106,7 @@ MonoBehaviour:
       m_weight: 1
     m_spawnRate: 1.5
     m_maxEnemies: 12
-  - m_waveDuration: 15
+  - m_waveDuration: 10
     m_enemySpawnWeights: []
     m_spawnRate: 0
     m_maxEnemies: 12

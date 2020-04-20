@@ -68,6 +68,7 @@ public class EnemySpawnManager : MonoBehaviour
         m_currentWaveDuration += Time.deltaTime;
         if(m_currentWaveDuration > m_enemySpawnWaveSettings[m_currentWaveIndex].m_waveDuration)
         {
+            m_currentWaveDuration = 0.0f;
             // If theres no more wave definitions we'll just keep going with the current one
             if (m_currentWaveIndex + 1 < m_enemySpawnWaveSettings.Count)
             {

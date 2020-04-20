@@ -9712,9 +9712,9 @@ MonoBehaviour:
   m_pointLight: {fileID: 1768294266}
   m_maxEnergy: 100
   m_startingEnergy: 50
-  m_energyLostPerSecond: 2
+  m_energyLostPerSecond: 3
   m_energyDrainedPerSecond: 5
-  m_maxEnergyGainPerSecondAtFullEnergy: 3
+  m_maxEnergyGainPerSecondAtFullEnergy: 4
   m_shopEnergyBuffer: 10
   m_healthScalingEffects:
     m_usePointLightSettingsAtFullHealth: 1

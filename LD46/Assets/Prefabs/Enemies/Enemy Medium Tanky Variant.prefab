@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}
       propertyPath: m_energyAttackModifier
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1046345540510257108, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}

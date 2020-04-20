@@ -15,16 +15,16 @@ MonoBehaviour:
   m_options:
   - m_shopItemPrefab: {fileID: 5257890068005515321, guid: 30685c47e5c669a4d88d0dd814a3a544,
       type: 3}
-    m_energyCost: 25
+    m_energyCost: 15
     m_energyIncreasePerPurchase: 5
     m_title: Ground Turret
     m_subtitle: Low Damage, Medium Range
     m_sprite: {fileID: 21300000, guid: d39b7113c1e5b6f44af0f0804f4435de, type: 3}
-    m_itemLimit: 5
+    m_itemLimit: 10
   - m_shopItemPrefab: {fileID: 5257890068005515321, guid: 18a68c2b403bf4c43b757d3757b5caee,
       type: 3}
     m_energyCost: 35
-    m_energyIncreasePerPurchase: 5
+    m_energyIncreasePerPurchase: 10
     m_title: Floating Turret
     m_subtitle: Low Damage, Long Range, Flying
     m_sprite: {fileID: 21300000, guid: 1dc6e1325d56326448c92322dce4d674, type: 3}
