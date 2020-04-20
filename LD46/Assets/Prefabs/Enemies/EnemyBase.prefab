@@ -302,7 +302,7 @@ MonoBehaviour:
   m_stopsL2DLSprite: {fileID: 0}
   m_deathParticleSystem: {fileID: 3800841708222894512, guid: 3877cf736af9040bfa4aa188f84c6ddf,
     type: 3}
-  m_deadColour: {r: 0, g: 0, b: 0, a: 0}
+  m_deadColour: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_hitFlashColor: {r: 0.9827944, g: 1, b: 0, a: 1}
   m_flashTime: 0.25
   m_flashEmissionMult: 2
