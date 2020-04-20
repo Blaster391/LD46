@@ -38,7 +38,7 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 			return;
 #endif
 
-		DontDestroyOnLoad(this);
+		//DontDestroyOnLoad(this);
 	}
 
 	private void OnEnable()
