@@ -18,6 +18,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float m_movementUpdateRate = 1.0f;
 
+    [SerializeField]
+    private float m_despawnRange = 75.0f;
+    [SerializeField]
+    private float m_despawnUpdateRate = 1.0f;
+    private float m_timeSinceLastDespawnCheck = 0.0f;
+
     private List<Vector2> m_path = null;
     private Rigidbody2D m_rigidbody2D = null;
     private NavMesh m_mesh;
@@ -61,8 +67,14 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-
+        m_timeSinceLastDespawnCheck += Time.deltaTime;
         m_timeSinceLastPathUpdate += Time.deltaTime;
+        if(m_timeSinceLastDespawnCheck > m_despawnUpdateRate)
+        {
+            CheckDespawn();
+        }
+
+
         if (m_timeSinceLastPathUpdate > m_movementUpdateRate)
         {
             UpdatePath();
@@ -77,6 +89,21 @@ public class Enemy : MonoBehaviour
         Vector2 directionToTarget = (m_targetPosition - myPosition).normalized;
 
         m_rigidbody2D.AddForce(directionToTarget * m_moveForce);
+    }
+
+    void CheckDespawn()
+    {
+        m_timeSinceLastDespawnCheck = 0.0f;
+        OrbBehaviour orb = FindObjectOfType<OrbBehaviour>();
+        float despawnRangeSq = m_despawnRange * m_despawnRange;
+        if ((transform.position - orb.transform.position).sqrMagnitude > despawnRangeSq)
+        {
+            PlayerMovement player = FindObjectOfType<PlayerMovement>();
+            if ((transform.position - player.transform.position).sqrMagnitude > despawnRangeSq)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     void UpdatePathProgress()
