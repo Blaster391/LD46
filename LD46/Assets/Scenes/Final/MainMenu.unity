@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_camera: {fileID: 159243669}
   m_movementSpeed: 1
-  m_movementMax: 100
+  m_movementMax: 85
 --- !u!114 &1241033948
 MonoBehaviour:
   m_ObjectHideFlags: 0
