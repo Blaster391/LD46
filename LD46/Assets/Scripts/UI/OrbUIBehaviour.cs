@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class OrbUIBehaviour : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Image m_healthImage;
+    [SerializeField] private Image m_healthImage = null;
 
-    [SerializeField] private GameObject m_infoTextAreaObject;
-    [SerializeField] private Text m_infoText;
+    [SerializeField] private GameObject m_infoTextAreaObject = null;
+    [SerializeField] private Text m_infoText = null;
 
-    [SerializeField] private GameObject m_warningTextAreaObject;
-    [SerializeField] private Text m_warningText;
+    [SerializeField] private GameObject m_warningTextAreaObject = null;
+    [SerializeField] private Text m_warningText = null;
 
     [Header("Text")]
-    [SerializeField] private string m_openShop;
-    [SerializeField] private string m_lowEnergyWarning;
-    [SerializeField] private float m_lowHealthEnergyProp;
+    [SerializeField] private string m_openShop = "";
+    [SerializeField] private string m_lowEnergyWarning = "";
+    [SerializeField] private float m_lowHealthEnergyProp = 0.2f;
 
     [Header("TutorialyThings")]
     [SerializeField] private int m_timesForceShowShopInfo = 1;
@@ -39,6 +39,8 @@ public class OrbUIBehaviour : MonoBehaviour
     private void Update()
     {
         m_healthImage.fillAmount = m_orb.CurrentEnergyProp;
+
+        // Health Warning
         if(m_orb.CurrentEnergyProp <= m_lowHealthEnergyProp && !m_warningTextAreaObject.activeSelf)
         {
             OpenWarning(m_lowEnergyWarning);

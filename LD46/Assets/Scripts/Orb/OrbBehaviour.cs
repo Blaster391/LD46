@@ -12,6 +12,7 @@ public class OrbBehaviour : MonoBehaviour
 
     [Header("General")]
     [SerializeField] private float m_maxEnergy = 100f;
+    [SerializeField] private float m_startingEnergy = 50f;
 
     [Header("Energy")]
     [SerializeField] private float m_energyLostPerSecond = 0f;
@@ -111,7 +112,7 @@ public class OrbBehaviour : MonoBehaviour
     {
         GameHelper.GetManager<StatsManager>().StartAliveTimer();
 
-        CurrentEnergy = m_maxEnergy;
+        CurrentEnergy = m_startingEnergy;
 
         if (m_healthScalingEffects.m_usePointLightSettingsAtFullHealth)
         {
