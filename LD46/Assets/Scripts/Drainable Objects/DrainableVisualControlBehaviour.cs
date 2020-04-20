@@ -33,6 +33,7 @@ public class DrainableVisualControlBehaviour : MonoBehaviour
         else
         {
             m_fullHealthColour = m_fullHealthColours[Random.Range(0, m_fullHealthColours.Count)];
+            m_spriteRenderer.color = m_fullHealthColour;
         }
 
         m_originalScale = transform.localScale;
