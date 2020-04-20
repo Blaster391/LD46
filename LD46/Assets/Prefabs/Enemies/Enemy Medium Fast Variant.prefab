@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}
       propertyPath: m_moveForce
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}
