@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 454443884}
   - component: {fileID: 454443883}
   m_Layer: 0
-  m_Name: L2DLSprite
+  m_Name: GlowstickGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 35.02194
+  m_Distance: 3.340374
   m_MaxDistanceOnly: 0
 --- !u!114 &8068593257834618282
 MonoBehaviour:
