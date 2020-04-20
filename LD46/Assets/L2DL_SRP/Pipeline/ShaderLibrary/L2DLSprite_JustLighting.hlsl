@@ -1,5 +1,5 @@
-﻿#ifndef MYRP_L2DLSPRITE_INCLUDED
-#define MYRP_L2DLSPRITE_INCLUDED
+﻿#ifndef MYRP_L2DLSPRITEJUSTLIGHTING_INCLUDED
+#define MYRP_L2DLSPRITEJUSTLIGHTING_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 
@@ -51,7 +51,7 @@ struct FragOutput
     float4 additionalData : SV_Target3;
 };
 
-VertexOutput L2DLSpritePassVertex (VertexInput input) 
+VertexOutput L2DLSpriteJustLightingPassVertex (VertexInput input) 
 {
 	VertexOutput output;
 
@@ -65,7 +65,7 @@ VertexOutput L2DLSpritePassVertex (VertexInput input)
 	return output;
 }
 
-FragOutput L2DLSpritePassFragment (VertexOutput input) 
+FragOutput L2DLSpriteJustLightingPassFragment (VertexOutput input) 
 {
     ////  Sample Inputs ////
     float4 spriteColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
@@ -84,16 +84,16 @@ FragOutput L2DLSpritePassFragment (VertexOutput input)
     // http://amindforeverprogramming.blogspot.com/2013/07/why-alpha-premultiplied-colour-blending.html
 
     // Target 1 : Color
-	output.color = spriteColor * input.color; //float4(spriteColor.a, 0, 0, 1);//
-    float alpha = output.color.a;
-    output.color.rgb *= alpha;
+	output.color = float4(0, 0, 0, 0);
+    float4 lightingColour = spriteColor * input.color;
+    float alpha = lightingColour.a;
 
     // Target 2 : Occlusion/Reflectivity
-	float3 absorbedColours = float3(1, 1, 1) - (output.color.rgb * _LightBleed);
+	float3 absorbedColours = float3(1, 1, 1) - (lightingColour.rgb * _LightBleed);
 	output.occlusionReflection = float4(absorbedColours * lightingMasks.g * _Occlusion * alpha, alpha);
     
     // Target 3 : Emission
-	output.emission = float4(output.color.rgb * lightingMasks.r * _Emission * alpha, alpha);
+	output.emission = float4(lightingColour.rgb * lightingMasks.r * _Emission * alpha, alpha);
 
     // Target 4 : Currently 'Reflectance', void, void
     float reflectivity = lightingMasks.b * _Reflectance;
@@ -102,4 +102,4 @@ FragOutput L2DLSpritePassFragment (VertexOutput input)
     return output;
 }
 
-#endif // MYRP_L2DLSPRITE_INCLUDED
+#endif // MYRP_L2DLSPRITEJUSTLIGHTING_INCLUDED

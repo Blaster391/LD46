@@ -45,6 +45,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Infront
-    uniqueID: 1494993259
+  - name: Floor
+    uniqueID: 3786316511
+    locked: 0
+  - name: Environment
+    uniqueID: 393834835
+    locked: 0
+  - name: Player
+    uniqueID: 2542654053
+    locked: 0
+  - name: DynamicWorldObjects
+    uniqueID: 1693425895
+    locked: 0
+  - name: Turrets
+    uniqueID: 578767725
+    locked: 0
+  - name: Enemies
+    uniqueID: 3159583133
+    locked: 0
+  - name: Orb
+    uniqueID: 4038625265
+    locked: 0
+  - name: OverlayedLights
+    uniqueID: 1480926377
     locked: 0
