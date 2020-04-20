@@ -133,7 +133,7 @@ public class InteractionObject : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        if(m_dealsCollisonDamageOnYeeting)
+        if(m_dealsCollisonDamageOnYeeting && m_canDealCollisionDamage)
         {
             Enemy enemyHit = collision.gameObject.GetComponent<Enemy>();
             if(enemyHit != null)
