@@ -19,7 +19,7 @@ MonoBehaviour:
     m_energyIncreasePerPurchase: 5
     m_title: Ground Turret
     m_subtitle: Low Damage, Medium Range
-    m_sprite: {fileID: 21300000, guid: 4165262a08fb640abaa19e3000cdf4d6, type: 3}
+    m_sprite: {fileID: 21300000, guid: d39b7113c1e5b6f44af0f0804f4435de, type: 3}
     m_itemLimit: 5
   - m_shopItemPrefab: {fileID: 5257890068005515321, guid: 18a68c2b403bf4c43b757d3757b5caee,
       type: 3}
@@ -27,15 +27,7 @@ MonoBehaviour:
     m_energyIncreasePerPurchase: 5
     m_title: Floating Turret
     m_subtitle: Low Damage, Long Range, Flying
-    m_sprite: {fileID: 21300000, guid: 4165262a08fb640abaa19e3000cdf4d6, type: 3}
-    m_itemLimit: 5
-  - m_shopItemPrefab: {fileID: 8068593257834618284, guid: c8a05ac01507e4243b6174fc4649fdf2,
-      type: 3}
-    m_energyCost: 10
-    m_energyIncreasePerPurchase: 0
-    m_title: Glowstick
-    m_subtitle: Helps you see!
-    m_sprite: {fileID: 21300000, guid: b25cf56efadb6a545aa2c7eba8b613ab, type: 3}
+    m_sprite: {fileID: 21300000, guid: 1dc6e1325d56326448c92322dce4d674, type: 3}
     m_itemLimit: 5
   - m_shopItemPrefab: {fileID: 4524918053758304705, guid: 300d819dc6296534284517e36587337f,
       type: 3}
@@ -43,7 +35,7 @@ MonoBehaviour:
     m_energyIncreasePerPurchase: 15
     m_title: Shotgun Turret
     m_subtitle: High Damage, Low Fire Rate
-    m_sprite: {fileID: 21300000, guid: 4165262a08fb640abaa19e3000cdf4d6, type: 3}
+    m_sprite: {fileID: 21300000, guid: de58ef90231721a47a12e9317651f286, type: 3}
     m_itemLimit: 3
   - m_shopItemPrefab: {fileID: 745644540895376077, guid: cb57a2b1c7f1de04480a50372ca7a0f8,
       type: 3}
@@ -51,5 +43,13 @@ MonoBehaviour:
     m_energyIncreasePerPurchase: 100
     m_title: BIG Turret
     m_subtitle: High Damage, High Fire Rate
-    m_sprite: {fileID: 21300000, guid: 4165262a08fb640abaa19e3000cdf4d6, type: 3}
+    m_sprite: {fileID: 21300000, guid: bb0cdf49cffc488408da2a0f5f43feaa, type: 3}
     m_itemLimit: 2
+  - m_shopItemPrefab: {fileID: 8068593257834618284, guid: c8a05ac01507e4243b6174fc4649fdf2,
+      type: 3}
+    m_energyCost: 10
+    m_energyIncreasePerPurchase: 0
+    m_title: Glowstick
+    m_subtitle: Helps you see!
+    m_sprite: {fileID: 21300000, guid: ead82c81250ddd348855ce84c691096b, type: 3}
+    m_itemLimit: 5
