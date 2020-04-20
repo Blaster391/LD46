@@ -32,7 +32,7 @@ MonoBehaviour:
   - m_shopItemPrefab: {fileID: 4524918053758304705, guid: 300d819dc6296534284517e36587337f,
       type: 3}
     m_energyCost: 50
-    m_energyIncreasePerPurchase: 15
+    m_energyIncreasePerPurchase: 50
     m_title: Shotgun Turret
     m_subtitle: High Damage, Low Fire Rate
     m_sprite: {fileID: 21300000, guid: de58ef90231721a47a12e9317651f286, type: 3}

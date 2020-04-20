@@ -33,6 +33,16 @@ public class ShopUIBehaviour : MonoBehaviour
 
     private void Update()
     {
-        m_energyText.text = $"E: {Mathf.FloorToInt(m_orb.CurrentEnergy).ToString()}";
+        int energy = Mathf.FloorToInt(m_orb.CurrentEnergy - m_orb.ShopEnergyBuffer);
+        if(energy > 0)
+        {
+            m_energyText.text = $"E: {energy.ToString()}";
+        }
+        else
+        {
+            m_energyText.text = $"E: ?!?!";
+        }
+
+        
     }
 }
