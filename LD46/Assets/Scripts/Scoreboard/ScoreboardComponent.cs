@@ -28,7 +28,9 @@ namespace Scoreboard
         {
             private void Awake()
             {
-                m_connection = JsonConvert.DeserializeObject<ScoreboardConnection>(File.ReadAllText(m_scoreboardConnectionFile));
+                TextAsset connectionText = Resources.Load<TextAsset>(m_scoreboardConnectionFile);
+
+                m_connection = JsonConvert.DeserializeObject<ScoreboardConnection>(connectionText.text);
 
                 // For testing
                 //Score score = new Score();
