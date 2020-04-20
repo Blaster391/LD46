@@ -47,9 +47,6 @@ public class TurretProjectile : MonoBehaviour
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy != null)
         {
-            GameHelper.GetManager<StatsManager>().IncrementKills();
-            GameHelper.GetManager<StatsManager>().AddScore(1);
-
             enemy.DealDamage(m_damage);
             Destroy(gameObject);
         }
