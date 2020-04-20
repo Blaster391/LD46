@@ -65,31 +65,24 @@ public class Turret : MonoBehaviour
 
     void UpdateFiringStatus()
     {
-        if(m_currentTarget != null && CanSeeTarget(m_currentTarget))
+
+        m_currentTarget = null;
+        m_isFiring = false;
+
+        var allEnemies = FindObjectsOfType<Enemy>();
+        float rangeSq = m_range * m_range;
+
+        allEnemies = allEnemies.Where(x => (transform.position - x.transform.position).sqrMagnitude < rangeSq).OrderBy(x => (transform.position - x.transform.position).sqrMagnitude).ToArray();
+
+        foreach(Enemy e in allEnemies)
         {
-            m_isFiring = true;
-        }
-        else
-        {
-            m_currentTarget = null;
-            m_isFiring = false;
-
-            var allEnemies = FindObjectsOfType<Enemy>();
-            float rangeSq = m_range * m_range;
-
-            allEnemies = allEnemies.Where(x => (transform.position - x.transform.position).sqrMagnitude < rangeSq).OrderBy(x => (transform.position - x.transform.position).sqrMagnitude).ToArray();
-
-            foreach(Enemy e in allEnemies)
+            if(CanSeeTarget(e.gameObject))
             {
-                if(CanSeeTarget(e.gameObject))
-                {
-                    m_currentTarget = e.gameObject;
-                    m_isFiring = true;
-                    break;
-                }
+                m_currentTarget = e.gameObject;
+                m_isFiring = true;
+                break;
             }
         }
-
 
         m_timeSinceUpdate = 0.0f;
     }
