@@ -239,7 +239,7 @@ MonoBehaviour:
   m_energyAttackModifier: 1
   m_moveForce: 2
   m_movementUpdateRate: 0.5
-  m_despawnRange: 75
+  m_despawnRange: 50
   m_despawnUpdateRate: 1
   MyEvent:
     idInternal: 0
