@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 112754609}
   - component: {fileID: 112754610}
   - component: {fileID: 5602487207210066326}
+  - component: {fileID: -4369577486698051298}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -232,3 +233,15 @@ MonoBehaviour:
   m_exitGameTextPrefab: {fileID: 3308612597963457349, guid: ebdba25a7356b1e4ea14e5e577ae62b2,
     type: 3}
   m_timeToQuit: 3
+--- !u!114 &-4369577486698051298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27447131541504395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf12b97fd4e6eb41b6e096bb255a261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

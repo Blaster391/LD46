@@ -23,12 +23,15 @@ public partial class L2DLCameraRenderer
         dimension = TextureDimension.Tex2D
     };
     
-    L2DLBufferTextures m_textureToView;
+    public L2DLBufferTextures TextureToView { get; set; }
 
     L2DLSceneDataRenderer m_sceneDataRenderer = new L2DLSceneDataRenderer();
     L2DLDirectLightRenderer m_directLightRenderer;
     L2DLIndirectLightRenderer m_indirectLightRenderer;
     L2DLIndirectLightData m_indirectLightData;
+
+    // Horrible access for some debug thingies
+    public static L2DLCameraRenderer CameraRenderInstance { get; private set; }
     
     // --------------------------------------------------------------------
     // Initilisation
@@ -44,11 +47,13 @@ public partial class L2DLCameraRenderer
     {
         GraphicsSettings.lightsUseLinearIntensity = true;
         
-        m_textureToView = textureToView;
+        TextureToView = textureToView;
 
         m_directLightRenderer = new L2DLDirectLightRenderer(directLightData);
         m_indirectLightRenderer = new L2DLIndirectLightRenderer(indirectLightData);
         m_indirectLightData = indirectLightData;
+
+        CameraRenderInstance = this;
     }
 
     // --------------------------------------------------------------------
@@ -65,7 +70,7 @@ public partial class L2DLCameraRenderer
 
         m_sceneDataRenderer.Render(m_context, m_camera);
 
-        if (m_textureToView == L2DLBufferTextures.None)
+        if (TextureToView == L2DLBufferTextures.None)
         {
             m_directLightRenderer.Render(m_context, m_camera, directLights);
             m_indirectLightRenderer.Render(m_context, m_camera);
@@ -100,7 +105,7 @@ public partial class L2DLCameraRenderer
     void RenderStep_PresentFinalImage()
     {
         // Push the RT we've written on to the camera target
-        switch (m_textureToView)
+        switch (TextureToView)
         {
             case L2DLBufferTextures.None:
                 m_presentFinalImageBuffer.SetGlobalTexture("_Color", L2DLPipelineData.s_cameraColorTextureId);
