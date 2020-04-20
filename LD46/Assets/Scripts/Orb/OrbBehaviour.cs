@@ -19,6 +19,8 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private float m_maxEnergyGainPerSecondAtFullEnergy = 0f;
     [SerializeField] private float m_shopEnergyBuffer = 10.0f;
 
+    private Dictionary<GameObject, int> m_purchasedItems = new Dictionary<GameObject, int>();
+
     public float ShopEnergyBuffer => m_shopEnergyBuffer;
 
     [System.Serializable]
@@ -83,6 +85,16 @@ public class OrbBehaviour : MonoBehaviour
             TakeEnergy(_energyCost);
             SpawnShopItem(_itemPrefab);
         }
+    }
+
+    public int GetPurchasedAmount(GameObject prefab)
+    {
+        if(!m_purchasedItems.ContainsKey(prefab))
+        {
+            return 0;
+        }
+
+        return m_purchasedItems[prefab];
     }
 
     private void Awake()
@@ -194,6 +206,15 @@ public class OrbBehaviour : MonoBehaviour
 
     private void SpawnShopItem(GameObject _turretPrefab)
     {
+        if(m_purchasedItems.ContainsKey(_turretPrefab))
+        {
+            m_purchasedItems[_turretPrefab]++;
+        }
+        else
+        {
+            m_purchasedItems.Add(_turretPrefab, 1);
+        }
+
         Instantiate(_turretPrefab, transform.position, Quaternion.identity, m_gameWorldObjectManager.TurretsParent);
     }
 

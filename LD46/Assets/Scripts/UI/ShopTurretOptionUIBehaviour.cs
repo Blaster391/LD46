@@ -35,18 +35,40 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (!InStock())
+        {
+            m_subtitleText.text = "OUT OF STOCK";
+        }
+        else
+        {
+            m_subtitleText.text = m_shopOption.m_subtitle + $" ({m_orbBehavior.GetPurchasedAmount(m_shopItemPrefab)}/{m_shopOption.m_itemLimit})";
+        }
+
         if (CanBuy())
         {
+
+
             m_button.image.color = Color.white;
         }
         else
         {
+
             m_button.image.color = Color.red;
         }
     }
 
+    private bool InStock()
+    {
+        return m_orbBehavior.GetPurchasedAmount(m_shopItemPrefab) < m_shopOption.m_itemLimit;
+    }
+
     private bool CanBuy()
     {
+        if(!InStock())
+        {
+            return false;
+        }
+
         return (m_orbBehavior.CurrentEnergy > m_shopOption.m_energyCost + m_orbBehavior.ShopEnergyBuffer);
     }
 
