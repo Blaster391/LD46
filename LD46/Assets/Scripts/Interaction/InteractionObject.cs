@@ -80,8 +80,7 @@ public class InteractionObject : MonoBehaviour
         Vector2 mousePosition = GameHelper.MouseToWorldPosition();
         Vector2 directionToMousePos = (mousePosition - myPosition).normalized;
 
-        m_rigidBody2D.AddForce(directionToMousePos * 10.0f);
-        m_joint2D.connectedBody.AddForce(-directionToMousePos * 10.0f);
+        m_rigidBody2D.AddForce(directionToMousePos * 25.0f);
     }
 
     // Called when player drops this.

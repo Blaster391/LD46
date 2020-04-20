@@ -9872,8 +9872,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 2.31
+  m_Mass: 20
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 2.62
   m_Material: {fileID: 0}
@@ -9893,12 +9893,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6605d91141d20a4ea54c7df9378bfa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_baseMovementForce: 500
-  m_baseJumpForce: 180.5
+  m_baseMovementForce: 5000
+  m_baseJumpForce: 1000
   m_jetpackObject: {fileID: 6033589080152006139}
   m_jetpackTickDownTime: 0.5
   m_jetpackFlipOffset: 0.4
-  m_airDampening: 0.45
+  m_airDampening: 0.905
   m_groundedEpsilon: 0.05
   m_bodySprite: {fileID: 461759859216939917}
   m_legsSprite: {fileID: 1413874802743802373}
@@ -9998,7 +9998,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a155ad0a8deed6544912d41494d1d54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxVelocity: {x: 10, y: 17.5}
+  m_clampDownwards: 0
+  m_maxVelocity: {x: 2, y: 20}
 --- !u!1 &2072905595466686080
 GameObject:
   m_ObjectHideFlags: 0
