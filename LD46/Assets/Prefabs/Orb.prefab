@@ -59,7 +59,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -87,11 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc648eec8af1bf428767cd1672c513b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 1
+  m_intensity: 3.64
   m_color: {r: 1, g: 1, b: 1, a: 1}
-  m_range: 5
+  m_range: 7
   m_shadowmapSize: 2048
-  m_maxIntensityOutput: 0.39
+  m_maxIntensityOutput: 0.5
 --- !u!1 &7459418591684140267
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,15 +164,16 @@ MonoBehaviour:
   m_pointLight: {fileID: 1768294266}
   m_maxEnergy: 100
   m_energyLostPerSecond: 2
-  m_energyDrainedPerSecond: 5
-  m_maxEnergyGainPerSecondAtFullEnergy: 0
+  m_energyDrainedPerSecond: 3
+  m_maxEnergyGainPerSecondAtFullEnergy: 1
+  m_shopEnergyBuffer: 10
   m_healthScalingEffects:
     m_usePointLightSettingsAtFullHealth: 1
     m_propsAtFullHealth:
       m_range: 5
       m_intensity: 1
     m_propsAtAtNoHealth:
-      m_range: 1
+      m_range: 2
       m_intensity: 0.1
   m_standardColourTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_consumingEnergyColourTint: {r: 0.43921572, g: 0.9843138, b: 0.9921569, a: 1}
@@ -277,7 +278,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -256342031
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 073d66829208143ca88b6bc0f80a3ad5, type: 3}
   m_Color: {r: 0, g: 1, b: 0.9440751, a: 1}

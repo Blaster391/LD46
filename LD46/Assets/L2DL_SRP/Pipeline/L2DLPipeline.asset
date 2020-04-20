@@ -23,7 +23,7 @@ MonoBehaviour:
     m_directLightShadowMultiplier: 4
   m_indirectLightSettings:
     m_enabled: 1
-    m_indirectLightCalculationMethod: {fileID: 11400000, guid: 5cc23e850232eaf459346df35f17d699,
+    m_indirectLightCalculationMethod: {fileID: 11400000, guid: 60b6fca3ac4e1fc4f9cede7dd39891ad,
       type: 2}
   m_textureToView: 0
   m_debugSettings:

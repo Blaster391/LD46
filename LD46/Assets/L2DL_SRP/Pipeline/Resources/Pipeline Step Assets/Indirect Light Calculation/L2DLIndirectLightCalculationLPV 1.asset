@@ -14,6 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_lpvIterationsData:
   - MipLevel: 4
-    Iterations: 5
-    TotalStartIteration: 0
+    Iterations: 90
+    TotalStartIteration: 40
+    InjectAmbientLight: 0
+  - MipLevel: 3
+    Iterations: 40
+    TotalStartIteration: 15
+    InjectAmbientLight: 0
+  - MipLevel: 2
+    Iterations: 46
+    TotalStartIteration: 10
     InjectAmbientLight: 0
