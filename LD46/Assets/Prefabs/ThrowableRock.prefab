@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Emission: 0
-  Occlusion: 0.4
+  Occlusion: 0.79
   Reflectance: 0.5
   LightBleed: 0.089
   LightingTexture: {fileID: 0}
