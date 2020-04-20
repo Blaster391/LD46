@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
       propertyPath: m_rateOfFire
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
       propertyPath: m_range
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
       propertyPath: m_damage
@@ -113,11 +113,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
       propertyPath: m_rateOfFire
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
       propertyPath: m_range
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 944994527, guid: 7373382353344a342a7727952bb3c084, type: 3}
       propertyPath: m_damage
@@ -334,12 +334,12 @@ PrefabInstance:
     - target: {fileID: 5257890068139761143, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
       propertyPath: m_rateOfFire
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5257890068139761143, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
       propertyPath: m_range
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5257890068139761143, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
@@ -380,6 +380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Distance
       value: 19.436737
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200078176298207873, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7725016798215666678, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}

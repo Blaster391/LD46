@@ -146,12 +146,12 @@ PrefabInstance:
     - target: {fileID: 8103301343383231829, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
       propertyPath: m_energy
-      value: 1000
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 8103301343383231829, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}
       propertyPath: m_energyAttackModifier
-      value: 0.075
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8103301343383231829, guid: b6264ef57e909d74798be70b0f19b871,
         type: 3}

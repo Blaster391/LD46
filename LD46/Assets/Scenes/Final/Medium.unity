@@ -57761,6 +57761,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 899647910, guid: 6ea38383c275e9f488c75fd3bc591c44, type: 3}
+      propertyPath: m_enemySpawnWaveSettings.Array.data[2].m_waveDuration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 27447131541504392, guid: 6ea38383c275e9f488c75fd3bc591c44,
         type: 3}
       propertyPath: m_LocalPosition.x
