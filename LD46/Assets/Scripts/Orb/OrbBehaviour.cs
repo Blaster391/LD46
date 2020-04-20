@@ -17,8 +17,9 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private float m_energyLostPerSecond = 0f;
     [SerializeField] private float m_energyDrainedPerSecond = 0f;
     [SerializeField] private float m_maxEnergyGainPerSecondAtFullEnergy = 0f;
+    [SerializeField] private float m_shopEnergyBuffer = 10.0f;
 
-
+    public float ShopEnergyBuffer => m_shopEnergyBuffer;
 
     [System.Serializable]
     public class HealthScalingEffects

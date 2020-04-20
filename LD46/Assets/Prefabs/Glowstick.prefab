@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: feb6153f8bd4108439503236efa6172e, type: 3}
-  m_Color: {r: 0.8499978, g: 1, b: 0.8349056, a: 1}
+  m_Color: {r: 0.09523797, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -269,7 +269,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.340374
+  m_Distance: 35.02194
   m_MaxDistanceOnly: 0
 --- !u!114 &8068593257834618282
 MonoBehaviour:

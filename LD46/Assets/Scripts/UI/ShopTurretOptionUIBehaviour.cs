@@ -35,7 +35,7 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if(m_orbBehavior.CurrentEnergy > m_shopOption.m_energyCost)
+        if (CanBuy())
         {
             m_button.image.color = Color.white;
         }
@@ -45,9 +45,18 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
         }
     }
 
+    private bool CanBuy()
+    {
+        return (m_orbBehavior.CurrentEnergy > m_shopOption.m_energyCost + m_orbBehavior.ShopEnergyBuffer);
+    }
+
     private void ButtonClicked()
     {
-        MyEvent.Post(gameObject);
-        m_orbBehavior.PurchaseItem(m_shopItemPrefab, m_shopOption.m_energyCost);
+        if(CanBuy())
+        {
+
+            MyEvent.Post(gameObject);
+            m_orbBehavior.PurchaseItem(m_shopItemPrefab, m_shopOption.m_energyCost);
+        }
     }
 }
