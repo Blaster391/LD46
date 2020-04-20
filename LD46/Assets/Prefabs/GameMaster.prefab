@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemySpawnWaveSettings:
-  - m_waveDuration: 30
+  - m_waveDuration: 10
     m_enemySpawnWeights:
     - m_enemyPrefab: {fileID: 1656771657698826109, guid: 8a17d290d69298a4e9e5fb89ae0dd974,
         type: 3}
@@ -85,6 +85,10 @@ MonoBehaviour:
         type: 3}
       m_weight: 0.5
     m_spawnRate: 2
+    m_maxEnemies: 10
+  - m_waveDuration: 10
+    m_enemySpawnWeights: []
+    m_spawnRate: 0
     m_maxEnemies: 10
   - m_waveDuration: 30
     m_enemySpawnWeights:
@@ -102,6 +106,10 @@ MonoBehaviour:
       m_weight: 1
     m_spawnRate: 1.5
     m_maxEnemies: 12
+  - m_waveDuration: 15
+    m_enemySpawnWeights: []
+    m_spawnRate: 0
+    m_maxEnemies: 12
   - m_waveDuration: 30
     m_enemySpawnWeights:
     - m_enemyPrefab: {fileID: 1656771657698826109, guid: 8a17d290d69298a4e9e5fb89ae0dd974,
@@ -118,6 +126,28 @@ MonoBehaviour:
       m_weight: 1
     m_spawnRate: 1.5
     m_maxEnemies: 15
+  - m_waveDuration: 30
+    m_enemySpawnWeights:
+    - m_enemyPrefab: {fileID: 1656771657698826109, guid: 8a17d290d69298a4e9e5fb89ae0dd974,
+        type: 3}
+      m_weight: 0.05
+    - m_enemyPrefab: {fileID: 6835257591895941633, guid: c5b712ef351b1c34b8ff6ea7562a6d79,
+        type: 3}
+      m_weight: 0.5
+    - m_enemyPrefab: {fileID: 698034105895709845, guid: 20573596e8b21a442a02d8b6bbd1a19e,
+        type: 3}
+      m_weight: 0.5
+    - m_enemyPrefab: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      m_weight: 0.75
+    - m_enemyPrefab: {fileID: 6342191103065960851, guid: f2a35d79938bfc448bbc928a8d04ba31,
+        type: 3}
+      m_weight: 0.25
+    - m_enemyPrefab: {fileID: 3617446336705145226, guid: 57b42e676f9d1b249b3d51509a448fc8,
+        type: 3}
+      m_weight: 0.5
+    m_spawnRate: 1.5
+    m_maxEnemies: 20
 --- !u!114 &4805470249427859455
 MonoBehaviour:
   m_ObjectHideFlags: 0
