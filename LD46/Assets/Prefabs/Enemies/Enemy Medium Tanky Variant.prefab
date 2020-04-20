@@ -7,6 +7,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_moveForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_movementUpdateRate
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257099, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_energy
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257108, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8165336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257108, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5137255
+      objectReference: {fileID: 0}
     - target: {fileID: 1046345540510257109, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,10 +87,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257109, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257109, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1046345540510257110, guid: 7b6c36cb11958b14abecd6b8c8258f55,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Medium Tanky
+      value: Enemy Medium Tanky Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046345540510257111, guid: 7b6c36cb11958b14abecd6b8c8258f55,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.6286018
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b6c36cb11958b14abecd6b8c8258f55, type: 3}
