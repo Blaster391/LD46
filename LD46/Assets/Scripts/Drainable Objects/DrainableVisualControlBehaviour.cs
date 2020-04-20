@@ -10,7 +10,8 @@ public class DrainableVisualControlBehaviour : MonoBehaviour
 
     [Header("Colour")]
     [SerializeField] private bool m_useSpriteRenderableColour = false;
-    [SerializeField] private Color m_fullHealthColour = Color.white;
+    [SerializeField] private List<Color> m_fullHealthColours = new List<Color>();
+    private Color m_fullHealthColour = Color.white;
     [SerializeField] private Color m_noHealthColour = Color.clear;
 
     [Header("Scale")]
@@ -28,6 +29,10 @@ public class DrainableVisualControlBehaviour : MonoBehaviour
         if(m_useSpriteRenderableColour)
         {
             m_fullHealthColour = m_spriteRenderer.color;
+        }
+        else
+        {
+            m_fullHealthColour = m_fullHealthColours[Random.Range(0, m_fullHealthColours.Count)];
         }
 
         m_originalScale = transform.localScale;

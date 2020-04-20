@@ -183,8 +183,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spriteRenderer: {fileID: 8967545703650951085}
   m_drainingParticleSystem: {fileID: 4194764595216935037}
-  m_useSpriteRenderableColour: 1
-  m_fullHealthColour: {r: 1, g: 1, b: 1, a: 1}
+  m_useSpriteRenderableColour: 0
+  m_fullHealthColours:
+  - {r: 1, g: 0.9780377, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.1692667, a: 1}
+  - {r: 1, g: 0, b: 0.8228264, a: 1}
+  - {r: 0, g: 1, b: 1, a: 1}
+  - {r: 0.6841221, g: 0, b: 1, a: 1}
   m_noHealthColour: {r: 0.3679245, g: 0.22833651, b: 0.02603239, a: 0}
   m_fullhealthScale: 1
   m_noHealthScale: 0.3
