@@ -118,33 +118,6 @@ public class Enemy : MonoBehaviour
 
             UpdatePathProgress();
         }
-
-
-
-        
-        //if (m_path != null && m_path.Count > 2)
-        //{
-        //    //if (GameHelper.IsWithinThreshold(myPosition, m_path[2], 0.1f))
-        //    //{
-        //    //    m_path.RemoveAt(2);
-        //    //}
-
-        //    //if (GameHelper.IsWithinThreshold(myPosition, m_path[1], 0.1f))
-        //    //{
-        //    //    m_path.RemoveAt(1);
-        //    //}
-
-        //    if(GameHelper.IsWithinThreshold(myPosition, m_path[1], m_size) || GameHelper.HasLineOfSight(gameObject, m_path[2]))
-        //    {
-        //        m_targetPosition = m_path[2];
-
-
-        //    }
-        //    else
-        //    {
-        //        m_targetPosition = m_path[1];
-        //    }
-        //}
     }
 
     private void OnDrawGizmosSelected()
