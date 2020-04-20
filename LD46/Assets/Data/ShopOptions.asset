@@ -13,15 +13,24 @@ MonoBehaviour:
   m_Name: ShopOptions
   m_EditorClassIdentifier: 
   m_options:
-  - m_turretPrefab: {fileID: 2121025596641494043, guid: 18a68c2b403bf4c43b757d3757b5caee,
+  - m_shopItemPrefab: {fileID: 5257890068005515321, guid: 30685c47e5c669a4d88d0dd814a3a544,
       type: 3}
     m_energyCost: 20
-    m_title: Turret 1
-    m_subtitle: The first turret
+    m_title: Ground Turret
+    m_subtitle: Low Damage, High Fire Rate
     m_sprite: {fileID: 21300000, guid: 546dded7b6f44714c82425654e2aead9, type: 3}
-  - m_turretPrefab: {fileID: 2121025596641494043, guid: 30685c47e5c669a4d88d0dd814a3a544,
+    m_itemLimit: 0
+  - m_shopItemPrefab: {fileID: 5257890068005515321, guid: 18a68c2b403bf4c43b757d3757b5caee,
       type: 3}
     m_energyCost: 30
-    m_title: Turret 2
+    m_title: Floating Turret
     m_subtitle: The second turret
     m_sprite: {fileID: 21300000, guid: 35a7d91ca4004854b95258c7a7110792, type: 3}
+    m_itemLimit: 0
+  - m_shopItemPrefab: {fileID: 8068593257834618284, guid: c8a05ac01507e4243b6174fc4649fdf2,
+      type: 3}
+    m_energyCost: 10
+    m_title: Glowstick
+    m_subtitle: Low Damage, High Fire Rate
+    m_sprite: {fileID: 21300000, guid: 35a7d91ca4004854b95258c7a7110792, type: 3}
+    m_itemLimit: 3

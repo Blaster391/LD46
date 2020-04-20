@@ -9,7 +9,7 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
     [SerializeField] private Text m_subtitleText = null;
     [SerializeField] private Text m_energyCostText = null;
     [SerializeField] private Image m_iconImage = null;
-    private TurretBase m_turretPrefab = null;
+    private GameObject m_shopItemPrefab = null;
 
     [SerializeField] private Button m_button = null;
 
@@ -25,7 +25,7 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
         m_energyCostText.text = shopOption.m_energyCost.ToString() + "£";
         m_iconImage.sprite = shopOption.m_sprite;
 
-        m_turretPrefab = shopOption.m_turretPrefab;
+        m_shopItemPrefab = shopOption.m_shopItemPrefab;
 
         m_button.onClick.AddListener(ButtonClicked);
 
@@ -48,6 +48,6 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
     private void ButtonClicked()
     {
         MyEvent.Post(gameObject);
-        m_orbBehavior.PurchaseTurret(m_turretPrefab, m_shopOption.m_energyCost);
+        m_orbBehavior.PurchaseItem(m_shopItemPrefab, m_shopOption.m_energyCost);
     }
 }

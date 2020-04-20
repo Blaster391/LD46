@@ -75,12 +75,12 @@ public class OrbBehaviour : MonoBehaviour
         UpdateEnergy(-_energyAmount);
     }
 
-    public void PurchaseTurret(TurretBase _turretPrefab, float _energyCost)
+    public void PurchaseItem(GameObject _itemPrefab, float _energyCost)
     {
         if(CurrentEnergy >= _energyCost)
         {
             TakeEnergy(_energyCost);
-            SpawnTurret(_turretPrefab);
+            SpawnShopItem(_itemPrefab);
         }
     }
 
@@ -191,9 +191,9 @@ public class OrbBehaviour : MonoBehaviour
         }
     }
 
-    private void SpawnTurret(TurretBase _turretPrefab)
+    private void SpawnShopItem(GameObject _turretPrefab)
     {
-        TurretBase turret = Instantiate(_turretPrefab, transform.position, Quaternion.identity, m_gameWorldObjectManager.TurretsParent);
+        Instantiate(_turretPrefab, transform.position, Quaternion.identity, m_gameWorldObjectManager.TurretsParent);
     }
 
     private void Use(PlayerInteraction _playerInteraction)
