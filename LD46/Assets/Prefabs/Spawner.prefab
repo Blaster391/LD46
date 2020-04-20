@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_availabilityUpdate: 1
   m_minDistanceFromOrb: 10
-  m_maxDistanceFromOrb: 50
+  m_maxDistanceFromOrb: 25
