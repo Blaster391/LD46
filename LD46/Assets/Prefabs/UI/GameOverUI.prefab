@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3cf1aca149d5e4e9950a86ddcc0291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_scoreboardConnectionFile: Assets/scoreboard.scoreboard
+  m_scoreboardConnectionFile: scoreboard.scoreboard
 --- !u!1 &3841222924286848154
 GameObject:
   m_ObjectHideFlags: 0

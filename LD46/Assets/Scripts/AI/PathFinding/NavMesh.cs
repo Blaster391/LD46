@@ -324,7 +324,8 @@ public class NavMesh : MonoBehaviour
     {
         _nodeMap.Clear();
 
-        List<PathNodeSerializable> serializableNodes = JsonConvert.DeserializeObject<List<PathNodeSerializable>>(File.ReadAllText(("Assets/NavMeshs/" + m_navmeshFile + ".path")));
+        TextAsset navmeshText = Resources.Load<TextAsset>("Navmesh/" + m_navmeshFile + ".path");
+        List<PathNodeSerializable> serializableNodes = JsonConvert.DeserializeObject<List<PathNodeSerializable>>(navmeshText.text);
 
         foreach(var node in serializableNodes)
         {
@@ -355,7 +356,7 @@ public class NavMesh : MonoBehaviour
             return;
         }
 
-        string file = "Assets/NavMeshs/" + m_navmeshFile + ".path";
+        string file = "Assets/Resources/Navmesh/" + m_navmeshFile + ".path.txt";
         if (File.Exists(file))
         {
             File.Delete(file);
