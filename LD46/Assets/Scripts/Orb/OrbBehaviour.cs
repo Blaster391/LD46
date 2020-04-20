@@ -52,6 +52,7 @@ public class OrbBehaviour : MonoBehaviour
     [SerializeField] private Color m_gainingMaxHealthColourTint = Color.cyan;
     [SerializeField] private Color m_lowHealthColourTint = Color.red;
     [SerializeField] private float m_lowHealthEnergyProp = 0.1f;
+    [SerializeField] private ParticleSystem m_maxHealthGainParticleSystem = null;
 
     [Header("UI")]
     [SerializeField] private ShopUIBehaviour m_shopUIPrefab = null;
@@ -174,6 +175,18 @@ public class OrbBehaviour : MonoBehaviour
         {
             m_maxEnergy += m_maxEnergyGainPerSecondAtFullEnergy * Time.deltaTime;
             m_spriteRenderer.color = m_gainingMaxHealthColourTint;
+
+            if(!m_maxHealthGainParticleSystem.isPlaying)
+            {
+                m_maxHealthGainParticleSystem.Play();
+            }
+        }
+        else
+        {
+            if(m_maxHealthGainParticleSystem.isPlaying)
+            {
+                m_maxHealthGainParticleSystem.Stop();
+            }
         }
     }
 
