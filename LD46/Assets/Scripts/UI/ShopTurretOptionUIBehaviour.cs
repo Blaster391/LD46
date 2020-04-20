@@ -22,7 +22,7 @@ public class ShopTurretOptionUIBehaviour : MonoBehaviour
     {
         m_titleText.text = shopOption.m_title;
         m_subtitleText.text = shopOption.m_subtitle;
-        m_energyCostText.text = shopOption.m_energyCost.ToString() + "£";
+        m_energyCostText.text = shopOption.m_energyCost.ToString() + "E";
         m_iconImage.sprite = shopOption.m_sprite;
 
         m_shopItemPrefab = shopOption.m_shopItemPrefab;
