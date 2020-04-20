@@ -351,6 +351,21 @@ PrefabInstance:
       propertyPath: m_projectileSpeed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 5830912746736399441, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05688095
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830912746736399441, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.77804184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830912746736399441, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14999998
+      objectReference: {fileID: 0}
     - target: {fileID: 5830912746736399442, guid: 30685c47e5c669a4d88d0dd814a3a544,
         type: 3}
       propertyPath: m_Mass
@@ -370,6 +385,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725016798215666678, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.50326174
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725016798215666678, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2065235
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725016798215666678, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0029935837
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725016798215666678, guid: 30685c47e5c669a4d88d0dd814a3a544,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.85326195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30685c47e5c669a4d88d0dd814a3a544, type: 3}
