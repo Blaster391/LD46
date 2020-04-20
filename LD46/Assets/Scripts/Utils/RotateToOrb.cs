@@ -13,6 +13,11 @@ public class RotateToOrb : MonoBehaviour
 
     private void Update()
     {
+        if(m_orb == null)
+        {
+            return;
+        }
+
         transform.rotation = Quaternion.LookRotation(Vector3.forward, m_orb.transform.position - transform.position);
     }
 }
