@@ -280,7 +280,7 @@ TextMesh:
   m_GameObject: {fileID: 254873482}
   m_Text: WALK WITH A + D
   m_OffsetZ: 0
-  m_CharacterSize: 20
+  m_CharacterSize: 25
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -1050,7 +1050,7 @@ TextMesh:
   m_GameObject: {fileID: 425510301}
   m_Text: PICKUP ROCKS WITH F
   m_OffsetZ: 0
-  m_CharacterSize: 20
+  m_CharacterSize: 25
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -1202,7 +1202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444253345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.68, y: -10.59, z: 0}
+  m_LocalPosition: {x: 6.9, y: -10.1, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -1480,7 +1480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626645970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.53, y: -11.49, z: 0}
+  m_LocalPosition: {x: 8.31, y: -11.21, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -1604,12 +1604,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &633618434
 Camera:
@@ -1786,12 +1786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &653851507
 Camera:
@@ -1845,7 +1845,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 680375960}
+  - component: {fileID: 680375959}
   - component: {fileID: 680375958}
+  - component: {fileID: 680375957}
+  m_Layer: 0
+  m_Name: WwiseGlobal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2141,12 +2145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 30.1
+  m_intensity: 75.64
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &846768490
 Camera:
@@ -2355,7 +2359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992276235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.69, y: -10.06, z: 0}
+  m_LocalPosition: {x: -17.94, y: -9.7, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -2482,7 +2486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085276629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.849998, y: -10.620001, z: 0}
+  m_LocalPosition: {x: -18.099998, y: -10.26, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -3426,7 +3430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173511346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.92, y: -2.85, z: 0}
+  m_LocalPosition: {x: -5.92, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1320977503}
@@ -3459,7 +3463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205051841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.34, y: -8.71, z: 0}
+  m_LocalPosition: {x: -8.85, y: -8.4800005, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -3658,12 +3662,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 63.4
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 57.5
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &1320977506
 Camera:
@@ -3734,7 +3738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345270356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.84, y: -9.23, z: 0}
+  m_LocalPosition: {x: -8.35, y: -9, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -3827,7 +3831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385169391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.45, y: -11.18, z: 0}
+  m_LocalPosition: {x: -17.7, y: -10.82, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -3951,12 +3955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 59.8
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
-  m_angle: 49.9
+  m_angle: 53
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &1411696455
 Camera:
@@ -4471,12 +4475,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 28
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &1681153224
 Camera:
@@ -5242,7 +5246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842903395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.99, y: -9.6, z: 0}
+  m_LocalPosition: {x: 14.35, y: -9.45, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -5258,7 +5262,7 @@ TextMesh:
   m_GameObject: {fileID: 1842903395}
   m_Text: HOLD ESCAPE TO RETURN THE TO MAIN MENU
   m_OffsetZ: 0
-  m_CharacterSize: 20
+  m_CharacterSize: 25
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -5609,12 +5613,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 68.9
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
-  m_angle: 52.1
+  m_angle: 64.1
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &2096778266
 Camera:
