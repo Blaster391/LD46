@@ -20,16 +20,16 @@ public class MainMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_movementAmount > m_movementMax)
+        if(m_movementAmount < -m_movementMax)
         {
             m_reversed = true;
         }
-        else if(-m_movementAmount < m_movementMax)
+        else if (m_movementAmount > m_movementMax)
         {
             m_reversed = false;
         }
 
-        if(m_reversed)
+        if (m_reversed)
         {
             m_movementAmount += m_movementSpeed * Time.deltaTime;
         }

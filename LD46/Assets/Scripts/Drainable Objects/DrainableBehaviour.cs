@@ -22,9 +22,17 @@ public class DrainableBehaviour : MonoBehaviour
     // Static tracking
     private static List<DrainableBehaviour> s_drainables = new List<DrainableBehaviour>();
     public static List<DrainableBehaviour> Drainables { get { return new List<DrainableBehaviour>(s_drainables); } }
-    
+
+    [SerializeField]
+    bool m_mainMenu = false;
+
     void Start()
     {
+        if(m_mainMenu)
+        {
+            return;
+        }
+
         s_drainables.Add(this);
         MyEvent.Post(gameObject);
         MyRTPC.SetValue(gameObject, 100);
@@ -63,6 +71,11 @@ public class DrainableBehaviour : MonoBehaviour
 
     private void Die()
     {
+        if (m_mainMenu)
+        {
+            return;
+        }
+
         Dead();
 
         // Kill self? Maybe not idk yet
