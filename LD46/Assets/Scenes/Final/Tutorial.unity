@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 254873485}
   - component: {fileID: 254873484}
   m_Layer: 0
-  m_Name: New Text (2)
+  m_Name: Message_1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &254873484
 TextMesh:
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 425510304}
   - component: {fileID: 425510303}
   m_Layer: 0
-  m_Name: New Text (8)
+  m_Name: Message_5_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1034,11 +1034,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425510301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -11.06, z: 0}
+  m_LocalPosition: {x: 1.26, y: -11.06, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &425510303
 TextMesh:
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 444253348}
   - component: {fileID: 444253347}
   m_Layer: 0
-  m_Name: New Text (9)
+  m_Name: Message_6_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,11 +1202,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444253345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.79, y: -9.96, z: 0}
+  m_LocalPosition: {x: 6.9, y: -10.1, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &444253347
 TextMesh:
@@ -1216,7 +1216,10 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444253345}
-  m_Text: "To PUSH + PULL OBJECTS \nHOLD THE MOUSE BUTTONS"
+  m_Text: 'PUSH + PULL OBJECTS WITH THE MOUSE BUTTONS
+
+    HOLD DOWN TO CHARGE POWER
+    AND RELEASE!'
   m_OffsetZ: 0
   m_CharacterSize: 25
   m_LineSpacing: 1
@@ -1370,7 +1373,7 @@ GameObject:
   - component: {fileID: 607249456}
   - component: {fileID: 607249455}
   m_Layer: 0
-  m_Name: New Text (1)
+  m_Name: Message_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,11 +1387,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607249453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.35, y: -10.52, z: 0}
+  m_LocalPosition: {x: -22.12, y: -10.52, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &607249455
 TextMesh:
@@ -1463,7 +1466,7 @@ GameObject:
   - component: {fileID: 626645973}
   - component: {fileID: 626645972}
   m_Layer: 0
-  m_Name: New Text (12)
+  m_Name: Message_6_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,11 +1480,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626645970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.35, y: -11.28, z: 0}
+  m_LocalPosition: {x: 8.31, y: -11.21, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &626645972
 TextMesh:
@@ -1601,12 +1604,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &633618434
 Camera:
@@ -1783,12 +1786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &653851507
 Camera:
@@ -2142,12 +2145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 75.64
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &846768490
 Camera:
@@ -2342,7 +2345,7 @@ GameObject:
   - component: {fileID: 992276238}
   - component: {fileID: 992276237}
   m_Layer: 0
-  m_Name: New Text (4)
+  m_Name: Message_3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2356,7 +2359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992276235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.64, y: -9.36, z: 0}
+  m_LocalPosition: {x: -17.94, y: -9.7, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
@@ -2469,7 +2472,7 @@ GameObject:
   - component: {fileID: 1085276632}
   - component: {fileID: 1085276631}
   m_Layer: 0
-  m_Name: New Text (7)
+  m_Name: Message_3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2483,11 +2486,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085276629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.64, y: -9.92, z: 0}
+  m_LocalPosition: {x: -18.099998, y: -10.26, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1085276631
 TextMesh:
@@ -2631,7 +2634,7 @@ GameObject:
   - component: {fileID: 1131133422}
   - component: {fileID: 1131133421}
   m_Layer: 0
-  m_Name: New Text (3)
+  m_Name: Message_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2649,7 +2652,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1131133421
 TextMesh:
@@ -3427,7 +3430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173511346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.17, y: 1.21, z: 0}
+  m_LocalPosition: {x: -5.92, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1320977503}
@@ -3446,7 +3449,7 @@ GameObject:
   - component: {fileID: 1205051844}
   - component: {fileID: 1205051843}
   m_Layer: 0
-  m_Name: New Text (6)
+  m_Name: Message_4_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3460,11 +3463,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205051841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.34, y: -8.57, z: 0}
+  m_LocalPosition: {x: -8.85, y: -8.4800005, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1205051843
 TextMesh:
@@ -3474,7 +3477,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205051841}
-  m_Text: BIGGER CRYSTALS GIVE MORE ENERGY
+  m_Text: BIGGER CRYSTALS CONTAIN MORE ENERGY
   m_OffsetZ: 0
   m_CharacterSize: 25
   m_LineSpacing: 1
@@ -3659,12 +3662,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
-  m_angle: 45
+  m_angle: 57.5
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &1320977506
 Camera:
@@ -3721,7 +3724,7 @@ GameObject:
   - component: {fileID: 1345270359}
   - component: {fileID: 1345270358}
   m_Layer: 0
-  m_Name: New Text (10)
+  m_Name: Message_4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3735,11 +3738,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345270356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.81, y: -9.16, z: 0}
+  m_LocalPosition: {x: -8.35, y: -9, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1345270358
 TextMesh:
@@ -3814,7 +3817,7 @@ GameObject:
   - component: {fileID: 1385169394}
   - component: {fileID: 1385169393}
   m_Layer: 0
-  m_Name: New Text (5)
+  m_Name: Message_3_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3828,11 +3831,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385169391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.43, y: -10.48, z: 0}
+  m_LocalPosition: {x: -17.7, y: -10.82, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1385169393
 TextMesh:
@@ -3952,12 +3955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
-  m_angle: 45
+  m_angle: 53
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &1411696455
 Camera:
@@ -4135,19 +4138,19 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1652663406}
-  - {fileID: 607249454}
   - {fileID: 254873483}
   - {fileID: 1131133420}
+  - {fileID: 1652663406}
+  - {fileID: 607249454}
   - {fileID: 992276236}
+  - {fileID: 1085276630}
   - {fileID: 1385169392}
   - {fileID: 1205051842}
-  - {fileID: 1085276630}
+  - {fileID: 1345270357}
   - {fileID: 425510302}
   - {fileID: 444253346}
-  - {fileID: 1345270357}
-  - {fileID: 1842903396}
   - {fileID: 626645971}
+  - {fileID: 1842903396}
   m_Father: {fileID: 443244900}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4268,7 +4271,7 @@ GameObject:
   - component: {fileID: 1652663408}
   - component: {fileID: 1652663407}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: Message_2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4286,7 +4289,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1652663407
 TextMesh:
@@ -4296,7 +4299,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652663405}
-  m_Text: KEEP THE ORB ALIVE
+  m_Text: KEEP THE ORB ALIVE!
   m_OffsetZ: 0
   m_CharacterSize: 25
   m_LineSpacing: 1
@@ -4472,12 +4475,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
   m_angle: 45
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &1681153224
 Camera:
@@ -5229,7 +5232,7 @@ GameObject:
   - component: {fileID: 1842903398}
   - component: {fileID: 1842903397}
   m_Layer: 0
-  m_Name: New Text (11)
+  m_Name: Message_7_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5243,11 +5246,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842903395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.25, y: -9.3, z: 0}
+  m_LocalPosition: {x: 14.35, y: -9.45, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1536915285}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1842903397
 TextMesh:
@@ -5409,7 +5412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892554211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.34, y: -2.1, z: 0}
+  m_LocalPosition: {x: 10.46, y: -2.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2096778263}
@@ -5610,12 +5613,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15375465b8789644994bfb292e54f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intensity: 20
+  m_intensity: 52.13
   m_color: {r: 0.8666667, g: 0.3254902, b: 0.7607843, a: 1}
   m_range: 20
-  m_angle: 45
+  m_angle: 64.1
   m_shadowmapSize: 512
-  m_maxIntensityOutput: 1
+  m_maxIntensityOutput: 2
   m_startingRange: 0.5
 --- !u!20 &2096778266
 Camera:
@@ -6442,6 +6445,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229337032975385014, guid: 72290825666b00a41a7fdb3f345f714a,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72290825666b00a41a7fdb3f345f714a, type: 3}
