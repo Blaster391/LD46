@@ -29,6 +29,8 @@ public class GameOverUI : MonoBehaviour
     public AK.Wwise.State WWiseState;
     public AK.Wwise.Event MyEvent;
 
+    private float m_timeTillUpdate = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +61,14 @@ public class GameOverUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        m_timeTillUpdate -= Time.deltaTime;
+        if (m_timeTillUpdate < 0)
+        {
+            m_timeTillUpdate = 5.0f;
+            LoadHighscores();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0, LoadSceneMode.Single);
         }

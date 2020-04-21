@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
         Vector2 myPosition = transform.position;
         Vector2 directionToTarget = (m_targetPosition - myPosition).normalized;
 
-        m_rigidbody2D.AddForce(directionToTarget * m_moveForce);
+        m_rigidbody2D.AddForce(directionToTarget * m_moveForce * (Time.deltaTime * 60.0f));
     }
 
     void CheckDespawn()

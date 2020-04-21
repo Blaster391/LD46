@@ -118,7 +118,7 @@ public class PlayerInteraction : MonoBehaviour
                 // Push the thing.
                 float angMul = Mathf.Lerp(0.45f, 1.0f, (dot / cosConeAngle));
                 float mul = m_timeMouseWasDownFor * m_forcePushMultiplier * angMul * (inverse ? -1.0f : 1.0f);
-                collider.attachedRigidbody.AddForce(toObj * mul);
+                collider.attachedRigidbody.AddForce(toObj * mul * (Time.deltaTime * 60.0f));
                
             }
         }

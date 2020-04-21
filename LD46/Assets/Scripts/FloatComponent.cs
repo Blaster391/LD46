@@ -36,7 +36,7 @@ public class FloatComponent : MonoBehaviour
         if (distanceFromFloor < m_desiredHeight)
         {
             m_rigidbody2D.gravityScale = 0.0f;
-            m_rigidbody2D.AddForce(Vector2.up * m_upwardsForce);
+            m_rigidbody2D.AddForce(Vector2.up * m_upwardsForce * (Time.deltaTime * 60.0f));
         }
         else if (distanceFromFloor < m_desiredHeight + m_heightThreshold)
         {
